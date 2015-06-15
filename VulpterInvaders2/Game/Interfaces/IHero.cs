@@ -10,5 +10,8 @@
 
         void AddLives();
         void RemoveLives();
+
+        void AddScores();
+        void RemoveScores();
     }
 }
