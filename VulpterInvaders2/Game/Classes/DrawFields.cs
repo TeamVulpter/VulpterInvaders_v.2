@@ -4,7 +4,14 @@
     using Interfaces;
     class DrawFields : IMap
     {
-        public void DrawField(int[,] matrix)
+        private int[,] matrix;
+
+        public DrawFields(int[,] matrix)
+        {
+            this.matrix = DrawField(matrix);
+        }
+
+        public int[,] DrawField(int[,] matrix)
         {
             Random randomWidthGenerator = new Random();
             Random randomValue = new Random();
@@ -88,6 +95,7 @@
                 }
                 //Console.WriteLine();
             }
+            return matrix;
         }
     }
 }

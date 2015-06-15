@@ -2,6 +2,6 @@
 {
     interface IMap
     {
-        void DrawField(int[,] matrix);
+        int[,] DrawField(int[,] matrix);
     }
 }
