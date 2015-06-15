@@ -1,16 +1,18 @@
-﻿using System;
-using System.Windows.Forms;
-
-namespace Game
+﻿namespace Game
 {
+    using System;
+    using System.Windows.Forms;
+    using Interfaces;
+    using Classes;
+
     public partial class Form1 : Form
     {
-        private int[,] matrix;
+        private DrawFields matrix;
 
         public Form1()
         {
             InitializeComponent();
-            this.matrix = new int[10,10];
+            this.matrix = new DrawFields(new int[40,40]);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,11 +30,13 @@ namespace Game
 
         }
 
+        //button for start
         private void start_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("");
         }
 
+        //button for create hero
         private void button1_Click(object sender, EventArgs e)
         {
 
