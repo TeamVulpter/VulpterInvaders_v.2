@@ -32,6 +32,7 @@
             this.lives = new System.Windows.Forms.Label();
             this.scores = new System.Windows.Forms.Label();
             this.start = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // health
@@ -73,12 +74,24 @@
             // 
             this.start.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.start.ForeColor = System.Drawing.Color.Blue;
-            this.start.Location = new System.Drawing.Point(838, 633);
+            this.start.Location = new System.Drawing.Point(840, 625);
             this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(104, 34);
+            this.start.Size = new System.Drawing.Size(100, 40);
             this.start.TabIndex = 4;
             this.start.Text = "Start";
             this.start.UseVisualStyleBackColor = false;
+            this.start.Click += new System.EventHandler(this.start_Click);
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Blue;
+            this.button1.Location = new System.Drawing.Point(840, 565);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 40);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Create Hero";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -86,6 +99,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(982, 693);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.start);
             this.Controls.Add(this.scores);
             this.Controls.Add(this.lives);
@@ -105,6 +119,7 @@
         private System.Windows.Forms.Label lives;
         private System.Windows.Forms.Label scores;
         private System.Windows.Forms.Button start;
+        private System.Windows.Forms.Button button1;
     }
 }
 
