@@ -12,7 +12,14 @@
         public Form1()
         {
             InitializeComponent();
-            this.matrix = new DrawFields(new int[40,40]);
+            try
+            {
+                this.matrix = new DrawFields(new int[40, 40]);
+            }
+            catch (NotImplementedException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
