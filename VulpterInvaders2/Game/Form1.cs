@@ -4,11 +4,12 @@
     using System.Windows.Forms;
     using Interfaces;
     using Classes;
+    using Game.Classes.Hero;
 
     public partial class Form1 : Form
     {
         private DrawFields matrix;
-        private IHero hero;
+        private IHero player;
 
         public Form1()
         {
@@ -47,7 +48,7 @@
         //button for create hero
         private void button1_Click(object sender, EventArgs e)
         {
-            //IHero hero = new 
+            this.player = new Player(0, 0, "Arthur");
             MessageBox.Show("Create");
         }
     }

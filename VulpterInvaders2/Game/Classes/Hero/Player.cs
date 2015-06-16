@@ -2,9 +2,9 @@
 {
     class Player : Hero
     {
-        public Player(string name)
+        public Player(int positionX, int positionY, string name)
         {
-            
+            this.CreateHero(positionX, positionY, name);
         }
 
         public override void AddHealth()
