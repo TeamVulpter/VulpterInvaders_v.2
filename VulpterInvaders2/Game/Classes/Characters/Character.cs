@@ -10,8 +10,8 @@
         private string name;
 
 
-        protected Character(int x, int y)
-            : base(x, y)
+        protected Character(int positionX, int positionY)
+            : base(positionX, positionY)
         {
 
         }

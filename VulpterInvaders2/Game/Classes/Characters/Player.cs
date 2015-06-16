@@ -5,7 +5,7 @@
         public Player(int positionX, int positionY, string name)
             : base(positionX, positionY)
         {
-            this.CreateHero(positionX, positionY, name);
+            
         }
 
         public override void AddHealth()
