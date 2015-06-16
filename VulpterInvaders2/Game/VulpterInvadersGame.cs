@@ -1,4 +1,6 @@
-﻿namespace Game
+﻿using Game.Classes.Matrix;
+
+namespace Game
 {
     using System;
     using System.Windows.Forms;

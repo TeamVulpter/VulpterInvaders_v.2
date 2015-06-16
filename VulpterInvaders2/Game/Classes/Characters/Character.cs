@@ -11,6 +11,10 @@
         private int positionX;
         private int positionY;
 
+        protected Character()
+        {
+                
+        }
         public void CreateHero(int positionX, int positionY, string name)
         {
             throw new System.NotImplementedException();

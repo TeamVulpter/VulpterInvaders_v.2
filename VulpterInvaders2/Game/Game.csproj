@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Attack.cs" />
+    <Compile Include="Classes\Matrix\Brick.cs" />
     <Compile Include="Classes\Bullet.cs" />
     <Compile Include="Classes\Characters\PlayerShip.cs" />
     <Compile Include="Classes\Health.cs" />
@@ -112,6 +113,7 @@
   <ItemGroup>
     <Content Include="Resources\Bricks.jpg" />
     <Content Include="Resources\Hero.png" />
+    <Content Include="Resources\HeroSingle.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

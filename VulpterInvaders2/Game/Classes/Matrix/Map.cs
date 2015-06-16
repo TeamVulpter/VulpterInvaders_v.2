@@ -1,4 +1,4 @@
-﻿namespace Game.Classes
+﻿namespace Game.Classes.Matrix
 {
     using System;
     using Interfaces;
