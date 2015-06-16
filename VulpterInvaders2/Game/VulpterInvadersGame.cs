@@ -4,19 +4,19 @@
     using System.Windows.Forms;
     using Interfaces;
     using Classes;
-    using Game.Classes.Hero;
+    using Game.Classes.Characters;
 
     public partial class VulpterInvadersGame : Form
     {
-        private DrawFields matrix;
-        private IHero player;
+        private Map matrix;
+        private ICharacter player;
 
         public VulpterInvadersGame()
         {
             InitializeComponent();
             try
             {
-                this.matrix = new DrawFields(new int[40, 40]);
+                this.matrix = new Map(new int[40, 40]);
             }
             catch (NotImplementedException ex)
             {

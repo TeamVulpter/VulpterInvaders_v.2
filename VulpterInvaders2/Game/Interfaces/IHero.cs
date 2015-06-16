@@ -1,6 +1,6 @@
 ﻿namespace Game.Interfaces
 {
-    interface IHero
+    interface ICharacter
     {
         void CreateHero();
         void KillHero();
