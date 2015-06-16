@@ -1,23 +1,24 @@
 ﻿namespace Game.Classes.Characters
 {
     using Interfaces;
-    public abstract class Character : ICharacter
+    public abstract class Character : GameObject, ICharacter
     {
-        private Health health;
-        private Score scores;
-        private Life lives;
+        //private Health health;
+        //private Score scores;
+        //private Life lives;
 
         private string name;
-        private int positionX;
-        private int positionY;
 
-        protected Character()
+
+        protected Character(int x, int y)
+            : base(x, y)
         {
-                
+
         }
         public void CreateHero(int positionX, int positionY, string name)
         {
-            throw new System.NotImplementedException();
+            Health.HelthCount = 150;
+            Life.LifeCount = 3;
         }
 
         public void CreateHero()
@@ -27,7 +28,8 @@
 
         public void KillHero()
         {
-            throw new System.NotImplementedException();
+            Life.LifeCount = 0;
+            Health.HelthCount = 0;
         }
 
         public abstract void AddHealth();

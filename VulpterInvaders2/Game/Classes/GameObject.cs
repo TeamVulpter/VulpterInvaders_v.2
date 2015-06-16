@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Game.Classes
+{
+    public abstract class GameObject
+    {
+        private int positionX;
+        private int positionY;
+
+        protected GameObject(int positionX, int positionY)
+        {
+            this.PositionX = positionX;
+            this.PositionY = positionY;
+        }
+
+        public int PositionX { get; set; }
+        public int PositionY { get; set; }
+    }
+}
