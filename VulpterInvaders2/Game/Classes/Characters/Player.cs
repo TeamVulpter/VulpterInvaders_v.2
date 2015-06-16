@@ -1,11 +1,15 @@
-﻿namespace Game.Classes.Characters
+﻿using System.Windows.Forms;
+
+namespace Game.Classes.Characters
 {
     public class Player : Character
     {
-        public Player(int positionX, int positionY, string name)
+        private PictureBox hero;
+        public Player(int positionX, int positionY, PictureBox hero)
             : base(positionX, positionY)
         {
-            
+            this.hero = hero;
+          
         }
 
         public override void AddHealth()

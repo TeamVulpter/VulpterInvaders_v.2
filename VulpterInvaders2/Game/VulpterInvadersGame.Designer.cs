@@ -1,4 +1,5 @@
-﻿using Game.Classes.Matrix;
+﻿using System.Windows.Forms;
+using Game.Classes.Matrix;
 namespace Game
 {
     partial class VulpterInvadersGame
@@ -118,12 +119,15 @@ namespace Game
             // 
             // hero
             // 
+            this.hero.ErrorImage = global::Game.Properties.Resources.HeroSingle;
             this.hero.Image = global::Game.Properties.Resources.HeroSingle;
+            this.hero.InitialImage = global::Game.Properties.Resources.HeroSingle;
             this.hero.Location = new System.Drawing.Point(149, 431);
             this.hero.Name = "hero";
             this.hero.Size = new System.Drawing.Size(37, 39);
             this.hero.TabIndex = 8;
             this.hero.TabStop = false;
+            this.hero.Click += new System.EventHandler(this.hero_MouseEnter);
             // 
             // VulpterInvadersGame
             // 

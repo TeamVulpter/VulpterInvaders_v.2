@@ -1,4 +1,5 @@
-﻿using Game.Classes.Matrix;
+﻿using System.Drawing;
+using Game.Classes.Matrix;
 
 namespace Game
 {
@@ -11,12 +12,13 @@ namespace Game
     public partial class VulpterInvadersGame : Form
     {
         private Map matrix;
-        private ICharacter player;
         private Brick bricks;
+        private Player player;
 
         public VulpterInvadersGame()
         {
             InitializeComponent();
+            
             try
             {
                 this.matrix = new Map(new int[40, 40]);
@@ -29,13 +31,19 @@ namespace Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //bricks = new Brick(this.bricks);
-
+            player = new Player(hero.Location.X, hero.Location.Y, hero);
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void hero_MouseEnter(object sender, EventArgs e)
+        {
+            this.player.PositionX = hero.Location.X;
+            this.player.PositionY = hero.Location.Y;
+            hero.Location = new Point(player.PositionX + 25, player.PositionY);
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -52,7 +60,7 @@ namespace Game
         //button for create hero
         private void button1_Click(object sender, EventArgs e)
         {
-            this.player = new Player(0, 0, "Arthur");
+            //this.player = new Player(0, 0, "Arthur");
             MessageBox.Show("Create");
         }
     }
