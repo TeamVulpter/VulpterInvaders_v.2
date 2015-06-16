@@ -1,15 +1,17 @@
-﻿namespace Game.Classes.Matrix
+﻿using System.Windows.Forms;
+
+namespace Game.Classes.Matrix
 {
     using System;
     using Interfaces;
     public class Map : IMap
     {
-
         public Map(int[,] matrix)
         {
             this.Matrix = new int[40,40];
         }
-        public int[,] Matrix { get; set; }
+        public int[,] Matrix { get; private set; }
+
         public int[,] DrawField(int[,] matrix)
         {
             Random randomWidthGenerator = new Random();

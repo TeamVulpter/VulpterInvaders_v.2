@@ -38,6 +38,7 @@ namespace Game
             this.start = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.brick = new System.Windows.Forms.PictureBox();
+            
             ((System.ComponentModel.ISupportInitialize)(this.brick)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,6 +114,7 @@ namespace Game
             this.brick.Size = new System.Drawing.Size(20, 20);
             this.brick.TabIndex = 7;
             this.brick.TabStop = false;
+        
             // 
             // VulpterInvadersGame
             // 
@@ -120,12 +122,13 @@ namespace Game
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(736, 563);
-            this.Controls.Add(this.brick);
+            
             this.Controls.Add(this.button1);
             this.Controls.Add(this.start);
             this.Controls.Add(this.scores);
             this.Controls.Add(this.lives);
             this.Controls.Add(this.health);
+            this.Controls.Add(this.brick);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "VulpterInvadersGame";

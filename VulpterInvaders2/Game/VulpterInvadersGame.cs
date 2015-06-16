@@ -12,6 +12,7 @@ namespace Game
     {
         private Map matrix;
         private ICharacter player;
+        private Brick bricks;
 
         public VulpterInvadersGame()
         {
@@ -28,6 +29,7 @@ namespace Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //bricks = new Brick(this.bricks);
 
         }
 
