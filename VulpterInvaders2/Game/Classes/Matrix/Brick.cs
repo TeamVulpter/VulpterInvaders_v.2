@@ -7,14 +7,13 @@ using System.Windows.Forms;
 
 namespace Game.Classes.Matrix
 {
-    public class Brick
+    public class Brick:GameObject
     {
         private PictureBox brickSingle;
-        private int x;
-        private int y;
-    
-        public Brick(PictureBox brickSingle)
+
+        public Brick(int x, int y, PictureBox brickSingle):base(x, y)
         {
+
             this.BrickSingle = brickSingle;
            
         }

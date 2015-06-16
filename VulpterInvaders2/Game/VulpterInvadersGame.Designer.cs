@@ -38,8 +38,9 @@ namespace Game
             this.start = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.brick = new System.Windows.Forms.PictureBox();
-            
+            this.hero = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.brick)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hero)).BeginInit();
             this.SuspendLayout();
             // 
             // health
@@ -114,7 +115,15 @@ namespace Game
             this.brick.Size = new System.Drawing.Size(20, 20);
             this.brick.TabIndex = 7;
             this.brick.TabStop = false;
-        
+            // 
+            // hero
+            // 
+            this.hero.Image = global::Game.Properties.Resources.HeroSingle;
+            this.hero.Location = new System.Drawing.Point(149, 431);
+            this.hero.Name = "hero";
+            this.hero.Size = new System.Drawing.Size(37, 39);
+            this.hero.TabIndex = 8;
+            this.hero.TabStop = false;
             // 
             // VulpterInvadersGame
             // 
@@ -122,7 +131,7 @@ namespace Game
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(736, 563);
-            
+            this.Controls.Add(this.hero);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.start);
             this.Controls.Add(this.scores);
@@ -135,6 +144,7 @@ namespace Game
             this.Text = "VulpterInvader.2";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.brick)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hero)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,6 +158,7 @@ namespace Game
         private System.Windows.Forms.Button start;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox brick;
+        private System.Windows.Forms.PictureBox hero;
     }
 }
 
