@@ -3,6 +3,18 @@
     using Interfaces;
     public abstract class Hero : IHero
     {
+        private const int defaultHealth = 150;
+        private const int defaultScores = 0;
+        private const int defaultLives = 3;
+
+        private int health;
+        private int scores;
+        private int lives;
+
+        private string name;
+        private int positionX;
+        private int positionY;
+
         public void CreateHero()
         {
             throw new System.NotImplementedException();
@@ -21,5 +33,7 @@
 
         public abstract void AddScores();
         public abstract void RemoveScores();
+
+        public abstract void Mooving(int x, int y);
     }
 }

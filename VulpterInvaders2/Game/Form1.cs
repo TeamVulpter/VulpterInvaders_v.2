@@ -8,6 +8,7 @@
     public partial class Form1 : Form
     {
         private DrawFields matrix;
+        private IHero hero;
 
         public Form1()
         {
@@ -46,7 +47,7 @@
         //button for create hero
         private void button1_Click(object sender, EventArgs e)
         {
-
+            //IHero hero = new 
             MessageBox.Show("Create");
         }
     }
