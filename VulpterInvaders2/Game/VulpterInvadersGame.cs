@@ -20,6 +20,7 @@ namespace Game
             InitializeComponent();
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.player = new Player(500, 0, "Arthur");
+            //this.brick = new
 
             try
             {
@@ -75,18 +76,18 @@ namespace Game
             
         }
 
-        //button for start
-        private void start_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("");
-        }
+        ////button for start
+        //private void start_Click(object sender, EventArgs e)
+        //{
+        //    //MessageBox.Show("");
+        //}
 
-        //button for create hero
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //this.player = new Player(0, 0, "Arthur");
-            MessageBox.Show("Create");
-        }
+        ////button for create hero
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    //this.player = new Player(0, 0, "Arthur");
+        //    MessageBox.Show("Create");
+        //}
 
         private void hero_Click(object sender, EventArgs e)
         {
