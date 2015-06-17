@@ -3,43 +3,89 @@
     using Interfaces;
     public abstract class Character : GameObject, ICharacter
     {
-        //private Health health;
-        //private Score scores;
-        //private Life lives;
-
         private string name;
-
+        private int health;
+        private int lives;
+        private int scores;
 
         protected Character(int positionX, int positionY)
             : base(positionX, positionY)
         {
-
         }
-        public void CreateHero(int positionX, int positionY, string name)
+
+        public string Name
         {
-            Health.HelthCount = 150;
-            Life.LifeCount = 3;
+            get { return this.name; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    //TODO throw exception or send message
+                }
+                this.name = value.Trim();
+            }
         }
-
-        public void CreateHero()
+        public int Health
         {
-            throw new System.NotImplementedException();
+            get { return this.health; }
+            set
+            {
+                if (value < 0)
+                {
+                    //TODO throw exception or send message
+                }
+                this.health = value;
+            }
         }
-
+        public int Lives
+        {
+            get { return this.lives; }
+            set
+            {
+                if (value < 0)
+                {
+                    //TODO throw exception or send message
+                }
+                this.lives = value;
+            }
+        }
+        public int Scores
+        {
+            get { return this.scores; }
+            set
+            {
+                if (value < 0)
+                {
+                    //TODO throw exception or send message
+                }
+                this.scores = value;
+            }
+        }
+        //Add hero
+        public void CreateHero(int positionX, int positionY, string heroName)
+        {
+            this.Name = heroName;
+            this.Health = 150;
+            this.Lives = 3;
+        }
+        //Kill hero
         public void KillHero()
         {
-            Life.LifeCount = 0;
-            Health.HelthCount = 0;
+            this.Lives = 0;
+            this.Health = 0;
         }
-
-        public abstract void AddHealth();
-        public abstract void RemoveHealth();
-
-        public abstract void AddLives();
-        public abstract void RemoveLives();
-
-        public abstract void AddScores();
-        public abstract void RemoveScores();
+        //add health to hero
+        public abstract void AddHealth(int points);
+        //remove health from hero
+        public abstract void RemoveHealth(int points);
+        //add lives to hero
+        public abstract void AddLives(int life);
+        //remove lives from hero
+        public abstract void RemoveLives(int life);
+        //add bonus scores to hero
+        public abstract void AddScores(int score);
+        //remove bonus score from hero
+        public abstract void RemoveScores(int score);
 
         public abstract void Mooving(int x, int y);
     }

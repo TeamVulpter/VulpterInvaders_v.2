@@ -19,10 +19,17 @@ namespace Game
         {
             InitializeComponent();
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            
+            this.player = new Player(500, 0, "Arthur");
+
             try
             {
                 this.matrix = new Map(new int[40, 40]);
+                this.player.AddHealth(300);
+                this.player.RemoveHealth(100);
+                this.player.AddLives(2);
+                this.player.RemoveLives(1);
+                this.player.AddScores(300);
+                this.player.RemoveScores(125);
             }
             catch (NotImplementedException ex)
             {
@@ -32,7 +39,7 @@ namespace Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            player = new Player(hero.Location.X, hero.Location.Y, hero);
+            //player = new Player(hero.Location.X, hero.Location.Y, hero);
         }
 
         private void label1_Click(object sender, EventArgs e)

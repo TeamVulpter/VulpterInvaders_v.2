@@ -4,42 +4,70 @@ namespace Game.Classes.Characters
 {
     public class Player : Character
     {
-        private PictureBox hero;
-        public Player(int positionX, int positionY, PictureBox hero)
+        public Player(int positionX, int positionY, string hero)
             : base(positionX, positionY)
         {
-            this.hero = hero;
-          
+            this.CreateHero(positionX, positionY, hero);
         }
 
-        public override void AddHealth()
+        public override void AddHealth(int points)
         {
-            throw new System.NotImplementedException();
+            if (points < 0)
+            {
+                //TODO add exception or message;
+                return;
+            }
+            this.Health += points;
+        }
+        
+        public override void RemoveHealth(int points)
+        {
+            if (points < 0)
+            {
+                //TODO add exception or message;
+                return;
+            }
+            this.Health -= points;
         }
 
-        public override void RemoveHealth()
+        public override void AddLives(int life)
         {
-            throw new System.NotImplementedException();
+            if (life < 0)
+            {
+                //TODO add exception or message;
+                return;
+            }
+            this.Lives += life;
         }
 
-        public override void AddLives()
+        public override void RemoveLives(int life)
         {
-            throw new System.NotImplementedException();
+            if (life < 0)
+            {
+                //TODO add exception or message;
+                return;
+            }
+            this.Lives -= life;
         }
 
-        public override void RemoveLives()
+        public override void AddScores(int score)
         {
-            throw new System.NotImplementedException();
+            if (score < 0)
+            {
+                //TODO add exception or message;
+                return;
+            }
+            this.Scores += score;
         }
 
-        public override void AddScores()
+        public override void RemoveScores(int score)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public override void RemoveScores()
-        {
-            throw new System.NotImplementedException();
+            if (score < 0)
+            {
+                //TODO add exception or message;
+                return;
+            }
+            this.Scores -= score;
         }
 
         public override void Mooving(int x, int y)

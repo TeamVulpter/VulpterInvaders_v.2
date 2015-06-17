@@ -65,7 +65,6 @@
     <Compile Include="Classes\Matrix\Brick.cs" />
     <Compile Include="Classes\Bullet.cs" />
     <Compile Include="Classes\Characters\PlayerShip.cs" />
-    <Compile Include="Classes\Health.cs" />
     <Compile Include="Classes\Characters\Character.cs" />
     <Compile Include="Classes\Characters\Player.cs" />
     <Compile Include="FormMenuUI.cs">
@@ -75,9 +74,7 @@
       <DependentUpon>FormMenuUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IAttack.cs" />
-    <Compile Include="Classes\Life.cs" />
     <Compile Include="Classes\Matrix\Map.cs" />
-    <Compile Include="Classes\Score.cs" />
     <Compile Include="Classes\Shooting.cs" />
     <Compile Include="Engine\GameEngine.cs" />
     <Compile Include="Interfaces\IShoot.cs" />

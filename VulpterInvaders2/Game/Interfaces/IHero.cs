@@ -2,16 +2,16 @@
 {
     interface ICharacter
     {
-        void CreateHero();
+        void CreateHero(int positionX, int positionY, string heroName);
         void KillHero();
 
-        void AddHealth();
-        void RemoveHealth();
+        void AddHealth(int points);
+        void RemoveHealth(int points);
 
-        void AddLives();
-        void RemoveLives();
+        void AddLives(int life);
+        void RemoveLives(int life);
 
-        void AddScores();
-        void RemoveScores();
+        void AddScores(int score);
+        void RemoveScores(int score);
     }
 }

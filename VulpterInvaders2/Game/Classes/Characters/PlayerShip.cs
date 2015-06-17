@@ -13,32 +13,32 @@ namespace Game.Classes.Characters
         {
 
         }
-        public override void AddHealth()
+        public override void AddHealth(int points)
         {
             throw new NotImplementedException();
         }
 
-        public override void RemoveHealth()
+        public override void RemoveHealth(int points)
         {
             throw new NotImplementedException();
         }
 
-        public override void AddLives()
+        public override void AddLives(int life)
         {
             throw new NotImplementedException();
         }
 
-        public override void RemoveLives()
+        public override void RemoveLives(int life)
         {
             throw new NotImplementedException();
         }
 
-        public override void AddScores()
+        public override void AddScores(int score)
         {
             throw new NotImplementedException();
         }
 
-        public override void RemoveScores()
+        public override void RemoveScores(int score)
         {
             throw new NotImplementedException();
         }
