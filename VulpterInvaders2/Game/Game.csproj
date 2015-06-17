@@ -84,7 +84,7 @@
     <Compile Include="VulpterInvadersGame.Designer.cs">
       <DependentUpon>VulpterInvadersGame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\IHero.cs" />
+    <Compile Include="Interfaces\ICharacter.cs" />
     <Compile Include="Interfaces\IMap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
