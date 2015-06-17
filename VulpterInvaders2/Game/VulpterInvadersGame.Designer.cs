@@ -100,6 +100,7 @@ namespace Game
             this.hero.Size = new System.Drawing.Size(37, 39);
             this.hero.TabIndex = 8;
             this.hero.TabStop = false;
+            this.hero.Click += new System.EventHandler(this.hero_Click);
             // 
             // VulpterInvadersGame
             // 
@@ -115,6 +116,7 @@ namespace Game
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "VulpterInvadersGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VulpterInvader.2";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.brick)).EndInit();

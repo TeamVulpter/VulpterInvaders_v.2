@@ -80,5 +80,10 @@ namespace Game
             //this.player = new Player(0, 0, "Arthur");
             MessageBox.Show("Create");
         }
+
+        private void hero_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

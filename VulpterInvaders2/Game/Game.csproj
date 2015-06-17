@@ -68,6 +68,12 @@
     <Compile Include="Classes\Health.cs" />
     <Compile Include="Classes\Characters\Character.cs" />
     <Compile Include="Classes\Characters\Player.cs" />
+    <Compile Include="FormMenuUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuUI.Designer.cs">
+      <DependentUpon>FormMenuUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IAttack.cs" />
     <Compile Include="Classes\Life.cs" />
     <Compile Include="Classes\Matrix\Map.cs" />
@@ -85,6 +91,9 @@
     <Compile Include="Interfaces\IMap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormMenuUI.resx">
+      <DependentUpon>FormMenuUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VulpterInvadersGame.resx">
       <DependentUpon>VulpterInvadersGame.cs</DependentUpon>
     </EmbeddedResource>

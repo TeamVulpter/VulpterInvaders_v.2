@@ -10,7 +10,7 @@ namespace Game
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VulpterInvadersGame());
+            Application.Run(new FormMenuUI());
         }
     }
 }
