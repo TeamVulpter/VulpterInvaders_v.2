@@ -18,6 +18,7 @@ namespace Game
         public VulpterInvadersGame()
         {
             InitializeComponent();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             
             try
             {
@@ -39,16 +40,32 @@ namespace Game
             
         }
 
-        private void hero_MouseEnter(object sender, EventArgs e)
-        {
-            this.player.PositionX = hero.Location.X;
-            this.player.PositionY = hero.Location.Y;
-            hero.Location = new Point(player.PositionX + 25, player.PositionY);
-        }
-
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            this.player.PositionX = hero.Location.X;
+            this.player.PositionY = hero.Location.Y;
+            if (e.KeyCode == Keys.W)
+            {
+                hero.Location = new Point(player.PositionX, player.PositionY-10);
+            }
+            if (e.KeyCode == Keys.S)
+            {
+                hero.Location = new Point(player.PositionX, player.PositionY +10);
+            }
+            if (e.KeyCode == Keys.A)
+            {
+                hero.Location = new Point(player.PositionX-10, player.PositionY);
+            }
+            if (e.KeyCode == Keys.D)
+            {
+                hero.Location = new Point(player.PositionX + 10, player.PositionY);
+            }
+            
         }
 
         //button for start

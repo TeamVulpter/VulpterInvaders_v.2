@@ -36,8 +36,6 @@ namespace Game
             this.health = new System.Windows.Forms.Label();
             this.lives = new System.Windows.Forms.Label();
             this.scores = new System.Windows.Forms.Label();
-            this.start = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.brick = new System.Windows.Forms.PictureBox();
             this.hero = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.brick)).BeginInit();
@@ -82,31 +80,6 @@ namespace Game
             this.scores.TabIndex = 3;
             this.scores.Text = "Scores:";
             // 
-            // start
-            // 
-            this.start.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.start.ForeColor = System.Drawing.Color.Blue;
-            this.start.Location = new System.Drawing.Point(630, 508);
-            this.start.Margin = new System.Windows.Forms.Padding(2);
-            this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(75, 32);
-            this.start.TabIndex = 4;
-            this.start.Text = "Start";
-            this.start.UseVisualStyleBackColor = false;
-            this.start.Click += new System.EventHandler(this.start_Click);
-            // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.Color.Blue;
-            this.button1.Location = new System.Drawing.Point(630, 459);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 32);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Create Hero";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // brick
             // 
             this.brick.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick.ErrorImage")));
@@ -127,7 +100,6 @@ namespace Game
             this.hero.Size = new System.Drawing.Size(37, 39);
             this.hero.TabIndex = 8;
             this.hero.TabStop = false;
-            this.hero.Click += new System.EventHandler(this.hero_MouseEnter);
             // 
             // VulpterInvadersGame
             // 
@@ -136,8 +108,6 @@ namespace Game
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(736, 563);
             this.Controls.Add(this.hero);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.start);
             this.Controls.Add(this.scores);
             this.Controls.Add(this.lives);
             this.Controls.Add(this.health);
@@ -159,8 +129,6 @@ namespace Game
         private System.Windows.Forms.Label health;
         private System.Windows.Forms.Label lives;
         private System.Windows.Forms.Label scores;
-        private System.Windows.Forms.Button start;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox brick;
         private System.Windows.Forms.PictureBox hero;
     }
