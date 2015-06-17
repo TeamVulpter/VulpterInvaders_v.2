@@ -78,6 +78,12 @@
     <Compile Include="Classes\Shooting.cs" />
     <Compile Include="Engine\GameEngine.cs" />
     <Compile Include="Interfaces\IShoot.cs" />
+    <Compile Include="InvadersAttack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvadersAttack.Designer.cs">
+      <DependentUpon>InvadersAttack.cs</DependentUpon>
+    </Compile>
     <Compile Include="VulpterInvadersGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMenuUI.resx">
       <DependentUpon>FormMenuUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvadersAttack.resx">
+      <DependentUpon>InvadersAttack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VulpterInvadersGame.resx">
       <DependentUpon>VulpterInvadersGame.cs</DependentUpon>

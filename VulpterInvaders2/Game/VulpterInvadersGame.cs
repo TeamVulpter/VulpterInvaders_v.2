@@ -73,6 +73,12 @@ namespace Game
             {
                 hero.Location = new Point(player.PositionX + 10, player.PositionY);
             }
+            if (e.KeyCode==Keys.X)
+            {
+                InvadersAttack invaderAttack = new InvadersAttack();
+                invaderAttack.Show();
+                Hide();
+            }
             
         }
 
