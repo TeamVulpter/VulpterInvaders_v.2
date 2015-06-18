@@ -19,7 +19,7 @@ namespace Game
         {
             InitializeComponent();
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.player = new Player(500, 0, "Arthur");
+            this.player = new Player(500, 0, hero);
             //this.brick = new
 
             try

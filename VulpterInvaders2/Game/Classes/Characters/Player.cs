@@ -4,10 +4,11 @@ namespace Game.Classes.Characters
 {
     public class Player : Character
     {
-        public Player(int positionX, int positionY, string hero)
+        private PictureBox hero;
+        public Player(int positionX, int positionY, PictureBox hero)
             : base(positionX, positionY)
         {
-            this.CreateHero(positionX, positionY, hero);
+            this.hero = hero;
         }
 
         public override void AddHealth(int points)
