@@ -37,9 +37,10 @@
             // 
             // Btn_StartNewGame
             // 
-            this.Btn_StartNewGame.Location = new System.Drawing.Point(12, 145);
+            this.Btn_StartNewGame.Location = new System.Drawing.Point(16, 178);
+            this.Btn_StartNewGame.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_StartNewGame.Name = "Btn_StartNewGame";
-            this.Btn_StartNewGame.Size = new System.Drawing.Size(87, 36);
+            this.Btn_StartNewGame.Size = new System.Drawing.Size(116, 44);
             this.Btn_StartNewGame.TabIndex = 0;
             this.Btn_StartNewGame.Text = "Start Game";
             this.Btn_StartNewGame.UseVisualStyleBackColor = true;
@@ -47,33 +48,37 @@
             // 
             // Btn_NewPlayer
             // 
-            this.Btn_NewPlayer.Location = new System.Drawing.Point(185, 145);
+            this.Btn_NewPlayer.Location = new System.Drawing.Point(247, 178);
+            this.Btn_NewPlayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_NewPlayer.Name = "Btn_NewPlayer";
-            this.Btn_NewPlayer.Size = new System.Drawing.Size(87, 36);
+            this.Btn_NewPlayer.Size = new System.Drawing.Size(116, 44);
             this.Btn_NewPlayer.TabIndex = 1;
             this.Btn_NewPlayer.Text = "Create Player";
             this.Btn_NewPlayer.UseVisualStyleBackColor = true;
             // 
             // Btn_Options
             // 
-            this.Btn_Options.Location = new System.Drawing.Point(321, 145);
+            this.Btn_Options.Location = new System.Drawing.Point(428, 178);
+            this.Btn_Options.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Options.Name = "Btn_Options";
-            this.Btn_Options.Size = new System.Drawing.Size(87, 36);
+            this.Btn_Options.Size = new System.Drawing.Size(116, 44);
             this.Btn_Options.TabIndex = 2;
             this.Btn_Options.Text = "button1";
             this.Btn_Options.UseVisualStyleBackColor = true;
             // 
             // FormMenuUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 563);
+            this.ClientSize = new System.Drawing.Size(981, 693);
             this.Controls.Add(this.Btn_Options);
             this.Controls.Add(this.Btn_NewPlayer);
             this.Controls.Add(this.Btn_StartNewGame);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormMenuUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenuUI";
+            this.Load += new System.EventHandler(this.FormMenuUI_Load);
             this.ResumeLayout(false);
 
         }

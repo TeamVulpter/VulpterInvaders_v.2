@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Game.Classes.Items;
 
 namespace Game
 {
@@ -25,6 +26,11 @@ namespace Game
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMenuUI_Load(object sender, EventArgs e)
         {
 
         }

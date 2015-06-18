@@ -63,6 +63,8 @@
     <Compile Include="Classes\Attack.cs" />
     <Compile Include="Classes\GameObject.cs" />
     <Compile Include="Classes\Health.cs" />
+    <Compile Include="Classes\Items\Item.cs" />
+    <Compile Include="Classes\Items\ItemType.cs" />
     <Compile Include="Classes\Life.cs" />
     <Compile Include="Classes\Matrix\Brick.cs" />
     <Compile Include="Classes\Bullet.cs" />

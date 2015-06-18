@@ -5,21 +5,22 @@ namespace Game
 {
     using System;
     using System.Windows.Forms;
-    using Interfaces;
-    using Classes;
     using Game.Classes.Characters;
+    using Classes.Items;
 
     public partial class VulpterInvadersGame : Form
     {
         private Map matrix;
         private Brick bricks;
         private Player player;
+        private Item item;
 
         public VulpterInvadersGame()
         {
             InitializeComponent();
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.player = new Player(500, 0, hero);
+            this.item = new Item(10, 10);
 
             try
             {
@@ -39,7 +40,7 @@ namespace Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //player = new Player(hero.Location.X, hero.Location.Y, hero);
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
