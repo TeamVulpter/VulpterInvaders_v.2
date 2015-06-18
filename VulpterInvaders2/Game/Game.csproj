@@ -62,11 +62,14 @@
   <ItemGroup>
     <Compile Include="Classes\Attack.cs" />
     <Compile Include="Classes\GameObject.cs" />
+    <Compile Include="Classes\Health.cs" />
+    <Compile Include="Classes\Life.cs" />
     <Compile Include="Classes\Matrix\Brick.cs" />
     <Compile Include="Classes\Bullet.cs" />
     <Compile Include="Classes\Characters\PlayerShip.cs" />
     <Compile Include="Classes\Characters\Character.cs" />
     <Compile Include="Classes\Characters\Player.cs" />
+    <Compile Include="Classes\Score.cs" />
     <Compile Include="FormMenuUI.cs">
       <SubType>Form</SubType>
     </Compile>
