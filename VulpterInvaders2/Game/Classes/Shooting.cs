@@ -4,7 +4,7 @@ using Game.Interfaces;
 namespace Game.Classes
 {
     public class Shooting :IShoot
-    {s
+    {
         public void Shoot()
         {
             throw new NotImplementedException();
