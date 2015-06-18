@@ -51,6 +51,7 @@
             this.ClientSize = new System.Drawing.Size(736, 563);
             this.Controls.Add(this.playerShip);
             this.Name = "InvadersAttack";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InvadersAttack";
             ((System.ComponentModel.ISupportInitialize)(this.playerShip)).EndInit();
             this.ResumeLayout(false);
