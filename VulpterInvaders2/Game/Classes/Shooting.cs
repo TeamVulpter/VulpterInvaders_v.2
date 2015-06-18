@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Game.Interfaces;
 
 namespace Game.Classes
 {
     public class Shooting :IShoot
-    {
-
+    {s
         public void Shoot()
         {
             throw new NotImplementedException();

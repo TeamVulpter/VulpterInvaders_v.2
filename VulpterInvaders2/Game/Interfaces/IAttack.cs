@@ -3,6 +3,5 @@
     public interface IAttack
     {
         void UpdateAttack();
-
     }
 }
