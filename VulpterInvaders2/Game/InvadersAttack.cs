@@ -13,26 +13,26 @@ namespace Game
 {
     public partial class InvadersAttack : Form
     {
-        private Player player;
+        private PlayerShip shipPlayer;
         public InvadersAttack()
         {
             InitializeComponent();
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InvaderAttack_KeyDown);
-            this.player = new Player(500, 0, playerShip);
+            this.shipPlayer = new PlayerShip(500, 0, playerShip);
         }
 
 
         private void InvaderAttack_KeyDown(object sender, KeyEventArgs e)
         {
-            this.player.PositionX = playerShip.Location.X;
-            this.player.PositionY = playerShip.Location.Y;
+            this.shipPlayer.PositionX = playerShip.Location.X;
+            this.shipPlayer.PositionY = playerShip.Location.Y;
             if (e.KeyCode == Keys.A)
             {
-                playerShip.Location = new Point(player.PositionX-10, player.PositionY);
+                playerShip.Location = new Point(shipPlayer.PositionX-10, shipPlayer.PositionY);
             }
              if (e.KeyCode == Keys.D)
              {
-                 playerShip.Location = new Point(player.PositionX+10, player.PositionY);
+                 playerShip.Location = new Point(shipPlayer.PositionX+10, shipPlayer.PositionY);
              }
         }
     }

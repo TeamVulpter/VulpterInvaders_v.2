@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace Game.Classes.Characters
 {
     public class PlayerShip : Character
     {
-        public PlayerShip(int positionX, int positionY)
+        private PictureBox playerShip;
+        public PlayerShip(int positionX, int positionY, PictureBox playerShip)
             : base(positionX, positionY)
         {
+            this.playerShip = playerShip;
         }
 
         public override void AddHealth(int points)
