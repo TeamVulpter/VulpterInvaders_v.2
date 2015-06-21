@@ -16,7 +16,7 @@
         private IList<Bonus> bonus;
         private Brick bricks;
         private IList<Brick> bricksList = new List<Brick>();
-        private Map matrix=new Map();
+        private Map matrix = new Map();
         private int[,] playField;
 
         public VulpterInvadersGame()
@@ -45,29 +45,20 @@
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < playField.GetLength(0); i++)
+            foreach (var br in bricksList)
             {
-                for (int j = 0; j < playField.GetLength(1); j++)
+                if (br.BrickSingle.Location.X == player.Hero.Left && br.BrickSingle.Location.Y == player.Hero.Top &&
+                    br.BrickSingle.Bounds.Height == player.Hero.Bounds.Height)
                 {
-                    if (playField[i, j] == 1)
-                    {
-                        foreach (var br in bricksList)
-                        {
-                            if (br.BrickSingle.Location.X == j )
-                            {
-                                br.BrickSingle.Visible = true;
-                            }
-                            
-                        }
-
-                    }
+                    br.BrickSingle.Visible = false;
                 }
+
             }
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -80,30 +71,30 @@
         {
             this.player.PositionX = hero.Location.X;
             this.player.PositionY = hero.Location.Y;
-           
+
             if (e.KeyCode == Keys.W)
             {
-                hero.Location = new Point(player.PositionX, player.PositionY-10);
+                hero.Location = new Point(player.PositionX, player.PositionY - 10);
             }
             if (e.KeyCode == Keys.S)
             {
-                hero.Location = new Point(player.PositionX, player.PositionY +10);
+                hero.Location = new Point(player.PositionX, player.PositionY + 10);
             }
             if (e.KeyCode == Keys.A)
             {
-                hero.Location = new Point(player.PositionX-10, player.PositionY);
+                hero.Location = new Point(player.PositionX - 10, player.PositionY);
             }
             if (e.KeyCode == Keys.D)
             {
                 hero.Location = new Point(player.PositionX + 10, player.PositionY);
             }
-            if (e.KeyCode==Keys.X)
+            if (e.KeyCode == Keys.X)
             {
                 InvadersAttack invaderAttack = new InvadersAttack();
                 this.Close();
                 invaderAttack.Show();
             }
-            
+
         }
 
         ////button for start
