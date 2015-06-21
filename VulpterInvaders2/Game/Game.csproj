@@ -134,6 +134,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\Bricks.jpg" />
+    <None Include="Resources\bullet.png" />
     <Content Include="Resources\Hero.png" />
     <None Include="Resources\pictureBox1.InitialImage.png" />
     <None Include="Resources\pictureBox1.ErrorImage.png" />
