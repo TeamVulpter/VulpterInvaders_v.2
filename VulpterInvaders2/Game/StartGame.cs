@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Game
 {
-    static class Program
+    static class StartGame
     {
         [STAThread]
         static void Main()
