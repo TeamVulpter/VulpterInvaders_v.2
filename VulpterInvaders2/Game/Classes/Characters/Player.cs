@@ -8,8 +8,10 @@ namespace Game.Classes.Characters
         public Player(int positionX, int positionY, PictureBox hero)
             : base(positionX, positionY)
         {
-            this.hero = hero;
+            this.Hero = hero;
         }
+
+        public PictureBox Hero { get; set; }
 
         public override void AddHealth(int points)
         {

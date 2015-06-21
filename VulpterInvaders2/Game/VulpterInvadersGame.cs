@@ -54,9 +54,13 @@ namespace Game
                     {
                         foreach (var br in bricksList)
                         {
-                            br.BrickSingle.Visible = true;
+                            if (br.BrickSingle.Location.X == j )
+                            {
+                                br.BrickSingle.Visible = true;
+                            }
+                            
                         }
-                        
+
                     }
                 }
             }

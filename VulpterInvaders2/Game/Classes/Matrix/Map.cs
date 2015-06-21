@@ -15,7 +15,7 @@ namespace Game.Classes.Matrix
 
         public int[,] DrawField()
         {
-            int[,] matrix = new int[40, 40];
+            int[,] matrix = new int[40, 400];
             Random randomWidthGenerator = new Random();
             Random randomValue = new Random();
             Random randomDigit = new Random();
