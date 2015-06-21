@@ -1,42 +1,41 @@
-﻿using System.Collections.Generic;
-using System.Drawing;
-using Game.Classes.Matrix;
-
-namespace Game
+﻿namespace Game
 {
     using System;
     using System.Windows.Forms;
-    using Game.Classes.Characters;
+    using Classes;
+    using Classes.Characters;
     using Classes.Items;
+    using Classes.Matrix;
+    using System.Collections.Generic;
+    using System.Drawing;
 
     public partial class VulpterInvadersGame : Form
     {
-        
-        //private Brick bricks;
         private Player player;
         private Item item;
+        private IList<Bonus> bonus;
         private Brick bricks;
-        private IList<Brick> bricksList= new List<Brick>();
+        private IList<Brick> bricksList = new List<Brick>();
         private Map matrix=new Map();
         private int[,] playField;
 
-        public VulpterInvadersGame()
+        public VulpterInvadersGame(Player player)
         {
             InitializeComponent();
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.player = new Player(500, 0, hero);
-            this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
-            this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
-            this.item = new Item(10, 10);
+            this.player = player;
             try
             {
+                this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+                //drawing matrix
                 this.playField = this.matrix.DrawField();
-                this.player.AddHealth(300);
-                this.player.RemoveHealth(100);
-                this.player.AddLives(2);
-                this.player.RemoveLives(1);
-                this.player.AddScores(300);
-                this.player.RemoveScores(125);
+                //drawing bricks
+                this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
+                this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
+                this.item = new Item(300, 300, ItemType.Brick);
+                //generation on bonuses
+                this.bonus.Add(new Bonus(100, 100, ItemType.BonusLife));
+
+
             }
             catch (NotImplementedException ex)
             {
@@ -76,6 +75,7 @@ namespace Game
 
         }
 
+        //moving hero
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             this.player.PositionX = hero.Location.X;

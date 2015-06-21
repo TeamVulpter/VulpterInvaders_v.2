@@ -65,6 +65,7 @@
     <Compile Include="Classes\Factory\EnemyInvaderFactory.cs" />
     <Compile Include="Classes\GameObject.cs" />
     <Compile Include="Classes\Health.cs" />
+    <Compile Include="Classes\Items\Bonus.cs" />
     <Compile Include="Classes\Items\Item.cs" />
     <Compile Include="Classes\Items\ItemType.cs" />
     <Compile Include="Classes\Life.cs" />
@@ -99,7 +100,7 @@
     </Compile>
     <Compile Include="Interfaces\ICharacter.cs" />
     <Compile Include="Interfaces\IMap.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="StartGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMenuUI.resx">
       <DependentUpon>FormMenuUI.cs</DependentUpon>
