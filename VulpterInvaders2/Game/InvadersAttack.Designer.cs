@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvadersAttack));
             this.playerShip = new System.Windows.Forms.PictureBox();
             this.bulletPanel = new System.Windows.Forms.Panel();
+            this.shipEnemy = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.playerShip)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,11 +54,20 @@
             this.bulletPanel.Size = new System.Drawing.Size(28, 32);
             this.bulletPanel.TabIndex = 1;
             // 
+            // shipEnemy
+            // 
+            this.shipEnemy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("shipEnemy.BackgroundImage")));
+            this.shipEnemy.Location = new System.Drawing.Point(331, 66);
+            this.shipEnemy.Name = "shipEnemy";
+            this.shipEnemy.Size = new System.Drawing.Size(43, 36);
+            this.shipEnemy.TabIndex = 2;
+            // 
             // InvadersAttack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 563);
+            this.Controls.Add(this.shipEnemy);
             this.Controls.Add(this.bulletPanel);
             this.Controls.Add(this.playerShip);
             this.Name = "InvadersAttack";
@@ -72,5 +82,6 @@
 
         private System.Windows.Forms.PictureBox playerShip;
         private System.Windows.Forms.Panel bulletPanel;
+        private System.Windows.Forms.Panel shipEnemy;
     }
 }

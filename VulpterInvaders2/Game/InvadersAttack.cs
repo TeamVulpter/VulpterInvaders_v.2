@@ -21,7 +21,7 @@ namespace Game
             InitializeComponent();
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InvaderAttack_KeyDown);
             this.shipPlayer = new PlayerShip(500, 0, playerShip);
-            this.bullet = new Bullet(500, 40, bulletPanel);
+            this.bullet = new Bullet(shipPlayer.PositionX, 40, bulletPanel);
         }
 
 
@@ -29,7 +29,7 @@ namespace Game
         {
             this.shipPlayer.PositionX = playerShip.Location.X;
             this.shipPlayer.PositionY = playerShip.Location.Y;
-            this.bullet.PositionX = shipPlayer.PositionX;
+            this.bullet.PositionX = bulletPanel.Location.X;
             this.bullet.PositionY = bulletPanel.Location.Y;
             if (e.KeyCode == Keys.A)
             {
