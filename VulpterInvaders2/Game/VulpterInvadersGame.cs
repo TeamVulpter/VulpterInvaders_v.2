@@ -19,10 +19,10 @@
         private Map matrix=new Map();
         private int[,] playField;
 
-        public VulpterInvadersGame(Player player)
+        public VulpterInvadersGame()
         {
             InitializeComponent();
-            this.player = player;
+            this.player = new Player(350, 560, hero);
             try
             {
                 this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -31,9 +31,9 @@
                 //drawing bricks
                 this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
                 this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
-                this.item = new Item(300, 300, ItemType.Brick);
-                //generation on bonuses
-                this.bonus.Add(new Bonus(100, 100, ItemType.BonusLife));
+                //this.item = new Item(300, 300, ItemType.Brick);
+                ////generation on bonuses
+                //this.bonus.Add(new Bonus(100, 100, ItemType.BonusLife));
 
 
             }

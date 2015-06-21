@@ -5,6 +5,6 @@
         BonusHealth = 1,
         BonusScore = 2,
         BonusLife = 3,
-        Brick = 4
+        //Brick = 4
     }
 }
