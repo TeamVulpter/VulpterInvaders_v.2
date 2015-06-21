@@ -100,8 +100,8 @@
             if (e.KeyCode==Keys.X)
             {
                 InvadersAttack invaderAttack = new InvadersAttack();
+                this.Close();
                 invaderAttack.Show();
-                Hide();
             }
             
         }

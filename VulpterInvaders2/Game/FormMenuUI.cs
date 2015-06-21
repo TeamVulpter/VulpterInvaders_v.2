@@ -18,9 +18,11 @@ namespace Game
         {
             //if (this.player != null)
             //{
+                
                 VulpterInvadersGame newGame = new VulpterInvadersGame();
+                this.Hide();
                 newGame.Show();
-                Hide();
+                
             //}
             //else
             //{

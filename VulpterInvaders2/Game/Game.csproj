@@ -84,7 +84,7 @@
     <Compile Include="Interfaces\IAttack.cs" />
     <Compile Include="Classes\Matrix\Map.cs" />
     <Compile Include="Classes\Shooting.cs" />
-    <Compile Include="Engine\GameEngine.cs" />
+    <Compile Include="Engine\GameEngineVulpterInvaders.cs" />
     <Compile Include="Interfaces\IShoot.cs" />
     <Compile Include="InvadersAttack.cs">
       <SubType>Form</SubType>
