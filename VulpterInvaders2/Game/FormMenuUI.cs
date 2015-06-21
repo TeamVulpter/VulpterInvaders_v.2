@@ -43,11 +43,12 @@ namespace Game
             try
             {
                 //create hero
-                this.player = new Player(500, 0, hero);
+                this.player = new Player(350, 560, hero);
                 //add default values
                 this.player.AddHealth(Health.HelthCount);
                 this.player.AddLives(Life.LifeCount);
                 this.player.AddScores(Score.ScoreCount);
+                MessageBox.Show("Hero is created!");
             }
             catch (NotImplementedException ex)
             {
