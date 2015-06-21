@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Game.Classes.Items;
+using Game.Classes;
+using Game.Classes.Characters;
 
 namespace Game
 {
     public partial class FormMenuUI : Form
     {
+        private Player player;
+
         public FormMenuUI()
         {
             InitializeComponent();
@@ -20,9 +16,16 @@ namespace Game
 
         private void Btn_StartNewGame_Click(object sender, EventArgs e)
         {
-            VulpterInvadersGame newGame = new VulpterInvadersGame();
-            newGame.Show();
-            Hide();
+            if (this.player != null)
+            {
+                VulpterInvadersGame newGame = new VulpterInvadersGame(player);
+                newGame.Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Not created hero. First create hero and then try again!");
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -33,6 +36,24 @@ namespace Game
         private void FormMenuUI_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Btn_NewPlayer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //create hero
+                this.player = new Player(500, 0, hero);
+                //add default values
+                this.player.AddHealth(Health.HelthCount);
+                this.player.AddLives(Life.LifeCount);
+                this.player.AddScores(Score.ScoreCount);
+            }
+            catch (NotImplementedException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }
