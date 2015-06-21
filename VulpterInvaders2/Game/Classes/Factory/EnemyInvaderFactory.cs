@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game.Classes.Factory
 {
-    class EnemyInvaderFactory
+    public class EnemyInvaderFactory
     {
     }
 }

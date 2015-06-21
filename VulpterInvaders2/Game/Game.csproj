@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Classes\Attack.cs" />
     <Compile Include="Classes\Enemies\EnemyShip.cs" />
+    <Compile Include="Classes\Factory\EnemyInvaderFactory.cs" />
     <Compile Include="Classes\GameObject.cs" />
     <Compile Include="Classes\Health.cs" />
     <Compile Include="Classes\Items\Item.cs" />
@@ -132,9 +133,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\Factory\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\Bricks.jpg" />
     <None Include="Resources\ShipEnemy.png" />

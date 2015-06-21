@@ -1,7 +1,7 @@
 ﻿namespace Game.Interfaces
 {
-    interface IMap
+    public interface IMap
     {
-        int[,] DrawField(int[,] matrix);
+        int[,] DrawField();
     }
 }

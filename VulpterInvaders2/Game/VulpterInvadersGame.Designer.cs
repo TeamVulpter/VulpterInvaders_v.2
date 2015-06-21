@@ -38,8 +38,10 @@ namespace Game
             this.scores = new System.Windows.Forms.Label();
             this.brick = new System.Windows.Forms.PictureBox();
             this.hero = new System.Windows.Forms.PictureBox();
+            this.brick1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.brick)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hero)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brick1)).BeginInit();
             this.SuspendLayout();
             // 
             // health
@@ -102,12 +104,23 @@ namespace Game
             this.hero.TabStop = false;
             this.hero.Click += new System.EventHandler(this.hero_Click);
             // 
+            // brick1
+            // 
+            this.brick1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick1.ErrorImage")));
+            this.brick1.Image = ((System.Drawing.Image)(resources.GetObject("brick1.Image")));
+            this.brick1.Location = new System.Drawing.Point(41, 50);
+            this.brick1.Name = "brick1";
+            this.brick1.Size = new System.Drawing.Size(20, 20);
+            this.brick1.TabIndex = 9;
+            this.brick1.TabStop = false;
+            // 
             // VulpterInvadersGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(736, 563);
+            this.Controls.Add(this.brick1);
             this.Controls.Add(this.hero);
             this.Controls.Add(this.scores);
             this.Controls.Add(this.lives);
@@ -121,6 +134,7 @@ namespace Game
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.brick)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hero)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brick1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +147,7 @@ namespace Game
         private System.Windows.Forms.Label scores;
         private System.Windows.Forms.PictureBox brick;
         private System.Windows.Forms.PictureBox hero;
+        private PictureBox brick1;
     }
 }
 

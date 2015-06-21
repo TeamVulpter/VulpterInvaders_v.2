@@ -6,14 +6,16 @@ namespace Game.Classes.Matrix
     using Interfaces;
     public class Map : IMap
     {
-        public Map(int[,] matrix)
-        {
-            this.Matrix = new int[40,40];
-        }
-        public int[,] Matrix { get; private set; }
+        //private Brick brick;
+        //public Map(int[,] matrix)
+        //{
+        //    this.Matrix = new int[40,40];
+        //}
+        //public int[,] Matrix { get; private set; }
 
-        public int[,] DrawField(int[,] matrix)
+        public int[,] DrawField()
         {
+            int[,] matrix = new int[40, 40];
             Random randomWidthGenerator = new Random();
             Random randomValue = new Random();
             Random randomDigit = new Random();
@@ -68,34 +70,36 @@ namespace Game.Classes.Matrix
                 }
             }
 
-            for (int row = 0; row < height; row++)
-            {
-                for (int col = 0; col < width; col++)
-                {
-                    if (matrix[row, col] == 1)
-                    {
-                        //Visualization.PrintCharMatrixAtPosition(row, col, '#', ConsoleColor.White);
-                    }
+            //for (int row = 0; row < height; row++)
+            //{
+            //    for (int col = 0; col < width; col++)
+            //    {
+            //        if (matrix[row, col] == 1)
+            //        {
+            //            brick.PositionX = row;
+            //            brick.PositionY = col;
+            //            //Visualization.PrintCharMatrixAtPosition(row, col, '#', ConsoleColor.White);
+            //        }
 
-                    else if (matrix[row, col] >= 3 && matrix[row, col] <= 6)
-                    {
-                        //Visualization.PrintCharMatrixAtPosition(row, col, (char)(matrix[row, col] + 48), ConsoleColor.Blue);
-                    }
-                    else if (matrix[row, col] == 7 && chance > 20)
-                    {
-                        //Visualization.PrintCharMatrixAtPosition(row, col, '\u2665', ConsoleColor.Red);
-                    }
-                    else if (matrix[row, col] == 8)
-                    {
-                        //Visualization.PrintCharMatrixAtPosition(row, col, '\u0065', ConsoleColor.Green);
-                    }
-                    else
-                    {
-                        //Console.Write(" ");
-                    }
-                }
-                //Console.WriteLine();
-            }
+            //        else if (matrix[row, col] >= 3 && matrix[row, col] <= 6)
+            //        {
+            //            //Visualization.PrintCharMatrixAtPosition(row, col, (char)(matrix[row, col] + 48), ConsoleColor.Blue);
+            //        }
+            //        else if (matrix[row, col] == 7 && chance > 20)
+            //        {
+            //            //Visualization.PrintCharMatrixAtPosition(row, col, '\u2665', ConsoleColor.Red);
+            //        }
+            //        else if (matrix[row, col] == 8)
+            //        {
+            //            //Visualization.PrintCharMatrixAtPosition(row, col, '\u0065', ConsoleColor.Green);
+            //        }
+            //        else
+            //        {
+            //            //Console.Write(" ");
+            //        }
+            //    }
+            //    //Console.WriteLine();
+            //}
             return matrix;
         }
     }
