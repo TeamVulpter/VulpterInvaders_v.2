@@ -13,7 +13,6 @@
     {
         private Player player;
         private Item item;
-        private IList<Bonus> bonus;
         private Brick bricks;
         private IList<Brick> bricksList = new List<Brick>();
         private Map matrix = new Map();
@@ -29,7 +28,9 @@
         public VulpterInvadersGame()
         {
             InitializeComponent();
+            //create player
             this.player = new Player(350, 560, hero);
+
             this.obsticle=new ObsticleBrick(67,401,Obsticle);
             this.obsticle2 = new ObsticleBrick(67, 339, Obsticle2);
             this.obsticle3 = new ObsticleBrick(67, 243, Obsticle3);
@@ -48,9 +49,9 @@
                 //drawing bricks
                 this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
                 this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
-                //this.item = new Item(300, 300, ItemType.Brick);
-                ////generation on bonuses
-                //this.bonus.Add(new Bonus(100, 100, ItemType.BonusLife));
+
+                //generation bonus
+                this.item = new Item(300, 300, ItemType.BonusLife);
 
 
             }
