@@ -40,10 +40,18 @@ namespace Game
             if (e.KeyCode == Keys.A)
             {
                 playerShip.Location = new Point(shipPlayer.PositionX - 10, shipPlayer.PositionY);
+                if (playerShip.Location.X < 20)
+                {
+                    playerShip.Location = new Point(shipPlayer.PositionX, shipPlayer.PositionY);
+                }
             }
             if (e.KeyCode == Keys.D)
             {
                 playerShip.Location = new Point(shipPlayer.PositionX + 10, shipPlayer.PositionY);
+                if (playerShip.Location.X > this.Width - 30)
+                {
+                    playerShip.Location = new Point(shipPlayer.PositionX, shipPlayer.PositionY);
+                }
             }
             if (e.KeyCode == Keys.Space)
             {
@@ -64,6 +72,7 @@ namespace Game
                 shipEnemy.Location = new Point(enemy.PositionX, 10);
             }
 
+            //bulletPanel.Location = new Point(shipPlayer.PositionX, bullet.PositionY-1);
         }
     }
 }
