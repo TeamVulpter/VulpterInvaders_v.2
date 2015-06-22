@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace Game.Classes.Items
 {
     using Classes;
