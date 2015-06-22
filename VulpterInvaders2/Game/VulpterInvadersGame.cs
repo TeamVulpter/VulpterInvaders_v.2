@@ -116,20 +116,7 @@
             }
 
         }
-
-        ////button for start
-        //private void start_Click(object sender, EventArgs e)
-        //{
-        //    //MessageBox.Show("");
-        //}
-
-        ////button for create hero
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    //this.player = new Player(0, 0, "Arthur");
-        //    MessageBox.Show("Create");
-        //}
-
+        
         private void hero_Click(object sender, EventArgs e)
         {
 
@@ -211,11 +198,6 @@
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void brick11_Click(object sender, EventArgs e)
         {
 
         }
