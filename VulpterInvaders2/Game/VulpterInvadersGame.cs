@@ -5,6 +5,7 @@
     using Classes;
     using Classes.Characters;
     using Classes.Items;
+    using Classes.Factory;
     using Classes.Matrix;
     using System.Collections.Generic;
     using System.Drawing;
@@ -23,6 +24,7 @@
         private ObsticleBrick obsticle4;
         private ObsticleBrick obsticle5;
         private IList<ObsticleBrick> obsticles=new List<ObsticleBrick>();
+        private IList<Item> items = new List<Item>(); 
  
 
         public VulpterInvadersGame()
@@ -50,9 +52,9 @@
                 this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
                 this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
 
-                //generation bonus
-                this.item = new Item(300, 300, ItemType.BonusLife);
-
+                //generation items with bonus
+                ItemsFactory itemsFactory = new ItemsFactory();
+                items = itemsFactory.CreateItems(10);
 
             }
             catch (NotImplementedException ex)
