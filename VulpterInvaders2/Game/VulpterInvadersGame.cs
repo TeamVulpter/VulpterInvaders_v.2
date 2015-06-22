@@ -114,5 +114,10 @@
         {
 
         }
+
+        private void ObsticleTimer_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

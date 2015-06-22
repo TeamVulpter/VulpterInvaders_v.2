@@ -32,6 +32,7 @@ namespace Game
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VulpterInvadersGame));
             this.health = new System.Windows.Forms.Label();
             this.lives = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@ namespace Game
             this.brick17 = new System.Windows.Forms.PictureBox();
             this.brick18 = new System.Windows.Forms.PictureBox();
             this.brick19 = new System.Windows.Forms.PictureBox();
+            this.ObsticleTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.brick)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brick1)).BeginInit();
@@ -330,6 +332,10 @@ namespace Game
             this.brick19.TabIndex = 27;
             this.brick19.TabStop = false;
             // 
+            // ObsticleTimer
+            // 
+            this.ObsticleTimer.Tick += new System.EventHandler(this.ObsticleTimer_Tick);
+            // 
             // VulpterInvadersGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,7 +366,7 @@ namespace Game
             this.Controls.Add(this.lives);
             this.Controls.Add(this.health);
             this.Controls.Add(this.brick);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "VulpterInvadersGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -418,6 +424,7 @@ namespace Game
         private PictureBox brick17;
         private PictureBox brick18;
         private PictureBox brick19;
+        private Timer ObsticleTimer;
     }
 }
 
