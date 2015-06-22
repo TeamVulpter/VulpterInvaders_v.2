@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Game.Classes;
 using Game.Classes.Characters;
+using Game.Classes.Enemies;
 
 namespace Game
 {
@@ -16,12 +17,14 @@ namespace Game
     {
         private PlayerShip shipPlayer;
         private Bullet bullet;
+        private EnemyShip enemy;
         public InvadersAttack()
         {
             InitializeComponent();
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InvaderAttack_KeyDown);
             this.shipPlayer = new PlayerShip(500, 0, playerShip);
             this.bullet = new Bullet(shipPlayer.PositionX, 40, bulletPanel);
+            this.enemy = new EnemyShip(shipEnemy.Location.X, shipEnemy.Location.Y, shipEnemy);
         }
 
 
@@ -31,6 +34,10 @@ namespace Game
             this.shipPlayer.PositionY = playerShip.Location.Y;
             this.bullet.PositionX = bulletPanel.Location.X;
             this.bullet.PositionY = bulletPanel.Location.Y;
+            //this.enemy.PositionX = shipEnemy.Location.X;
+            //this.enemy.PositionY = shipEnemy.Location.Y;
+
+            //shipEnemy.Location = new Point(enemy.PositionX, enemy.PositionY + 10);
             if (e.KeyCode == Keys.A)
             {
                 playerShip.Location = new Point(shipPlayer.PositionX-10, shipPlayer.PositionY);
@@ -45,5 +52,15 @@ namespace Game
                 bullet.Start();
             }
         }
+
+        private void TimerMovementsTick(object sender, System.EventArgs e)
+        {
+            this.enemy.PositionX = shipEnemy.Location.X;
+            this.enemy.PositionY = shipEnemy.Location.Y;
+
+            shipEnemy.Location = new Point(enemy.PositionX, enemy.PositionY + 1);
+        }
+
+     
     }
 }

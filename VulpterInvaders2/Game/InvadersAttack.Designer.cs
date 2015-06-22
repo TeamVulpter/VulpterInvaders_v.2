@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvadersAttack));
             this.playerShip = new System.Windows.Forms.PictureBox();
             this.bulletPanel = new System.Windows.Forms.Panel();
             this.shipEnemy = new System.Windows.Forms.Panel();
+            this.timerMovement = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.playerShip)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +64,12 @@
             this.shipEnemy.Size = new System.Drawing.Size(43, 36);
             this.shipEnemy.TabIndex = 2;
             // 
+            // timerMovement
+            // 
+            this.timerMovement.Enabled = true;
+            this.timerMovement.Interval = 40;
+            this.timerMovement.Tick += new System.EventHandler(this.TimerMovementsTick);
+            // 
             // InvadersAttack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -78,10 +86,13 @@
 
         }
 
+       
+
         #endregion
 
         private System.Windows.Forms.PictureBox playerShip;
         private System.Windows.Forms.Panel bulletPanel;
         private System.Windows.Forms.Panel shipEnemy;
+        private System.Windows.Forms.Timer timerMovement;
     }
 }
