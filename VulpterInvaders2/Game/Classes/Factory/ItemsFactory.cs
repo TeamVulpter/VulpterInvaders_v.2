@@ -5,21 +5,17 @@
     using Items;
     public class ItemsFactory
     {
-        //generation bonus
-        //this.item = new Item(300, 300, ItemType.BonusLife);
         Random rnd = new Random();
 
         public List<Item> CreateItems(int numbersOfItems)
         {
             List<Item> items = new List<Item>();
-            
-            for (int i = 0; i < numbersOfItems; i++)
+            for (int i = 1; i <= numbersOfItems; i++)
             {
-                int randomItem = rnd.Next(0, 4);
-
-                items.Add(new Item(GenerateRandomX(500), GenerateRandomY(500), ItemType.BonusHealth));
+                int randomItem = rnd.Next(1, 4);
+                ItemType type = (ItemType) Enum.Parse(typeof (ItemType), randomItem.ToString());
+                items.Add(new Item(GenerateRandomX(500), GenerateRandomY(500), type));
             }
-
             return items;
         }
 
