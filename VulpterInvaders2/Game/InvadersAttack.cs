@@ -18,6 +18,8 @@ namespace Game
         private PlayerShip shipPlayer;
         private Bullet bullet;
         private EnemyShip enemy;
+        
+        
         public InvadersAttack()
         {
             InitializeComponent();
@@ -34,22 +36,20 @@ namespace Game
             this.shipPlayer.PositionY = playerShip.Location.Y;
             this.bullet.PositionX = bulletPanel.Location.X;
             this.bullet.PositionY = bulletPanel.Location.Y;
-            //this.enemy.PositionX = shipEnemy.Location.X;
-            //this.enemy.PositionY = shipEnemy.Location.Y;
 
-            //shipEnemy.Location = new Point(enemy.PositionX, enemy.PositionY + 10);
             if (e.KeyCode == Keys.A)
             {
-                playerShip.Location = new Point(shipPlayer.PositionX-10, shipPlayer.PositionY);
+                playerShip.Location = new Point(shipPlayer.PositionX - 10, shipPlayer.PositionY);
             }
-             if (e.KeyCode == Keys.D)
-             {
-                 playerShip.Location = new Point(shipPlayer.PositionX+10, shipPlayer.PositionY);
-             }
-            if (e.KeyCode==Keys.Space)
+            if (e.KeyCode == Keys.D)
             {
-                bulletPanel.Location = new Point(bullet.PositionX, bullet.PositionY-10);
+                playerShip.Location = new Point(shipPlayer.PositionX + 10, shipPlayer.PositionY);
+            }
+            if (e.KeyCode == Keys.Space)
+            {
+                bulletPanel.Location = new Point(shipPlayer.PositionX, bullet.PositionY - 10);
                 bullet.Start();
+                bullet.IsActive = true;
             }
         }
 
@@ -59,8 +59,11 @@ namespace Game
             this.enemy.PositionY = shipEnemy.Location.Y;
 
             shipEnemy.Location = new Point(enemy.PositionX, enemy.PositionY + 1);
-        }
+            if (enemy.PositionY>=this.Height-30)
+            {
+                shipEnemy.Location = new Point(enemy.PositionX, 10);
+            }
 
-     
+        }
     }
 }
