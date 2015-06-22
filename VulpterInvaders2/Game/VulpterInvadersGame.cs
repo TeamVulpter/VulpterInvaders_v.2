@@ -18,11 +18,13 @@
         private IList<Brick> bricksList = new List<Brick>();
         private Map matrix = new Map();
         private int[,] playField;
+        private ObsticleBrick obsticle;
 
         public VulpterInvadersGame()
         {
             InitializeComponent();
             this.player = new Player(350, 560, hero);
+            this.obsticle=new ObsticleBrick(300,50,Obsticle);
             try
             {
                 this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -116,6 +118,23 @@
         }
 
         private void ObsticleTimer_Tick(object sender, EventArgs e)
+        {
+            this.obsticle.PositionX = Obsticle.Location.X;
+            this.obsticle.PositionY = Obsticle.Location.Y;
+
+            Obsticle.Location=new Point(obsticle.PositionX +1, obsticle.PositionY);
+
+            if (obsticle.PositionY>=brick1.Location.Y)
+            {
+                if (Obsticle.Right >= brick15.Left)
+                {
+                    Obsticle.Location=new Point(brick1.Location.X-1,brick1.Location.Y);
+                }
+            }
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

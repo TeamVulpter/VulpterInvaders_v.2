@@ -1,1 +1,11 @@
 C:\Users\AquaT_1-PC\Desktop\VulpterInvaders_v.2\trunk\VulpterInvaders2\Game\bin\Debug\Game.exe.config
+C:\Users\AquaT_1-PC\Desktop\VulpterInvaders_v.2\trunk\VulpterInvaders2\Game\bin\Debug\Game.exe
+C:\Users\AquaT_1-PC\Desktop\VulpterInvaders_v.2\trunk\VulpterInvaders2\Game\bin\Debug\Game.pdb
+C:\Users\AquaT_1-PC\Desktop\VulpterInvaders_v.2\trunk\VulpterInvaders2\Game\obj\Debug\Game.csprojResolveAssemblyReference.cache
+C:\Users\AquaT_1-PC\Desktop\VulpterInvaders_v.2\trunk\VulpterInvaders2\Game\obj\Debug\Game.FormMenuUI.resources
+C:\Users\AquaT_1-PC\Desktop\VulpterInvaders_v.2\trunk\VulpterInvaders2\Game\obj\Debug\Game.InvadersAttack.resources
+C:\Users\AquaT_1-PC\Desktop\VulpterInvaders_v.2\trunk\VulpterInvaders2\Game\obj\Debug\Game.VulpterInvadersGame.resources
+C:\Users\AquaT_1-PC\Desktop\VulpterInvaders_v.2\trunk\VulpterInvaders2\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\AquaT_1-PC\Desktop\VulpterInvaders_v.2\trunk\VulpterInvaders2\Game\obj\Debug\Game.csproj.GenerateResource.Cache
+C:\Users\AquaT_1-PC\Desktop\VulpterInvaders_v.2\trunk\VulpterInvaders2\Game\obj\Debug\Game.exe
+C:\Users\AquaT_1-PC\Desktop\VulpterInvaders_v.2\trunk\VulpterInvaders2\Game\obj\Debug\Game.pdb
