@@ -2,7 +2,8 @@
 namespace Game.Classes.Items
 {
     using Classes;
-    class Item : GameObject
+
+    public class Item : GameObject
     {
         private ItemType itemType;
         private int bonusHealth = 0;

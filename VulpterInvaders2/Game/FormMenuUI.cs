@@ -7,8 +7,6 @@ namespace Game
 {
     public partial class FormMenuUI : Form
     {
-        //private Player player;
-
         public FormMenuUI()
         {
             InitializeComponent();
