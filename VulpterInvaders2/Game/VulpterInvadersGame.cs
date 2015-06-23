@@ -94,11 +94,25 @@
             
             if (e.KeyCode == Keys.W)
             {
-                hero.Location = new Point(player.PositionX, player.PositionY - 10);
+                if (player.PositionY >= 60)
+                {
+                    hero.Location = new Point(player.PositionX, player.PositionY - 10);
+                }
+                else
+                {
+                    hero.Location = new Point(player.PositionX, player.PositionY + 10);
+                }
             }
             if (e.KeyCode == Keys.S)
             {
-                hero.Location = new Point(player.PositionX, player.PositionY + 10);
+                if (this.player.PositionY <= 560)
+                {
+                    hero.Location = new Point(player.PositionX, player.PositionY + 10);
+                }
+                else
+                {
+                    hero.Location = new Point(player.PositionX, player.PositionY - 10);
+                }
             }
             if (e.KeyCode == Keys.A)
             {
