@@ -91,7 +91,7 @@
         {
             this.player.PositionX = hero.Location.X;
             this.player.PositionY = hero.Location.Y;
-
+            
             if (e.KeyCode == Keys.W)
             {
                 hero.Location = new Point(player.PositionX, player.PositionY - 10);
@@ -102,7 +102,15 @@
             }
             if (e.KeyCode == Keys.A)
             {
-                hero.Location = new Point(player.PositionX - 10, player.PositionY);
+                if (this.player.PositionX >= 80)
+                {
+                    hero.Location = new Point(player.PositionX - 10, player.PositionY);
+                }
+                else
+                {
+                    hero.Location = new Point(player.PositionX + 10, player.PositionY);
+                }
+                
             }
             if (e.KeyCode == Keys.D)
             {
@@ -187,11 +195,8 @@
                 }
             }
 
-         
-
             if (Obsticle.Right == hero.Left)
             {
-                
                 Obsticle.Location = new Point(brick5.Location.X - 1, brick5.Location.Y);
             }
 
