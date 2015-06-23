@@ -188,9 +188,14 @@
                 }
             }
 
-            if ((Obsticle.Location.X + Obsticle.Width >= this.player.Hero.Location.X && Obsticle.Location.X <= this.player.Hero.Left) && (Obsticle.Location.Y >= this.player.Hero.Top && Obsticle.Location.Y <= this.player.Hero.Top + this.player.Hero.Height))
+            if ((   Obsticle.Location.X + Obsticle.Width >= this.player.Hero.Location.X && 
+                    Obsticle.Location.X <= this.player.Hero.Left) && 
+                    (Obsticle.Location.Y >= this.player.Hero.Top && 
+                    Obsticle.Location.Y <= this.player.Hero.Top + this.player.Hero.Height))
             {
                 Obsticle.Location = new Point(brick5.Location.X - 1, brick5.Location.Y);
+                Life.LifeCount--;
+                life_value.Text = Life.LifeCount.ToString();
             }
 
         }

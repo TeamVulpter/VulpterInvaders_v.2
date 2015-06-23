@@ -8,3 +8,4 @@ C:\Users\Ivaylo Ivanov\Documents\GitHub\VulpterInvaders_v.2\VulpterInvaders2\Gam
 C:\Users\Ivaylo Ivanov\Documents\GitHub\VulpterInvaders_v.2\VulpterInvaders2\Game\obj\Debug\Game.csproj.GenerateResource.Cache
 C:\Users\Ivaylo Ivanov\Documents\GitHub\VulpterInvaders_v.2\VulpterInvaders2\Game\obj\Debug\Game.exe
 C:\Users\Ivaylo Ivanov\Documents\GitHub\VulpterInvaders_v.2\VulpterInvaders2\Game\obj\Debug\Game.pdb
+C:\Users\Ivaylo Ivanov\Documents\GitHub\VulpterInvaders_v.2\VulpterInvaders2\Game\obj\Debug\Game.csprojResolveAssemblyReference.cache
