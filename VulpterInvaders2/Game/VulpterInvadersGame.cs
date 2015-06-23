@@ -155,6 +155,28 @@
                     Obsticle.Location=new Point(brick5.Location.X-1,brick5.Location.Y);
                 }
             }
+
+            bool obsticleOne = (
+                                    Obsticle.Location.X + Obsticle.Width >= this.player.Hero.Location.X &&
+                                    Obsticle.Location.X <= this.player.Hero.Left
+                               ) &&
+                               (
+                                    Obsticle.Location.Y >= this.player.Hero.Top &&
+                                    Obsticle.Location.Y <= this.player.Hero.Top + this.player.Hero.Height
+                               );
+
+            if (obsticleOne)
+            {
+                Obsticle.Location = new Point(brick5.Location.X - 1, brick5.Location.Y);
+                Life.LifeCount--;
+                life_value.Text = Life.LifeCount.ToString();
+                if (Life.LifeCount == 0)
+                {
+                    MessageBox.Show("Game over");
+                    Application.Exit();
+                }
+            }
+
             //obsticle2 movement
             if (obsticle2.PositionY >= brick4.Location.Y - 1)
             {
@@ -187,22 +209,6 @@
                     Obsticle5.Location = new Point(brick1.Location.X - 1, brick1.Location.Y);
                 }
             }
-
-            if ((   Obsticle.Location.X + Obsticle.Width >= this.player.Hero.Location.X && 
-                    Obsticle.Location.X <= this.player.Hero.Left) && 
-                    (Obsticle.Location.Y >= this.player.Hero.Top && 
-                    Obsticle.Location.Y <= this.player.Hero.Top + this.player.Hero.Height))
-            {
-                Obsticle.Location = new Point(brick5.Location.X - 1, brick5.Location.Y);
-                Life.LifeCount--;
-                life_value.Text = Life.LifeCount.ToString();
-                if (Life.LifeCount == 0)
-                {
-                    MessageBox.Show("Game over");
-                    Application.Exit();
-                }
-            }
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
