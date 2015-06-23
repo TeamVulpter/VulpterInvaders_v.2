@@ -196,6 +196,11 @@
                 Obsticle.Location = new Point(brick5.Location.X - 1, brick5.Location.Y);
                 Life.LifeCount--;
                 life_value.Text = Life.LifeCount.ToString();
+                if (Life.LifeCount == 0)
+                {
+                    MessageBox.Show("Game over");
+                    Application.Exit();
+                }
             }
 
         }
