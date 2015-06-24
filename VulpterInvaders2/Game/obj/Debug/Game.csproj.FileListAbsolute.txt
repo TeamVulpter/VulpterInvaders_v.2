@@ -20,3 +20,14 @@ D:\VulpterGame-Last\trunk\VulpterInvaders2\Game\obj\Debug\Game.InvadersAttack.re
 D:\VulpterGame-Last\trunk\VulpterInvaders2\Game\obj\Debug\Game.VulpterInvadersGame.resources
 D:\VulpterGame-Last\trunk\VulpterInvaders2\Game\obj\Debug\Game.Properties.Resources.resources
 D:\VulpterGame-Last\trunk\VulpterInvaders2\Game\obj\Debug\Game.csproj.GenerateResource.Cache
+D:\Vulpter-New\trunk\VulpterInvaders2\Game\bin\Debug\Game.exe.config
+D:\Vulpter-New\trunk\VulpterInvaders2\Game\obj\Debug\Game.exe
+D:\Vulpter-New\trunk\VulpterInvaders2\Game\obj\Debug\Game.pdb
+D:\Vulpter-New\trunk\VulpterInvaders2\Game\bin\Debug\Game.exe
+D:\Vulpter-New\trunk\VulpterInvaders2\Game\bin\Debug\Game.pdb
+D:\Vulpter-New\trunk\VulpterInvaders2\Game\obj\Debug\Game.csprojResolveAssemblyReference.cache
+D:\Vulpter-New\trunk\VulpterInvaders2\Game\obj\Debug\Game.FormMenuUI.resources
+D:\Vulpter-New\trunk\VulpterInvaders2\Game\obj\Debug\Game.InvadersAttack.resources
+D:\Vulpter-New\trunk\VulpterInvaders2\Game\obj\Debug\Game.VulpterInvadersGame.resources
+D:\Vulpter-New\trunk\VulpterInvaders2\Game\obj\Debug\Game.Properties.Resources.resources
+D:\Vulpter-New\trunk\VulpterInvaders2\Game\obj\Debug\Game.csproj.GenerateResource.Cache

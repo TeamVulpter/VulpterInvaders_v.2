@@ -344,9 +344,9 @@ namespace Game
             // 
             // hero
             // 
-            this.hero.ErrorImage = global::Game.Properties.Resources.HeroSingle;
-            this.hero.Image = global::Game.Properties.Resources.HeroSingle;
-            this.hero.InitialImage = global::Game.Properties.Resources.HeroSingle;
+            this.hero.ErrorImage = ((System.Drawing.Image)(resources.GetObject("hero.ErrorImage")));
+            this.hero.Image = ((System.Drawing.Image)(resources.GetObject("hero.Image")));
+            this.hero.InitialImage = ((System.Drawing.Image)(resources.GetObject("hero.InitialImage")));
             this.hero.Location = new System.Drawing.Point(266, 439);
             this.hero.Name = "hero";
             this.hero.Size = new System.Drawing.Size(36, 38);
@@ -461,7 +461,7 @@ namespace Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(736, 563);
             this.Controls.Add(this.door);
@@ -497,7 +497,7 @@ namespace Game
             this.Controls.Add(this.lives);
             this.Controls.Add(this.health);
             this.Controls.Add(this.brick);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "VulpterInvadersGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
