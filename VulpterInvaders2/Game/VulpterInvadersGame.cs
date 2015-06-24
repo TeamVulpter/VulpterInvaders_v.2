@@ -25,8 +25,8 @@
         private ObsticleBrick obsticle5;
         private IList<ObsticleBrick> obsticles=new List<ObsticleBrick>();
         private IList<Item> items = new List<Item>(); 
+        private List<PictureBox> itemsPictureBox = new List<PictureBox>(); 
  
-
         public VulpterInvadersGame()
         {
             InitializeComponent();
@@ -42,6 +42,11 @@
             obsticles.Add(obsticle3);
             obsticles.Add(obsticle4);
             obsticles.Add(obsticle5);
+
+            itemsPictureBox.Add(item1);
+            itemsPictureBox.Add(item2);
+            itemsPictureBox.Add(item3);
+
             try
             {
                 this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -53,7 +58,7 @@
 
                 //generation items with bonus
                 ItemsFactory itemsFactory = new ItemsFactory();
-                items = itemsFactory.CreateItems(10, item1);
+                items = itemsFactory.CreateItems(3, itemsPictureBox);
 
             }
             catch (NotImplementedException ex)

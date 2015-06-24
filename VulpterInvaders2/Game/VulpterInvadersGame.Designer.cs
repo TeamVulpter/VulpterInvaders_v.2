@@ -69,6 +69,8 @@ namespace Game
             this.score_value = new System.Windows.Forms.Label();
             this.door = new System.Windows.Forms.PictureBox();
             this.item1 = new System.Windows.Forms.PictureBox();
+            this.item2 = new System.Windows.Forms.PictureBox();
+            this.item3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Obsticle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brick19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brick18)).BeginInit();
@@ -97,6 +99,8 @@ namespace Game
             ((System.ComponentModel.ISupportInitialize)(this.Obsticle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item3)).BeginInit();
             this.SuspendLayout();
             // 
             // health
@@ -484,11 +488,31 @@ namespace Game
             // 
             this.item1.BackColor = System.Drawing.Color.Transparent;
             this.item1.Image = ((System.Drawing.Image)(resources.GetObject("item1.Image")));
-            this.item1.Location = new System.Drawing.Point(249, 251);
+            this.item1.Location = new System.Drawing.Point(600, 236);
             this.item1.Name = "item1";
             this.item1.Size = new System.Drawing.Size(30, 22);
             this.item1.TabIndex = 37;
             this.item1.TabStop = false;
+            // 
+            // item2
+            // 
+            this.item2.BackColor = System.Drawing.Color.Transparent;
+            this.item2.Image = ((System.Drawing.Image)(resources.GetObject("item2.Image")));
+            this.item2.Location = new System.Drawing.Point(513, 236);
+            this.item2.Name = "item2";
+            this.item2.Size = new System.Drawing.Size(30, 22);
+            this.item2.TabIndex = 38;
+            this.item2.TabStop = false;
+            // 
+            // item3
+            // 
+            this.item3.BackColor = System.Drawing.Color.Transparent;
+            this.item3.Image = ((System.Drawing.Image)(resources.GetObject("item3.Image")));
+            this.item3.Location = new System.Drawing.Point(429, 236);
+            this.item3.Name = "item3";
+            this.item3.Size = new System.Drawing.Size(30, 22);
+            this.item3.TabIndex = 39;
+            this.item3.TabStop = false;
             // 
             // VulpterInvadersGame
             // 
@@ -497,6 +521,8 @@ namespace Game
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(981, 693);
+            this.Controls.Add(this.item3);
+            this.Controls.Add(this.item2);
             this.Controls.Add(this.item1);
             this.Controls.Add(this.door);
             this.Controls.Add(this.score_value);
@@ -565,6 +591,8 @@ namespace Game
             ((System.ComponentModel.ISupportInitialize)(this.Obsticle2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.door)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,6 +635,8 @@ namespace Game
         private Label score_value;
         private PictureBox door;
         private PictureBox item1;
+        private PictureBox item2;
+        private PictureBox item3;
     }
 }
 

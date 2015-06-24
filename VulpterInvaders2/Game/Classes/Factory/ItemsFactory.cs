@@ -8,14 +8,14 @@
     {
         Random rnd = new Random();
 
-        public List<Item> CreateItems(int numbersOfItems, PictureBox pic)
+        public List<Item> CreateItems(int numbersOfItems, List<PictureBox> pic)
         {
             List<Item> items = new List<Item>();
-            for (int i = 1; i <= numbersOfItems; i++)
+            for (int i = 0; i < numbersOfItems; i++)
             {
                 int randomItem = rnd.Next(1, 4);
                 ItemType type = (ItemType) Enum.Parse(typeof (ItemType), randomItem.ToString());
-                items.Add(new Item(GenerateRandomX(500), GenerateRandomY(500), type, pic));
+                items.Add(new Item(GenerateRandomX(500), GenerateRandomY(500), type, pic[i]));
             }
             return items;
         }
