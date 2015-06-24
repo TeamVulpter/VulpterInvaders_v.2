@@ -25,7 +25,7 @@ namespace Game
             InitializeComponent();
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InvaderAttack_KeyDown);
             this.shipPlayer = new PlayerShip(500, 0, playerShip);
-            this.bullet = new Bullet(shipPlayer.PositionX, 40, bulletPanel);
+            this.bullet = new Bullet(shipPlayer.PositionX, shipPlayer.PositionX, bulletPanel);
             this.enemy = new EnemyShip(shipEnemy.Location.X, shipEnemy.Location.Y, shipEnemy);
         }
 
@@ -55,6 +55,7 @@ namespace Game
             }
             if (e.KeyCode == Keys.Space)
             {
+                this.bullet = new Bullet(shipPlayer.PositionX, bullet.PositionY, bulletPanel);
                 bulletPanel.Location = new Point(shipPlayer.PositionX, bullet.PositionY - 10);
                 bullet.Start();
                 bullet.IsActive = true;
@@ -63,6 +64,7 @@ namespace Game
 
         private void TimerMovementsTick(object sender, System.EventArgs e)
         {
+
             this.enemy.PositionX = shipEnemy.Location.X;
             this.enemy.PositionY = shipEnemy.Location.Y;
 

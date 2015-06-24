@@ -32,7 +32,6 @@
             InitializeComponent();
             //create player
             this.player = new Player(350, 560, hero);
-
             this.obsticle=new ObsticleBrick(67,401,Obsticle);
             this.obsticle2 = new ObsticleBrick(67, 339, Obsticle2);
             this.obsticle3 = new ObsticleBrick(67, 243, Obsticle3);
@@ -65,15 +64,6 @@
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach (var br in bricksList)
-            {
-                if (br.BrickSingle.Location.X == player.Hero.Left && br.BrickSingle.Location.Y == player.Hero.Top &&
-                    br.BrickSingle.Bounds.Height == player.Hero.Bounds.Height)
-                {
-                    br.BrickSingle.Visible = false;
-                }
-
-            }
         }
 
         private void label1_Click(object sender, EventArgs e)

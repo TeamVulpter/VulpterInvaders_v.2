@@ -9,8 +9,8 @@ namespace Game.Classes
         public Bullet(int positionX, int positionY, Panel bulletPanel)
             :base(positionX, positionY)
         {
-            this.bulletPanel = bulletPanel;
-            bulletPanel.Visible = false;
+            this.BulletPanel = bulletPanel;
+            BulletPanel.Visible = false;
             this.IsActive = false;
         }
 
@@ -21,16 +21,17 @@ namespace Game.Classes
                 return;
             }
             IsActive = true;
-            bulletPanel.Visible = true;
+            BulletPanel.Visible = true;
 
         }
 
         public void Stop()
         {
             IsActive = false;
-            bulletPanel.Visible = false;
+            BulletPanel.Visible = false;
         }
 
         public bool IsActive { get; set; }
+        public Panel BulletPanel { get; set; }
     }
 }
