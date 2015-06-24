@@ -8,7 +8,9 @@ namespace Game.Classes.Characters
         public PlayerShip(int positionX, int positionY, PictureBox playerShip)
             : base(positionX, positionY)
         {
-            this.playerShip = playerShip;
+            this.Ship = playerShip;
         }
+
+        public PictureBox Ship { get; set; }
     }
 }

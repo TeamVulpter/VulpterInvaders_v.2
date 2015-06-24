@@ -30,31 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvadersAttack));
-            this.playerShip = new System.Windows.Forms.PictureBox();
-            this.bulletPanel = new System.Windows.Forms.Panel();
-            this.shipEnemy = new System.Windows.Forms.Panel();
             this.timerMovement = new System.Windows.Forms.Timer(this.components);
+            this.shipEnemy = new System.Windows.Forms.Panel();
+            this.bulletPanel = new System.Windows.Forms.Panel();
+            this.playerShip = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.playerShip)).BeginInit();
             this.SuspendLayout();
             // 
-            // playerShip
+            // timerMovement
             // 
-            this.playerShip.ErrorImage = ((System.Drawing.Image)(resources.GetObject("playerShip.ErrorImage")));
-            this.playerShip.Image = global::Game.Properties.Resources.pictureBox1_ErrorImage;
-            this.playerShip.InitialImage = ((System.Drawing.Image)(resources.GetObject("playerShip.InitialImage")));
-            this.playerShip.Location = new System.Drawing.Point(386, 516);
-            this.playerShip.Name = "playerShip";
-            this.playerShip.Size = new System.Drawing.Size(19, 35);
-            this.playerShip.TabIndex = 0;
-            this.playerShip.TabStop = false;
-            // 
-            // bulletPanel
-            // 
-            this.bulletPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bulletPanel.BackgroundImage")));
-            this.bulletPanel.Location = new System.Drawing.Point(377, 463);
-            this.bulletPanel.Name = "bulletPanel";
-            this.bulletPanel.Size = new System.Drawing.Size(28, 32);
-            this.bulletPanel.TabIndex = 1;
+            this.timerMovement.Enabled = true;
+            this.timerMovement.Interval = 40;
+            this.timerMovement.Tick += new System.EventHandler(this.TimerMovementsTick);
             // 
             // shipEnemy
             // 
@@ -64,11 +51,24 @@
             this.shipEnemy.Size = new System.Drawing.Size(43, 36);
             this.shipEnemy.TabIndex = 2;
             // 
-            // timerMovement
+            // bulletPanel
             // 
-            this.timerMovement.Enabled = true;
-            this.timerMovement.Interval = 40;
-            this.timerMovement.Tick += new System.EventHandler(this.TimerMovementsTick);
+            this.bulletPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bulletPanel.BackgroundImage")));
+            this.bulletPanel.Location = new System.Drawing.Point(457, 439);
+            this.bulletPanel.Name = "bulletPanel";
+            this.bulletPanel.Size = new System.Drawing.Size(28, 32);
+            this.bulletPanel.TabIndex = 1;
+            // 
+            // playerShip
+            // 
+            this.playerShip.ErrorImage = ((System.Drawing.Image)(resources.GetObject("playerShip.ErrorImage")));
+            this.playerShip.Image = global::Game.Properties.Resources.heroShip;
+            this.playerShip.InitialImage = global::Game.Properties.Resources.heroShip;
+            this.playerShip.Location = new System.Drawing.Point(438, 477);
+            this.playerShip.Name = "playerShip";
+            this.playerShip.Size = new System.Drawing.Size(69, 84);
+            this.playerShip.TabIndex = 0;
+            this.playerShip.TabStop = false;
             // 
             // InvadersAttack
             // 

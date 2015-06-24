@@ -138,6 +138,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\Bricks.jpg" />
+    <None Include="Resources\playerShip.png" />
     <None Include="Resources\ShipEnemy.png" />
     <None Include="Resources\bullet.png" />
     <None Include="Resources\enemyInvader.png" />
@@ -145,6 +146,7 @@
     <None Include="Resources\pictureBox1.InitialImage.png" />
     <None Include="Resources\pictureBox1.ErrorImage.png" />
     <None Include="Resources\HeroSingle.bmp" />
+    <None Include="Resources\heroShip.png" />
     <Content Include="Resources\HeroSingle.png" />
   </ItemGroup>
   <ItemGroup>
