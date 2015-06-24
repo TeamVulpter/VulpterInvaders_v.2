@@ -1,23 +1,34 @@
-﻿using System;
-namespace Game.Classes.Items
+﻿namespace Game.Classes.Items
 {
+    using System;
+    using System.Windows.Forms;
     using Classes;
 
     public class Item : GameObject
     {
         private ItemType itemType;
+        private PictureBox picture;
         private int bonusHealth = 0;
         private int bonusScore = 0;
         private int bonusLife = 0;
 
-        public Item(int positionX, int positionY, ItemType type) : base(positionX, positionY)
+        public Item(int positionX, int positionY, ItemType type, PictureBox picture) : base(positionX, positionY)
         {
             this.ItemType = type;
+            this.Picture = picture;
             this.GenerateBonus();
         }
 
-        protected ItemType ItemType { get; set; }
-
+        public PictureBox Picture
+        {
+            get { return this.picture; }
+            set { this.picture = value;}
+        }
+        protected ItemType ItemType
+        {
+            get { return this.itemType; }
+            set { this.itemType = value; }
+        }
         public int BonusHealth
         {
             get { return bonusHealth; }
