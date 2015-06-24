@@ -1,22 +1,21 @@
-﻿using System.Windows.Forms;
-
-namespace Game.Classes.Factory
+﻿namespace Game.Classes.Factory
 {
     using System;
     using System.Collections.Generic;
+    using System.Windows.Forms;
     using Items;
     public class ItemsFactory
     {
         Random rnd = new Random();
 
-        public List<Item> CreateItems(int numbersOfItems)
+        public List<Item> CreateItems(int numbersOfItems, PictureBox pic)
         {
             List<Item> items = new List<Item>();
             for (int i = 1; i <= numbersOfItems; i++)
             {
                 int randomItem = rnd.Next(1, 4);
                 ItemType type = (ItemType) Enum.Parse(typeof (ItemType), randomItem.ToString());
-                items.Add(new Item(GenerateRandomX(500), GenerateRandomY(500), type));
+                items.Add(new Item(GenerateRandomX(500), GenerateRandomY(500), type, pic));
             }
             return items;
         }

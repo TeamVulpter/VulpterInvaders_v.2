@@ -2,6 +2,7 @@
 {
     using System;
     using System.Windows.Forms;
+    using System.Drawing;
     using Classes;
 
     public class Item : GameObject
@@ -13,11 +14,11 @@
         private int bonusLife = 0;
         Random rnd = new Random();
 
-        public Item(int positionX, int positionY, ItemType type) : base(positionX, positionY)
+        public Item(int positionX, int positionY, ItemType type, PictureBox pic) : base(positionX, positionY)
         {
             this.ItemType = type;
             this.GenerateBonus();
-            this.InitializePictureBox();
+            this.InitializePictureBox(pic);
         }
 
         protected PictureBox Picture
@@ -63,17 +64,14 @@
             }
         }
 
-        private void InitializePictureBox()
+        private void InitializePictureBox(PictureBox pic)
         {
-            this.Picture = new PictureBox();
-            int randomX = this.rnd.Next(1, VulpterInvadersGame.ActiveForm.Width);
-            int randomY = this.rnd.Next(1, VulpterInvadersGame.ActiveForm.Height);
-
-            // Set the location and size of the PictureBox control. 
-            this.Picture.Location = new System.Drawing.Point(randomX, randomY);
-            this.Picture.Size = new System.Drawing.Size(75, 75);
+            this.Picture = pic;
+            this.Picture.Location = new Point(this.PositionX, this.PositionY);
+            this.Picture.Size = new Size(30, 22);
+            this.Picture.Margin = new Padding(0, 0, 0, 0);
+            this.Picture.TabIndex = 30;
             this.Picture.TabStop = false;
-            this.Picture.SizeMode = PictureBoxSizeMode.StretchImage;
         }
     }
 }

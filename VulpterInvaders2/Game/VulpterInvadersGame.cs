@@ -53,7 +53,7 @@
 
                 //generation items with bonus
                 ItemsFactory itemsFactory = new ItemsFactory();
-                items = itemsFactory.CreateItems(10);
+                items = itemsFactory.CreateItems(10, item1);
 
             }
             catch (NotImplementedException ex)
