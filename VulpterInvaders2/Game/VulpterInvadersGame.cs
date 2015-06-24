@@ -84,20 +84,32 @@
             
             if (e.KeyCode == Keys.W)
             {
-                hero.Location = player.PositionY >= 60 ? new Point(player.PositionX, player.PositionY - 10) : new Point(player.PositionX, player.PositionY + 10);
+                int top = this.brick16.Location.Y + this.brick16.Height;
+                hero.Location = player.PositionY >= top ? 
+                    new Point(player.PositionX, player.PositionY - 5) : 
+                    new Point(player.PositionX, player.PositionY + 5);
             }
             if (e.KeyCode == Keys.S)
             {
-                hero.Location = this.player.PositionY <= 560 ? new Point(player.PositionX, player.PositionY + 10) : new Point(player.PositionX, player.PositionY - 10);
+                int down = this.brick6.Location.Y-hero.Width;
+                hero.Location = this.player.PositionY <= down ? 
+                    new Point(player.PositionX, player.PositionY + 5) : 
+                    new Point(player.PositionX, player.PositionY - 5);
             }
             if (e.KeyCode == Keys.A)
             {
-                hero.Location = this.player.PositionX >= 80 ? new Point(player.PositionX - 10, player.PositionY) : new Point(player.PositionX + 10, player.PositionY);
+                int left = this.brick1.Location.X + this.brick1.Width;
+                hero.Location = this.player.PositionX >= left ? 
+                    new Point(player.PositionX - 5, player.PositionY) : 
+                    new Point(player.PositionX + 5, player.PositionY);
                 
             }
             if (e.KeyCode == Keys.D)
             {
-                hero.Location = this.player.PositionX <= 630 ? new Point(player.PositionX + 10, player.PositionY) : new Point(player.PositionX - 10, player.PositionY);
+                int right = this.brick11.Location.X-hero.Height;
+                hero.Location = this.player.PositionX <= right ? 
+                    new Point(player.PositionX + 5, player.PositionY) : 
+                    new Point(player.PositionX - 5, player.PositionY);
             }
             if (e.KeyCode == Keys.X)
             {
