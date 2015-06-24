@@ -11,15 +11,16 @@
         private int bonusHealth = 0;
         private int bonusScore = 0;
         private int bonusLife = 0;
+        Random rnd = new Random();
 
-        public Item(int positionX, int positionY, ItemType type, PictureBox picture) : base(positionX, positionY)
+        public Item(int positionX, int positionY, ItemType type) : base(positionX, positionY)
         {
             this.ItemType = type;
-            this.Picture = picture;
             this.GenerateBonus();
+            this.InitializePictureBox();
         }
 
-        public PictureBox Picture
+        protected PictureBox Picture
         {
             get { return this.picture; }
             set { this.picture = value;}
@@ -29,26 +30,25 @@
             get { return this.itemType; }
             set { this.itemType = value; }
         }
-        public int BonusHealth
+        protected int BonusHealth
         {
             get { return bonusHealth; }
             set { this.bonusHealth = value; }
         }
-        public int BonusScore
+        protected int BonusScore
         {
             get { return this.bonusScore; }
             set { this.bonusScore = value; }
         }
-        public int BonusLife
+        protected int BonusLife
         {
             get { return this.bonusLife; }
             set { this.bonusLife = value; }
         }
 
-        public void GenerateBonus()
+        private void GenerateBonus()
         {
-            Random rnd = new Random();
-            int randomBonus = rnd.Next(0, 150);
+            int randomBonus = this.rnd.Next(0, 150);
             if (this.ItemType.ToString() == "BonusHealth")
             {
                 this.BonusHealth += randomBonus;
@@ -61,6 +61,19 @@
             {
                 this.BonusLife += randomBonus;
             }
+        }
+
+        private void InitializePictureBox()
+        {
+            this.Picture = new PictureBox();
+            int randomX = this.rnd.Next(1, VulpterInvadersGame.ActiveForm.Width);
+            int randomY = this.rnd.Next(1, VulpterInvadersGame.ActiveForm.Height);
+
+            // Set the location and size of the PictureBox control. 
+            this.Picture.Location = new System.Drawing.Point(randomX, randomY);
+            this.Picture.Size = new System.Drawing.Size(75, 75);
+            this.Picture.TabStop = false;
+            this.Picture.SizeMode = PictureBoxSizeMode.StretchImage;
         }
     }
 }

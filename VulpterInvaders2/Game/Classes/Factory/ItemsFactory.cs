@@ -1,4 +1,6 @@
-﻿namespace Game.Classes.Factory
+﻿using System.Windows.Forms;
+
+namespace Game.Classes.Factory
 {
     using System;
     using System.Collections.Generic;
