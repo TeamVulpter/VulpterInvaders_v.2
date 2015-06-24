@@ -1,0 +1,5 @@
+https://www.informit.com/guides/content.aspx?g=dotnet&seqNum=860
+http://scottlilly.com/learn-c-by-building-a-simple-rpg-index/
+http://stackoverflow.com/questions/144701/how-do-i-convert-a-net-console-application-to-a-winforms-or-wpf-application
+http://www.hostinger.in/
+https://github.com/Minkov/The-Batman-game/tree/master/TheBatmanGame
