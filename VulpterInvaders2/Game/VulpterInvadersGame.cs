@@ -148,6 +148,7 @@
             Obsticle4.Location = new Point(obsticle4.PositionX + 1, obsticle4.PositionY);
             Obsticle5.Location = new Point(obsticle5.PositionX + 1, obsticle5.PositionY);
 
+            //------------------------------------------//
             if (obsticle.PositionY>=brick5.Location.Y-1)
             {
                 if (Obsticle.Right >= brick11.Left)
@@ -155,17 +156,9 @@
                     Obsticle.Location=new Point(brick5.Location.X-1,brick5.Location.Y);
                 }
             }
-
-            bool obsticleOne = (
-                                    Obsticle.Location.X + Obsticle.Width >= this.player.Hero.Location.X &&
-                                    Obsticle.Location.X <= this.player.Hero.Left
-                               ) &&
-                               (
-                                    Obsticle.Location.Y >= this.player.Hero.Top &&
-                                    Obsticle.Location.Y <= this.player.Hero.Top + this.player.Hero.Height
-                               );
-
-            if (obsticleOne)
+            
+            if ((Obsticle.Location.X + Obsticle.Width >= this.player.Hero.Location.X && Obsticle.Location.X <= this.player.Hero.Left) &&
+                (Obsticle.Location.Y >= this.player.Hero.Top && Obsticle.Location.Y <= this.player.Hero.Top + this.player.Hero.Height))
             {
                 Obsticle.Location = new Point(brick5.Location.X - 1, brick5.Location.Y);
                 Life.LifeCount--;
@@ -176,6 +169,7 @@
                     Application.Exit();
                 }
             }
+            //------------------------------------------//
 
             //obsticle2 movement
             if (obsticle2.PositionY >= brick4.Location.Y - 1)
@@ -185,6 +179,20 @@
                     Obsticle2.Location = new Point(brick12.Location.X + 1, brick12.Location.Y);
                 }
             }
+
+            if ((Obsticle2.Location.X + Obsticle2.Width >= this.player.Hero.Location.X && Obsticle2.Location.X <= this.player.Hero.Left) &&
+                (Obsticle2.Location.Y >= this.player.Hero.Top && Obsticle2.Location.Y <= this.player.Hero.Top + this.player.Hero.Height))
+            {
+                Obsticle2.Location = new Point(brick12.Location.X - 1, brick12.Location.Y);
+                Life.LifeCount--;
+                life_value.Text = Life.LifeCount.ToString();
+                if (Life.LifeCount == 0)
+                {
+                    MessageBox.Show("Game over");
+                    Application.Exit();
+                }
+            }
+
             // Obsticle3 movement
             if (obsticle3.PositionY >= brick13.Location.Y - 1)
             {
