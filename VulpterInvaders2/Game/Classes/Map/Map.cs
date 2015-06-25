@@ -1,5 +1,6 @@
-﻿namespace Game.Classes.Matrix
+﻿namespace Game.Classes.Map
 {
+    using System.Collections.Generic;
     using Interfaces;
     public class Map : IMap
     {
@@ -8,12 +9,15 @@
         private int left;
         private int right;
 
+        Dictionary<string, int> location = new Dictionary<string, int>();
+
         public Map(int top, int down, int left, int right)
         {
             this.Top = top;
             this.Down = down;
             this.Left = left;
             this.Right = right;
+            MapLacation();
         }
 
         public int Top
@@ -37,16 +41,12 @@
             set { this.right = value; }
         }
 
-        public int[] MapLacation()
+        public void MapLacation()
         {
-            int[] location = new []
-            {
-                this.Top,
-                this.Left,
-                this.Down,
-                this.Right
-            };
-            return location;
+            this.location.Add("top", this.Top);
+            this.location.Add("down", this.Down);
+            this.location.Add("left", this.Left);
+            this.location.Add("right", this.Right);
         }
     }
 }
