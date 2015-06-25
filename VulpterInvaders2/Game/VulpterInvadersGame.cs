@@ -52,10 +52,15 @@ namespace Game
                 itemsPictureBox.Add(item3);
                 itemsPictureBox.Add(item4);
                 itemsPictureBox.Add(item5);
+                itemsPictureBox.Add(item6);
+                itemsPictureBox.Add(item7);
+                itemsPictureBox.Add(item8);
+                itemsPictureBox.Add(item9);
+                itemsPictureBox.Add(item10);
 
                 //generation items with bonus
                 ItemsFactory itemsFactory = new ItemsFactory();
-                items = itemsFactory.CreateItems(5, itemsPictureBox, this.map);
+                items = itemsFactory.CreateItems(10, itemsPictureBox, this.map);
 
             }
             catch (NotImplementedException ex)
