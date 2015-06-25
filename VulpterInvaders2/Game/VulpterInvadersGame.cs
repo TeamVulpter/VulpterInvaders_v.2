@@ -30,19 +30,17 @@ namespace Game
         private IList<ObsticleBrick> obsticles=new List<ObsticleBrick>();
         private IList<Item> items = new List<Item>(); 
         private List<PictureBox> itemsPictureBox = new List<PictureBox>(); 
-        private IMap map;
+        private Map map;
  
         public VulpterInvadersGame()
         {
             InitializeComponent();
 
-
-            int top = this.brick16.Location.Y + this.brick16.Height;
-            int down = this.brick6.Location.Y;
-            int left = this.brick1.Location.X + this.brick1.Width;
-            int right = this.brick11.Location.X;
-            this.map = new Map(top,down,left,right);
-
+            //generation map coordinates
+            this.map = new Map( this.brick16.Location.Y + this.brick16.Height,
+                                this.brick6.Location.Y,
+                                this.brick1.Location.X + this.brick1.Width,
+                                this.brick11.Location.X);
 
             //this.engine.Run();
             
@@ -107,30 +105,26 @@ namespace Game
             
             if (e.KeyCode == Keys.W)
             {
-                int top = this.brick16.Location.Y + this.brick16.Height;
-                hero.Location = player.PositionY >= top ? 
+                hero.Location = player.PositionY >= this.map.Top ? 
                     new Point(player.PositionX, player.PositionY - 5) : 
                     new Point(player.PositionX, player.PositionY + 5);
             }
             if (e.KeyCode == Keys.S)
             {
-                int down = this.brick6.Location.Y-hero.Width;
-                hero.Location = this.player.PositionY <= down ? 
+                hero.Location = this.player.PositionY <= (this.map.Down - hero.Width) ? 
                     new Point(player.PositionX, player.PositionY + 5) : 
                     new Point(player.PositionX, player.PositionY - 5);
             }
             if (e.KeyCode == Keys.A)
             {
-                int left = this.brick1.Location.X + this.brick1.Width;
-                hero.Location = this.player.PositionX >= left ? 
+                hero.Location = this.player.PositionX >= this.map.Left ? 
                     new Point(player.PositionX - 5, player.PositionY) : 
                     new Point(player.PositionX + 5, player.PositionY);
                 
             }
             if (e.KeyCode == Keys.D)
             {
-                int right = this.brick11.Location.X-hero.Height;
-                hero.Location = this.player.PositionX <= right ? 
+                hero.Location = this.player.PositionX <= this.map.Right-hero.Height ? 
                     new Point(player.PositionX + 5, player.PositionY) : 
                     new Point(player.PositionX - 5, player.PositionY);
             }
