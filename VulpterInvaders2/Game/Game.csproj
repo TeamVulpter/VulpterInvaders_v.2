@@ -135,7 +135,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Classes\Map\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Bricks.jpg" />
     <None Include="Resources\playerShip.png" />

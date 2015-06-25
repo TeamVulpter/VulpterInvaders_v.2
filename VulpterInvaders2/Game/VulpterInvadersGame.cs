@@ -2,16 +2,18 @@
 {
     using System;
     using System.Windows.Forms;
+    using System.Collections.Generic;
+    using System.Drawing;
     using Classes;
     using Classes.Characters;
     using Classes.Items;
     using Classes.Factory;
     using Classes.Matrix;
-    using System.Collections.Generic;
-    using System.Drawing;
+    using Engine;
 
     public partial class VulpterInvadersGame : Form
     {
+        private GameEngineVulpterInvaders engine;
         private Player player;
         private Item item;
         private Brick bricks;
@@ -30,6 +32,7 @@
         public VulpterInvadersGame()
         {
             InitializeComponent();
+            //this.engine.Run();
             //create player
             this.player = new Player(350, 560, hero);
             this.obsticle=new ObsticleBrick(67,401,Obsticle);
@@ -46,19 +49,21 @@
             itemsPictureBox.Add(item1);
             itemsPictureBox.Add(item2);
             itemsPictureBox.Add(item3);
+            itemsPictureBox.Add(item4);
+            itemsPictureBox.Add(item5);
 
             try
             {
                 this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
                 //drawing matrix
-                this.playField = this.matrix.DrawField();
+                //this.playField = this.matrix.DrawField();
                 //drawing bricks
                 this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
                 this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
 
                 //generation items with bonus
                 ItemsFactory itemsFactory = new ItemsFactory();
-                items = itemsFactory.CreateItems(3, itemsPictureBox);
+                items = itemsFactory.CreateItems(5, itemsPictureBox);
 
             }
             catch (NotImplementedException ex)

@@ -17,5 +17,10 @@ namespace Game.Engine
                 }
             }
         }
+
+        private void AddItemsToList()
+        {
+            
+        }
     }
 }
