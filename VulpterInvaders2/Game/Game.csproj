@@ -105,7 +105,6 @@
       <DependentUpon>VulpterInvadersGame.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\ICharacter.cs" />
-    <Compile Include="Interfaces\IMap.cs" />
     <Compile Include="StartGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMenuUI.resx">
