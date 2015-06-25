@@ -35,26 +35,34 @@ namespace Game
         public VulpterInvadersGame()
         {
             InitializeComponent();
+            try
+            {
+                //generation map coordinates
+                this.map = new Map(this.brick16.Location.Y + this.brick16.Height,
+                                    this.brick6.Location.Y,
+                                    this.brick1.Location.X + this.brick1.Width,
+                                    this.brick11.Location.X);
 
-            //generation map coordinates
-            this.map = new Map( this.brick16.Location.Y + this.brick16.Height,
-                                this.brick6.Location.Y,
-                                this.brick1.Location.X + this.brick1.Width,
-                                this.brick11.Location.X);
+                //create player
+                this.player = new Player(((this.map.Right - this.map.Left) / 2), this.map.Down - hero.Height, hero);
+
+                //add item to list of items
+                itemsPictureBox.Add(item1);
+                itemsPictureBox.Add(item2);
+                itemsPictureBox.Add(item3);
+                itemsPictureBox.Add(item4);
+                itemsPictureBox.Add(item5);
+
+                //generation items with bonus
+                ItemsFactory itemsFactory = new ItemsFactory();
+                items = itemsFactory.CreateItems(5, itemsPictureBox, this.map);
+
+            }
+            catch (NotImplementedException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             
-            //create player
-            this.player = new Player(((this.map.Right-this.map.Left) / 2), this.map.Down-hero.Height, hero);
-
-            //add item to list of items
-            itemsPictureBox.Add(item1);
-            itemsPictureBox.Add(item2);
-            itemsPictureBox.Add(item3);
-            itemsPictureBox.Add(item4);
-            itemsPictureBox.Add(item5);
-
-            //generation items with bonus
-            ItemsFactory itemsFactory = new ItemsFactory();
-            items = itemsFactory.CreateItems(5, itemsPictureBox, this.map);
 
 
 
@@ -74,8 +82,6 @@ namespace Game
             try
             {
                 this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-                //drawing matrix
-                //this.playField = this.matrix.DrawField();
                 //drawing bricks
                 this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
                 this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
@@ -138,7 +144,6 @@ namespace Game
                 this.Close();
                 invaderAttack.Show();
             }
-
         }
         
         private void hero_Click(object sender, EventArgs e)
