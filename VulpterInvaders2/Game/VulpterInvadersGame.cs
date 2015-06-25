@@ -35,7 +35,17 @@ namespace Game
         public VulpterInvadersGame()
         {
             InitializeComponent();
+
+
+            int top = this.brick16.Location.Y + this.brick16.Height;
+            int down = this.brick6.Location.Y;
+            int left = this.brick1.Location.X + this.brick1.Width;
+            int right = this.brick11.Location.X;
+            this.map = new Map(top,down,left,right);
+
+
             //this.engine.Run();
+            
             //create player
             this.player = new Player(350, 560, hero);
             this.obsticle=new ObsticleBrick(67,401,Obsticle);

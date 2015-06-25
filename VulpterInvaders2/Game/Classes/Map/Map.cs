@@ -9,7 +9,7 @@
         private int left;
         private int right;
 
-        Dictionary<string, int> location = new Dictionary<string, int>();
+        public Dictionary<string, int> location = new Dictionary<string, int>();
 
         public Map(int top, int down, int left, int right)
         {

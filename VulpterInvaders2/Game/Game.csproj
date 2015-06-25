@@ -83,7 +83,7 @@
       <DependentUpon>FormMenuUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IAttack.cs" />
-    <Compile Include="Classes\Matrix\Map.cs" />
+    <Compile Include="Classes\Map\Map.cs" />
     <Compile Include="Classes\Shooting.cs" />
     <Compile Include="Engine\GameEngineVulpterInvaders.cs" />
     <Compile Include="Interfaces\IShoot.cs" />
@@ -135,9 +135,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\Map\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\Bricks.jpg" />
     <None Include="Resources\playerShip.png" />
