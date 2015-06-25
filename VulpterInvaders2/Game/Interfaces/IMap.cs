@@ -2,6 +2,6 @@
 {
     public interface IMap
     {
-        int[,] DrawField();
+        int[] MapLacation();
     }
 }
