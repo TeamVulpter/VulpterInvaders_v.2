@@ -7,7 +7,6 @@ namespace Game
     using System.Collections.Generic;
     using System.Drawing;
     using Engine;
-    using Interfaces;
     using Classes;
     using Classes.Characters;
     using Classes.Items;
@@ -41,11 +40,11 @@ namespace Game
                                 this.brick6.Location.Y,
                                 this.brick1.Location.X + this.brick1.Width,
                                 this.brick11.Location.X);
-
-            //this.engine.Run();
             
             //create player
-            this.player = new Player(350, 560, hero);
+            this.player = new Player(((this.map.Right-this.map.Left) / 2), this.map.Down-hero.Height, hero);
+
+
             this.obsticle=new ObsticleBrick(67,401,Obsticle);
             this.obsticle2 = new ObsticleBrick(67, 339, Obsticle2);
             this.obsticle3 = new ObsticleBrick(67, 243, Obsticle3);
