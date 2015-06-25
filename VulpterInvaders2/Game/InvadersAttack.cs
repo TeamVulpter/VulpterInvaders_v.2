@@ -19,15 +19,15 @@ namespace Game
         private PlayerShip shipPlayer;
         private Bullet bullet;
         private EnemyShip enemy;
-        private bool spaceKeyIsPressed=false;
-        
-        
+        private bool spaceKeyIsPressed = false;
+
+
         public InvadersAttack()
         {
             InitializeComponent();
             this.KeyPress += this.InvadersAttack_KeyPress;
             this.KeyDown += this.InvaderAttack_KeyDown;
-            this.shipPlayer = new PlayerShip(500, 0, playerShip);
+            this.shipPlayer = new PlayerShip(playerShip.Location.X, playerShip.Location.Y, playerShip);
             this.bullet = new Bullet(shipPlayer.PositionX, shipPlayer.PositionY, bulletPanel);
             this.enemy = new EnemyShip(shipEnemy.Location.X, shipEnemy.Location.Y, shipEnemy);
         }
@@ -38,29 +38,29 @@ namespace Game
             if (e.KeyChar == (char)Keys.Space)
             {
                 spaceKeyIsPressed = true;
-                bulletPanel.Location = new Point(shipPlayer.PositionX, 450);
+                bulletPanel.Location = new Point(playerShip.Location.X, 450);
             }
         }
 
 
         private void InvaderAttack_KeyDown(object sender, KeyEventArgs e)
         {
-            this.shipPlayer.PositionX = playerShip.Location.X;
-            this.shipPlayer.PositionY = playerShip.Location.Y;
-            if (e.KeyCode == Keys.A)
+            if (!shipPlayer.StopAtMin(playerShip.Location.X, 20))
             {
-                playerShip.Location = new Point(shipPlayer.PositionX - 10, shipPlayer.PositionY);
-                if (playerShip.Location.X < 20)
+
+                if (e.KeyCode == Keys.A)
                 {
-                    playerShip.Location = new Point(shipPlayer.PositionX, shipPlayer.PositionY);
+
+                    shipPlayer.MoveLeft();
                 }
+
             }
-            if (e.KeyCode == Keys.D)
+            if (!shipPlayer.StopAtMax(playerShip.Location.X, this.Width - 70))
             {
-                playerShip.Location = new Point(shipPlayer.PositionX + 10, shipPlayer.PositionY);
-                if (playerShip.Location.X > this.Width - 30)
+                if (e.KeyCode == Keys.D)
                 {
-                    playerShip.Location = new Point(shipPlayer.PositionX, shipPlayer.PositionY);
+
+                    shipPlayer.MoveRight();
                 }
             }
         }
@@ -71,18 +71,18 @@ namespace Game
             {
                 this.bullet.PositionX = bulletPanel.Location.X;
                 this.bullet.PositionY = bulletPanel.Location.Y;
-                this.bullet = new Bullet(shipPlayer.PositionX, bullet.PositionY, bulletPanel);
-                bulletPanel.Location = new Point(shipPlayer.PositionX, bullet.PositionY - 10);
+                this.bullet = new Bullet(playerShip.Location.X, bullet.PositionY, bulletPanel);
+                bulletPanel.Location = new Point(playerShip.Location.X, bullet.PositionY - 10);
                 bullet.Start();
-                
+
 
             }
-           
+
             this.enemy.PositionX = shipEnemy.Location.X;
             this.enemy.PositionY = shipEnemy.Location.Y;
 
             shipEnemy.Location = new Point(enemy.PositionX, enemy.PositionY + 1);
-            if (enemy.PositionY>=this.Height-30)
+            if (enemy.PositionY >= this.Height - 30)
             {
                 shipEnemy.Location = new Point(enemy.PositionX, 10);
             }

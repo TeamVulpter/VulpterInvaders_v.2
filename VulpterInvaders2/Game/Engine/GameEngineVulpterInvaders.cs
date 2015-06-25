@@ -1,35 +1,21 @@
 ﻿using System;
+using System.Windows.Forms;
+using Game.Classes;
+
 namespace Game.Engine
 {
     public class GameEngineVulpterInvaders
     {
-        private void GameLoop(object sender, EventArgs e)
+
+        public void Run()
         {
-            //this.HighScore += ScoreForTick;
-            //if (this.Enemies.Any(enemy => this.CollisionDetector.AreCollided(this.Batwing, enemy)))
-            //{
-            //    this.timer.Stop();
-            //    this.renderer.ShowEndGameScreen(this.HighScore);
-            //    return;
-            //}
-
-            //this.renderer.Clear();
-            //this.renderer.Draw(this.Batwing);
-
-            //if (rand.Next(100) < SpawnEnemyChange)
-            //{
-            //    var enemy = this.enemiesFactory.Get(this.renderer.ScreenWidth, rand.Next(this.renderer.ScreenHeight));
-            //    this.Enemies.Add(enemy);
-            //    this.GameObjects.Add(enemy);
-            //}
-
-            //this.KillEnemiesIfColliding();
-
-            //this.HighScore += this.Enemies.Count(enemy => !enemy.IsAlive) * ScoreForKill;
-            //this.RemoveNotAliveGameObjects();
-            //this.UpdateObjectsPositions();
-            //this.DrawGameObjects();
+            while (true)
+            {
+                if (Score.ScoreCount>=100 || Life.LifeCount<=0)
+                {
+                    Application.Exit();
+                }
+            }
         }
-
     }
 }
