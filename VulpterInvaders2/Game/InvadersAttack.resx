@@ -124,7 +124,7 @@
   <data name="shipEnemy.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAkCAYAAAD7PHgWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsNAAALDQHtB8AsAAAAGHRF
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsMAAALDAE/QCLIAAAAGHRF
         WHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjQSggLzAAAHxklEQVRYR+1Wa1CU1xkm7TQ1ijZiXUPFC4rR
         oGZSBVNEgXDd5X5Vkb2wy15g2WVhYXfZ67cL7AXWVREQWLk4EY1ooQWTmnY601+dztQ60plM24wZq53J
         ZZIm/dH+SLH16Xu+fnXyJ5bMZLDT4Zk5M7vnnPec570954tZwQr+nzA7O7uBDY7jviFM/e/g+vXrE7du
@@ -177,7 +177,7 @@
   <data name="playerShip.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEYAAABYCAYAAABI8oFvAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        0wAADdMBvdUcagAAAAd0SU1FB9kLDBYRAfiWpaoAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAu
+        0gAADdIBb5L+jgAAAAd0SU1FB9kLDBYRAfiWpaoAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAu
         NBKCAvMAACOcSURBVHhe7VwHWFVX1sXE9KJpJs44k8QYMzExMVERexfsXVFExQp2jIpELLGLHUQEK9hQ
         7GLFLthib1hQsaKi9F7e/tc67x28EJLJJBNT/jnft3mPe889d+911i7nvPueFdoL/PMUW6Hy5csXady4
         cfVmzZr5tG3b9pa9vX1q69atjzdp0mRoo0aNytWsWfNV9jN3f2rteYs87ftaWZUqVeqFWrVqVe3YsaOP

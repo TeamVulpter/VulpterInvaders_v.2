@@ -54,7 +54,7 @@
             // bulletPanel
             // 
             this.bulletPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bulletPanel.BackgroundImage")));
-            this.bulletPanel.Location = new System.Drawing.Point(457, 439);
+            this.bulletPanel.Location = new System.Drawing.Point(479, 439);
             this.bulletPanel.Name = "bulletPanel";
             this.bulletPanel.Size = new System.Drawing.Size(28, 32);
             this.bulletPanel.TabIndex = 1;
