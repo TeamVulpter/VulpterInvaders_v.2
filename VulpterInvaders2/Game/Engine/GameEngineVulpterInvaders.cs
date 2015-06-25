@@ -1,9 +1,9 @@
-﻿using System;
-using System.Windows.Forms;
-using Game.Classes;
-
-namespace Game.Engine
+﻿namespace Game.Engine
 {
+    using System;
+    using System.Windows.Forms;
+    using Classes;
+
     public class GameEngineVulpterInvaders
     {
 

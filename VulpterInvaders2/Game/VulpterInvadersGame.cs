@@ -1,15 +1,18 @@
-﻿namespace Game
+﻿using Game.Classes.Map;
+
+namespace Game
 {
     using System;
     using System.Windows.Forms;
     using System.Collections.Generic;
     using System.Drawing;
+    using Engine;
+    using Interfaces;
     using Classes;
     using Classes.Characters;
     using Classes.Items;
     using Classes.Factory;
     using Classes.Matrix;
-    using Engine;
 
     public partial class VulpterInvadersGame : Form
     {
@@ -18,7 +21,6 @@
         private Item item;
         private Brick bricks;
         private IList<Brick> bricksList = new List<Brick>();
-        private Map matrix = new Map();
         private int[,] playField;
         private ObsticleBrick obsticle;
         private ObsticleBrick obsticle2;
@@ -28,6 +30,7 @@
         private IList<ObsticleBrick> obsticles=new List<ObsticleBrick>();
         private IList<Item> items = new List<Item>(); 
         private List<PictureBox> itemsPictureBox = new List<PictureBox>(); 
+        private IMap map;
  
         public VulpterInvadersGame()
         {
