@@ -16,6 +16,7 @@ namespace Game
     public partial class VulpterInvadersGame : Form
     {
         private GameEngineVulpterInvaders engine;
+        private Map map;
         private Player player;
         private Item item;
         private Brick bricks;
@@ -29,7 +30,7 @@ namespace Game
         private IList<ObsticleBrick> obsticles=new List<ObsticleBrick>();
         private IList<Item> items = new List<Item>(); 
         private List<PictureBox> itemsPictureBox = new List<PictureBox>(); 
-        private Map map;
+        
  
         public VulpterInvadersGame()
         {
@@ -44,6 +45,20 @@ namespace Game
             //create player
             this.player = new Player(((this.map.Right-this.map.Left) / 2), this.map.Down-hero.Height, hero);
 
+            //add item to list of items
+            itemsPictureBox.Add(item1);
+            itemsPictureBox.Add(item2);
+            itemsPictureBox.Add(item3);
+            itemsPictureBox.Add(item4);
+            itemsPictureBox.Add(item5);
+
+            //generation items with bonus
+            ItemsFactory itemsFactory = new ItemsFactory();
+            items = itemsFactory.CreateItems(5, itemsPictureBox, this.map);
+
+
+
+
 
             this.obsticle=new ObsticleBrick(67,401,Obsticle);
             this.obsticle2 = new ObsticleBrick(67, 339, Obsticle2);
@@ -56,12 +71,6 @@ namespace Game
             obsticles.Add(obsticle4);
             obsticles.Add(obsticle5);
 
-            itemsPictureBox.Add(item1);
-            itemsPictureBox.Add(item2);
-            itemsPictureBox.Add(item3);
-            itemsPictureBox.Add(item4);
-            itemsPictureBox.Add(item5);
-
             try
             {
                 this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -70,11 +79,7 @@ namespace Game
                 //drawing bricks
                 this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
                 this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
-
-                //generation items with bonus
-                ItemsFactory itemsFactory = new ItemsFactory();
-                items = itemsFactory.CreateItems(5, itemsPictureBox);
-
+                
             }
             catch (NotImplementedException ex)
             {
