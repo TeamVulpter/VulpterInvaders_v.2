@@ -31,7 +31,6 @@ namespace Game
         private IList<Item> items = new List<Item>(); 
         private List<PictureBox> itemsPictureBox = new List<PictureBox>(); 
         
- 
         public VulpterInvadersGame()
         {
             InitializeComponent();
