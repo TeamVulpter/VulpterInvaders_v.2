@@ -1,7 +1,7 @@
-﻿using System.Windows.Forms;
-
-namespace Game.Classes.Matrix
+﻿namespace Game.Classes.Brick
 {
+    using System.Windows.Forms;
+
     public class Brick : GameObject
     {
         private PictureBox brickSingle;
