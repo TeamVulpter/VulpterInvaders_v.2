@@ -1,4 +1,4 @@
-﻿namespace Game.Classes
+﻿namespace Game.Classes.Characters
 {
     public class Health
     {

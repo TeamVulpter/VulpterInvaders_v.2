@@ -1,8 +1,7 @@
-﻿using System;
-using Game.Interfaces;
-
-namespace Game.Classes
+﻿namespace Game.Classes
 {
+    using System;
+    using Game.Interfaces;
     public class Shooting :IShoot
     {
         public void Shoot()

@@ -1,8 +1,7 @@
-﻿using Game.Interfaces;
-using System;
-
-namespace Game.Classes
+﻿namespace Game.Classes
 {
+    using Interfaces;
+    using System;
     public class Attack :IAttack
     {
         public void UpdateAttack()

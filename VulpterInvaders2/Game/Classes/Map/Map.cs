@@ -1,7 +1,5 @@
 ﻿namespace Game.Classes.Map
 {
-    using System.Collections.Generic;
-    using Interfaces;
     public class Map
     {
         private int top;

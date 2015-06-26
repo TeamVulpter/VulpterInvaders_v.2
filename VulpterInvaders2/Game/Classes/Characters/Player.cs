@@ -1,6 +1,6 @@
-﻿using System.Windows.Forms;
-namespace Game.Classes.Characters
+﻿namespace Game.Classes.Characters
 {
+    using System.Windows.Forms;
     public class Player : Character
     {
         private PictureBox hero;

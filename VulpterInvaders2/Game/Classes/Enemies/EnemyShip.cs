@@ -1,7 +1,6 @@
-﻿using System.Windows.Forms;
-
-namespace Game.Classes.Enemies
+﻿namespace Game.Classes.Enemies
 {
+    using System.Windows.Forms;
     public class EnemyShip: GameObject
     {
         private Panel enemyInvader;

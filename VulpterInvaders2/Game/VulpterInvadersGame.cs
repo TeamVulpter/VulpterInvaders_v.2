@@ -97,6 +97,45 @@ namespace Game
             }
         }
 
+        //moving hero
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            this.player.PositionX = hero.Location.X;
+            this.player.PositionY = hero.Location.Y;
+
+            if (e.KeyCode == Keys.W)
+            {
+                hero.Location = player.PositionY >= this.map.Top ?
+                    new Point(player.PositionX, player.PositionY - 5) :
+                    new Point(player.PositionX, player.PositionY + 5);
+            }
+            if (e.KeyCode == Keys.S)
+            {
+                hero.Location = this.player.PositionY <= (this.map.Down - hero.Width) ?
+                    new Point(player.PositionX, player.PositionY + 5) :
+                    new Point(player.PositionX, player.PositionY - 5);
+            }
+            if (e.KeyCode == Keys.A)
+            {
+                hero.Location = this.player.PositionX >= this.map.Left ?
+                    new Point(player.PositionX - 5, player.PositionY) :
+                    new Point(player.PositionX + 5, player.PositionY);
+
+            }
+            if (e.KeyCode == Keys.D)
+            {
+                hero.Location = this.player.PositionX <= this.map.Right - hero.Height ?
+                    new Point(player.PositionX + 5, player.PositionY) :
+                    new Point(player.PositionX - 5, player.PositionY);
+            }
+            if (e.KeyCode == Keys.X)
+            {
+                InvadersAttack invaderAttack = new InvadersAttack();
+                this.Close();
+                invaderAttack.Show();
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
         }
@@ -111,44 +150,7 @@ namespace Game
 
         }
 
-        //moving hero
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            this.player.PositionX = hero.Location.X;
-            this.player.PositionY = hero.Location.Y;
-            
-            if (e.KeyCode == Keys.W)
-            {
-                hero.Location = player.PositionY >= this.map.Top ? 
-                    new Point(player.PositionX, player.PositionY - 5) : 
-                    new Point(player.PositionX, player.PositionY + 5);
-            }
-            if (e.KeyCode == Keys.S)
-            {
-                hero.Location = this.player.PositionY <= (this.map.Down - hero.Width) ? 
-                    new Point(player.PositionX, player.PositionY + 5) : 
-                    new Point(player.PositionX, player.PositionY - 5);
-            }
-            if (e.KeyCode == Keys.A)
-            {
-                hero.Location = this.player.PositionX >= this.map.Left ? 
-                    new Point(player.PositionX - 5, player.PositionY) : 
-                    new Point(player.PositionX + 5, player.PositionY);
-                
-            }
-            if (e.KeyCode == Keys.D)
-            {
-                hero.Location = this.player.PositionX <= this.map.Right-hero.Height ? 
-                    new Point(player.PositionX + 5, player.PositionY) : 
-                    new Point(player.PositionX - 5, player.PositionY);
-            }
-            if (e.KeyCode == Keys.X)
-            {
-                InvadersAttack invaderAttack = new InvadersAttack();
-                this.Close();
-                invaderAttack.Show();
-            }
-        }
+        
         
         private void hero_Click(object sender, EventArgs e)
         {

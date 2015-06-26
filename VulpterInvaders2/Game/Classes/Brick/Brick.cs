@@ -1,7 +1,6 @@
 ﻿namespace Game.Classes.Brick
 {
     using System.Windows.Forms;
-
     public class Brick : GameObject
     {
         private PictureBox brickSingle;

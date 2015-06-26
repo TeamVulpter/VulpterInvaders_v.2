@@ -1,8 +1,7 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
-
-namespace Game.Classes.Characters
+﻿namespace Game.Classes.Characters
 {
+    using System.Drawing;
+    using System.Windows.Forms;
     public class PlayerShip : Character
     {
         private PictureBox playerShip;

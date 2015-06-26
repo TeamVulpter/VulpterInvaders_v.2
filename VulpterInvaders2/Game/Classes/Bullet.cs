@@ -1,7 +1,6 @@
-﻿using System.Windows.Forms;
-
-namespace Game.Classes
+﻿namespace Game.Classes
 {
+    using System.Windows.Forms;
     public class Bullet :GameObject
     {
         private Panel bulletPanel;
