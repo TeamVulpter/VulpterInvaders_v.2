@@ -9,6 +9,8 @@
     public class ItemsFactory
     {
         Random rnd = new Random();
+        List<int> rndX = new List<int>();
+        List<int> rndY = new List<int>(); 
 
         public List<Item> CreateItems(int numbersOfItems, List<PictureBox> pic, Map map)
         {
@@ -30,14 +32,32 @@
         //create random x position
         private int GenerateRandomX(int minX, int maxX)
         {
+            Again:
             int randomX = rnd.Next(minX, maxX);
+            foreach (int x in rndX)
+            {
+                if (x == randomX)
+                {
+                    goto Again;
+                }
+            }
+            this.rndX.Add(randomX);
             return randomX;
         }
 
         //create random y position
         private int GenerateRandomY(int minY, int maxY)
         {
+            Again:
             int randomY = rnd.Next(minY, maxY);
+            foreach (int y in rndY)
+            {
+                if (y == randomY)
+                {
+                    goto Again;
+                }
+            }
+            this.rndY.Add(randomY);
             return randomY;
         }
     }
