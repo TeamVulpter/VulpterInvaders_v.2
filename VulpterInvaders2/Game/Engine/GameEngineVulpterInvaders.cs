@@ -4,7 +4,6 @@
 
     public class GameEngineVulpterInvaders
     {
-
         public void Run()
         {
             Application.EnableVisualStyles();
@@ -19,11 +18,6 @@
             //        Application.Exit();
             //    }
             //}
-        }
-
-        private void AddItemsToList()
-        {
-            
         }
     }
 }
