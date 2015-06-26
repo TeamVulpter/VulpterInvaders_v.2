@@ -4,7 +4,6 @@
     using System.Windows.Forms;
     using System.Collections.Generic;
     using System.Drawing;
-    using Engine;
     using Classes.Characters;
     using Classes.Items;
     using Classes.Factory;
@@ -13,13 +12,9 @@
 
     public partial class VulpterInvadersGame : Form
     {
-        private GameEngineVulpterInvaders engine;
-        private Map map;
-        private Player player;
-        private Item item;
-        private Brick bricks;
+        private readonly Map map;
+        private readonly Player player;
         private IList<Brick> bricksList = new List<Brick>();
-        private int[,] playField;
         private ObsticleBrick obsticle;
         private ObsticleBrick obsticle2;
         private ObsticleBrick obsticle3;
