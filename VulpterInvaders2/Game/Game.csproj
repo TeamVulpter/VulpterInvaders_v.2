@@ -66,16 +66,16 @@
     <Compile Include="Classes\Factory\EnemyInvaderFactory.cs" />
     <Compile Include="Classes\Factory\ItemsFactory.cs" />
     <Compile Include="Classes\GameObject.cs" />
-    <Compile Include="Classes\Health.cs" />
+    <Compile Include="Classes\Characters\Health.cs" />
     <Compile Include="Classes\Items\Item.cs" />
     <Compile Include="Classes\Items\ItemType.cs" />
-    <Compile Include="Classes\Life.cs" />
-    <Compile Include="Classes\Matrix\Brick.cs" />
+    <Compile Include="Classes\Characters\Life.cs" />
+    <Compile Include="Classes\Brick\Brick.cs" />
     <Compile Include="Classes\Bullet.cs" />
     <Compile Include="Classes\Characters\PlayerShip.cs" />
     <Compile Include="Classes\Characters\Character.cs" />
     <Compile Include="Classes\Characters\Player.cs" />
-    <Compile Include="Classes\Score.cs" />
+    <Compile Include="Classes\Characters\Score.cs" />
     <Compile Include="FormMenuUI.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -68,10 +68,23 @@
         {
             this.Picture = pic;
             this.Picture.Location = new Point(this.PositionX, this.PositionY);
-            this.Picture.Size = new Size(30, 22);
+            this.Picture.Size = new Size(30, 26);
             this.Picture.Margin = new Padding(0, 0, 0, 0);
             this.Picture.TabIndex = 30;
             this.Picture.TabStop = false;
+            //
+            switch (this.ItemType)
+            {
+                case ItemType.BonusHealth:
+                    this.Picture.ImageLocation = @"../../Resources/LifeBonus.png";
+                    break;
+                case ItemType.BonusLife:
+                    this.Picture.ImageLocation = @"../../Resources/RedPresent.png";
+                    break;
+                case ItemType.BonusScore:
+                    this.Picture.ImageLocation = @"../../Resources/BlueGear.png";
+                    break;
+            }
         }
     }
 }

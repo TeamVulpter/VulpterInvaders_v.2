@@ -1,17 +1,15 @@
-﻿using Game.Classes.Map;
-
-namespace Game
+﻿namespace Game
 {
     using System;
     using System.Windows.Forms;
     using System.Collections.Generic;
     using System.Drawing;
     using Engine;
-    using Classes;
     using Classes.Characters;
     using Classes.Items;
     using Classes.Factory;
-    using Classes.Matrix;
+    using Classes.Brick;
+    using Classes.Map;
 
     public partial class VulpterInvadersGame : Form
     {

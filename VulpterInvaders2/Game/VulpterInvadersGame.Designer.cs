@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-using Game.Classes.Matrix;
+using Game.Classes.Brick;
 namespace Game
 {
     partial class VulpterInvadersGame
