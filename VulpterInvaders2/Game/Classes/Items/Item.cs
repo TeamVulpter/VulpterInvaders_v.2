@@ -5,8 +5,9 @@
     using System.Drawing;
     using Classes;
     using Exception;
+    using Interfaces;
 
-    public class Item : GameObject
+    public class Item : GameObject, IItem
     {
         private ItemType itemType;
         private PictureBox picture;
