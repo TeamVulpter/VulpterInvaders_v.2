@@ -55,6 +55,29 @@
                 ItemsFactory itemsFactory = new ItemsFactory();
                 items = itemsFactory.CreateItems(10, itemsPictureBox, this.map);
 
+                this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+                //drawing bricks
+                this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
+                this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
+                this.bricksList.Add(new Brick(brick2.Location.X, brick2.Location.Y, brick2));
+                this.bricksList.Add(new Brick(brick3.Location.X, brick3.Location.Y, brick3));
+                this.bricksList.Add(new Brick(brick4.Location.X, brick4.Location.Y, brick4));
+                this.bricksList.Add(new Brick(brick5.Location.X, brick5.Location.Y, brick5));
+                this.bricksList.Add(new Brick(brick6.Location.X, brick6.Location.Y, brick6));
+                this.bricksList.Add(new Brick(brick7.Location.X, brick7.Location.Y, brick7));
+                this.bricksList.Add(new Brick(brick8.Location.X, brick8.Location.Y, brick8));
+                this.bricksList.Add(new Brick(brick9.Location.X, brick9.Location.Y, brick9));
+                this.bricksList.Add(new Brick(brick10.Location.X, brick10.Location.Y, brick10));
+                this.bricksList.Add(new Brick(brick11.Location.X, brick11.Location.Y, brick11));
+                this.bricksList.Add(new Brick(brick12.Location.X, brick12.Location.Y, brick12));
+                this.bricksList.Add(new Brick(brick13.Location.X, brick13.Location.Y, brick13));
+                this.bricksList.Add(new Brick(brick14.Location.X, brick14.Location.Y, brick14));
+                this.bricksList.Add(new Brick(brick15.Location.X, brick15.Location.Y, brick15));
+                this.bricksList.Add(new Brick(brick16.Location.X, brick16.Location.Y, brick16));
+                this.bricksList.Add(new Brick(brick17.Location.X, brick17.Location.Y, brick17));
+                this.bricksList.Add(new Brick(brick18.Location.X, brick18.Location.Y, brick18));
+                this.bricksList.Add(new Brick(brick19.Location.X, brick19.Location.Y, brick19));
+
             }
             catch (NotImplementedException ex)
             {
@@ -84,18 +107,6 @@
             obsticles.Add(obsticle4);
             obsticles.Add(obsticle5);
 
-            try
-            {
-                this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-                //drawing bricks
-                this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
-                this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
-                
-            }
-            catch (NotImplementedException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         //moving hero
