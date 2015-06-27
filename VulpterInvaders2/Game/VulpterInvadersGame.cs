@@ -147,8 +147,6 @@
         {
 
         }
-
-        
         
         private void hero_Click(object sender, EventArgs e)
         {
