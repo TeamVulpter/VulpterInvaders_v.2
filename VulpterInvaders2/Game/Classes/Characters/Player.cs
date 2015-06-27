@@ -1,6 +1,9 @@
 ﻿namespace Game.Classes.Characters
 {
     using System.Windows.Forms;
+    using System.Collections.Generic;
+    using Items;
+
     public class Player : Character
     {
         private PictureBox hero;
@@ -12,5 +15,23 @@
         }
 
         public PictureBox Hero { get; set; }
+
+        public IList<Item> GetItem(IList<Item> items)
+        {
+            for (int i = 0; i < items.Count; i++)
+            {
+                if ((this.PositionX >= items[i].PositionX && this.PositionX <= (items[i].PositionX + items[i].Picture.Width)) &&
+                    (this.PositionY >= items[i].PositionY && this.PositionY <= (items[i].PositionY + items[i].Picture.Height))
+                   )
+                {
+                    Health.HelthCount += items[i].BonusHealth;
+                    Life.LifeCount += items[i].BonusLife;
+                    Score.ScoreCount += items[i].BonusScore;
+                    items[i].Picture.Visible = false;
+                    items.RemoveAt(i);
+                }
+            }
+            return items;
+        }
     }
 }

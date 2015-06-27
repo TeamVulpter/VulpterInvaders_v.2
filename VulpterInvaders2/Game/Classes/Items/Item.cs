@@ -21,27 +21,27 @@
             this.InitializePictureBox(pic);
         }
 
-        protected PictureBox Picture
+        public PictureBox Picture
         {
             get { return this.picture; }
             set { this.picture = value;}
         }
-        protected ItemType ItemType
+        public ItemType ItemType
         {
             get { return this.itemType; }
             set { this.itemType = value; }
         }
-        protected int BonusHealth
+        public int BonusHealth
         {
             get { return bonusHealth; }
             set { this.bonusHealth = value; }
         }
-        protected int BonusScore
+        public int BonusScore
         {
             get { return this.bonusScore; }
             set { this.bonusScore = value; }
         }
-        protected int BonusLife
+        public int BonusLife
         {
             get { return this.bonusLife; }
             set { this.bonusLife = value; }
@@ -49,17 +49,19 @@
 
         private void GenerateBonus()
         {
-            int randomBonus = this.rnd.Next(0, 150);
             if (this.ItemType.ToString() == "BonusHealth")
             {
+                int randomBonus = this.rnd.Next(0, 100);
                 this.BonusHealth += randomBonus;
             }
             else if (this.ItemType.ToString() == "BonusScore")
             {
+                int randomBonus = this.rnd.Next(0, 50);
                 this.BonusScore += randomBonus;
             }
             else if (this.ItemType.ToString() == "BonusLife")
             {
+                int randomBonus = this.rnd.Next(0, 4);
                 this.BonusLife += randomBonus;
             }
         }

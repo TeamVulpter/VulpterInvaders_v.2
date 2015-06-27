@@ -127,6 +127,13 @@
                 this.Close();
                 invaderAttack.Show();
             }
+
+            //check for get item from field
+            this.items = this.player.GetItem(items);
+            //update values on hero
+            this.health_value.Text = Health.HelthCount.ToString();
+            this.life_value.Text = Life.LifeCount.ToString();
+            this.score_value.Text = Score.ScoreCount.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
