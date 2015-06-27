@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Windows.Forms;
     using Items;
-    using Map;
+    using Interfaces;
 
     public class ItemsFactory
     {
@@ -12,7 +12,7 @@
         List<int> rndX = new List<int>();
         List<int> rndY = new List<int>(); 
 
-        public List<Item> CreateItems(int numbersOfItems, List<PictureBox> pic, Map map)
+        public List<Item> CreateItems(int numbersOfItems, List<PictureBox> pic, IMap map)
         {
             List<Item> items = new List<Item>();
             for (int i = 0; i < numbersOfItems; i++)

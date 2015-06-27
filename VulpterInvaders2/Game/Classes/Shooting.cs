@@ -1,7 +1,7 @@
 ﻿namespace Game.Classes
 {
     using System;
-    using Game.Interfaces;
+    using Interfaces;
     public class Shooting :IShoot
     {
         public void Shoot()

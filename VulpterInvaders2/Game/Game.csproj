@@ -88,6 +88,8 @@
     <Compile Include="Classes\Map\Map.cs" />
     <Compile Include="Classes\Shooting.cs" />
     <Compile Include="Engine\GameEngineVulpterInvaders.cs" />
+    <Compile Include="Interfaces\IItem.cs" />
+    <Compile Include="Interfaces\IMap.cs" />
     <Compile Include="Interfaces\IShoot.cs" />
     <Compile Include="InvadersAttack.cs">
       <SubType>Form</SubType>

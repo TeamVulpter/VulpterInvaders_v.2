@@ -1,6 +1,7 @@
 ﻿namespace Game.Classes.Map
 {
-    public class Map
+    using Interfaces;
+    public class Map : IMap
     {
         private int top;
         private int down;

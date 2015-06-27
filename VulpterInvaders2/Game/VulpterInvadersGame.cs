@@ -10,10 +10,11 @@
     using Classes.Brick;
     using Classes.Map;
     using Exception;
+    using Interfaces;
 
     public partial class VulpterInvadersGame : Form
     {
-        private readonly Map map;
+        private readonly IMap map;
         private readonly Player player;
         private IList<Brick> bricksList = new List<Brick>();
         private ObsticleBrick obsticle;
@@ -85,7 +86,7 @@
             }
             catch (InvalidPictureException)
             {
-                MessageBox.Show("No found picture for item!");
+                MessageBox.Show(@"No found picture for item!");
             }
             
 
