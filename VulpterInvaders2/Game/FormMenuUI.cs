@@ -1,10 +1,7 @@
-﻿using System;
-using System.Windows.Forms;
-using Game.Classes;
-using Game.Classes.Characters;
-
-namespace Game
+﻿namespace Game
 {
+    using System;
+    using System.Windows.Forms;
     public partial class FormMenuUI : Form
     {
         public FormMenuUI()
@@ -18,12 +15,7 @@ namespace Game
             this.Hide();
             newGame.Show();
         }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void FormMenuUI_Load(object sender, EventArgs e)
         {
 
