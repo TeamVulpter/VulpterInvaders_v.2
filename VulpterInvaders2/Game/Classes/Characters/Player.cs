@@ -20,9 +20,8 @@
         {
             for (int i = 0; i < items.Count; i++)
             {
-                if ((this.PositionX >= items[i].PositionX && this.PositionX <= (items[i].PositionX + items[i].Picture.Width)) &&
-                    (this.PositionY >= items[i].PositionY && this.PositionY <= (items[i].PositionY + items[i].Picture.Height))
-                   )
+                if (((this.PositionX + 16 >= items[i].PositionX && this.PositionX + 16 <= (items[i].PositionX + items[i].Picture.Width)) &&
+                     (this.PositionY + 16 >= items[i].PositionY && this.PositionY + 16 <= (items[i].PositionY + items[i].Picture.Height))))
                 {
                     Health.HelthCount += items[i].BonusHealth;
                     Life.LifeCount += items[i].BonusLife;
