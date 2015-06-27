@@ -134,6 +134,14 @@
             this.health_value.Text = Health.HelthCount.ToString();
             this.life_value.Text = Life.LifeCount.ToString();
             this.score_value.Text = Score.ScoreCount.ToString();
+
+            //check for exit from this form in door
+            if (this.player.CheckForExit(this.door))
+            {
+                InvadersAttack invaderAttack = new InvadersAttack();
+                this.Close();
+                invaderAttack.Show();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

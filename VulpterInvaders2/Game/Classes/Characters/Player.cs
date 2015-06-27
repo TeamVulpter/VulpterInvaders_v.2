@@ -1,4 +1,6 @@
-﻿namespace Game.Classes.Characters
+﻿using System;
+
+namespace Game.Classes.Characters
 {
     using System.Windows.Forms;
     using System.Collections.Generic;
@@ -31,6 +33,16 @@
                 }
             }
             return items;
+        }
+
+        public bool CheckForExit(PictureBox door)
+        {
+            if (((this.PositionX + 16 >= door.Location.X && this.PositionX + 16 <= (door.Location.X + door.Width)) &&
+                 (this.PositionY + 16 >= door.Location.Y && this.PositionY + 16 <= (door.Location.Y + door.Height))))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
