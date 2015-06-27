@@ -9,6 +9,7 @@
     using Classes.Factory;
     using Classes.Brick;
     using Classes.Map;
+    using Exception;
 
     public partial class VulpterInvadersGame : Form
     {
@@ -31,12 +32,12 @@
             {
                 //generation map coordinates
                 this.map = new Map(this.brick16.Location.Y + this.brick16.Height,
-                                    this.brick6.Location.Y,
-                                    this.brick1.Location.X + this.brick1.Width,
-                                    this.brick11.Location.X);
+                    this.brick6.Location.Y,
+                    this.brick1.Location.X + this.brick1.Width,
+                    this.brick11.Location.X);
 
                 //create player
-                this.player = new Player(((this.map.Right - this.map.Left) / 2), this.map.Down - hero.Height, hero);
+                this.player = new Player(((this.map.Right - this.map.Left)/2), this.map.Down - hero.Height, hero);
 
                 //add item to list of items
                 itemsPictureBox.Add(item1);
@@ -59,7 +60,14 @@
             {
                 MessageBox.Show(ex.Message);
             }
+            catch (InvalidPictureException)
+            {
+                MessageBox.Show("No found picture for item!");
+            }
             
+
+
+
 
 
 
