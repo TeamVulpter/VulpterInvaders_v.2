@@ -128,7 +128,6 @@ namespace Game
             this.health.Size = new System.Drawing.Size(72, 19);
             this.health.TabIndex = 0;
             this.health.Text = "Health:";
-            this.health.Click += new System.EventHandler(this.label1_Click);
             // 
             // lives
             // 
@@ -141,7 +140,6 @@ namespace Game
             this.lives.Size = new System.Drawing.Size(63, 19);
             this.lives.TabIndex = 2;
             this.lives.Text = "Lives:";
-            this.lives.Click += new System.EventHandler(this.label3_Click);
             // 
             // scores
             // 
@@ -171,7 +169,6 @@ namespace Game
             this.Obsticle.Size = new System.Drawing.Size(47, 23);
             this.Obsticle.TabIndex = 28;
             this.Obsticle.TabStop = false;
-            this.Obsticle.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // brick19
             // 
@@ -374,7 +371,6 @@ namespace Game
             this.hero.Size = new System.Drawing.Size(37, 38);
             this.hero.TabIndex = 8;
             this.hero.TabStop = false;
-            this.hero.Click += new System.EventHandler(this.hero_Click);
             // 
             // brick
             // 
@@ -418,7 +414,6 @@ namespace Game
             this.Obsticle3.Size = new System.Drawing.Size(47, 23);
             this.Obsticle3.TabIndex = 31;
             this.Obsticle3.TabStop = false;
-            this.Obsticle3.Click += new System.EventHandler(this.Obsticle3_Click);
             // 
             // Obsticle2
             // 
@@ -649,7 +644,6 @@ namespace Game
             this.Name = "VulpterInvadersGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VulpterInvader.2";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Obsticle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.brick19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.brick18)).EndInit();

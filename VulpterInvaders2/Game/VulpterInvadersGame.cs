@@ -149,6 +149,7 @@
 
             //check for get item from field
             this.items = this.player.GetItem(items);
+
             //update values on hero
             this.health_value.Text = Health.HelthCount.ToString();
             this.life_value.Text = Life.LifeCount.ToString();
@@ -162,26 +163,7 @@
                 invaderAttack.Show();
             }
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
         
-        private void hero_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ObsticleTimer_Tick(object sender, EventArgs e)
         {
             this.obsticle.PositionX = Obsticle.Location.X;
@@ -252,7 +234,7 @@
                     Obsticle3.Location = new Point(brick3.Location.X - 1, brick3.Location.Y);
                 }
             }
-            /// Obsticle4 movement
+            // Obsticle4 movement
             if (obsticle4.PositionY >= brick14.Location.Y - 1)
             {
                 if (Obsticle4.Right >= brick14.Left)
@@ -260,7 +242,7 @@
                     Obsticle4.Location = new Point(brick2.Location.X - 1, brick2.Location.Y);
                 }
             }
-            //Obsticle5 movement
+            // Obsticle5 movement
             if (obsticle5.PositionY >= brick15.Location.Y - 1)
             {
                 if (Obsticle5.Right >= brick15.Left)
@@ -268,16 +250,6 @@
                     Obsticle5.Location = new Point(brick1.Location.X - 1, brick1.Location.Y);
                 }
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Obsticle3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

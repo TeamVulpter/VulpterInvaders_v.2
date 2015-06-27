@@ -76,6 +76,8 @@
     <Compile Include="Classes\Characters\Character.cs" />
     <Compile Include="Classes\Characters\Player.cs" />
     <Compile Include="Classes\Characters\Score.cs" />
+    <Compile Include="Exception\InvalidItemTypeException.cs" />
+    <Compile Include="Exception\InvalidPictureException.cs" />
     <Compile Include="FormMenuUI.cs">
       <SubType>Form</SubType>
     </Compile>
