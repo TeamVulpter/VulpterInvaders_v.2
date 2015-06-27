@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Game.Classes;
-using Game.Classes.Characters;
-using Game.Classes.Enemies;
-
-namespace Game
+﻿namespace Game
 {
+    using System.Drawing;
+    using System.Windows.Forms;
+    using Classes;
+    using Classes.Characters;
+    using Classes.Enemies;
+
     public partial class InvadersAttack : Form
     {
 
@@ -42,7 +35,6 @@ namespace Game
             }
         }
 
-
         private void InvaderAttack_KeyDown(object sender, KeyEventArgs e)
         {
             if (!shipPlayer.StopAtMin(playerShip.Location.X, 20))
@@ -50,7 +42,6 @@ namespace Game
 
                 if (e.KeyCode == Keys.A)
                 {
-
                     shipPlayer.MoveLeft();
                 }
 
@@ -59,7 +50,6 @@ namespace Game
             {
                 if (e.KeyCode == Keys.D)
                 {
-
                     shipPlayer.MoveRight();
                 }
             }
@@ -74,8 +64,6 @@ namespace Game
                 this.bullet = new Bullet(playerShip.Location.X, bullet.PositionY, bulletPanel);
                 bulletPanel.Location = new Point(playerShip.Location.X, bullet.PositionY - 10);
                 bullet.Start();
-
-
             }
 
             this.enemy.PositionX = shipEnemy.Location.X;
