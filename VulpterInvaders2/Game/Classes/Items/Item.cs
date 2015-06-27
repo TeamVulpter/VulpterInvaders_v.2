@@ -4,6 +4,7 @@
     using System.Windows.Forms;
     using System.Drawing;
     using Classes;
+    using Exception;
 
     public class Item : GameObject
     {
@@ -86,6 +87,8 @@
                 case ItemType.BonusScore:
                     this.Picture.ImageLocation = @"../../Resources/BlueGear.png";
                     break;
+                default:
+                    throw new InvalidPictureException();
             }
         }
     }
