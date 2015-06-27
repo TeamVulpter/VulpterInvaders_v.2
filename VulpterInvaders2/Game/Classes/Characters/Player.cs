@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Game.Classes.Characters
+﻿namespace Game.Classes.Characters
 {
     using System.Windows.Forms;
     using System.Collections.Generic;
