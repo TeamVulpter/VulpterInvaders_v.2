@@ -80,6 +80,7 @@
             this.item9 = new System.Windows.Forms.PictureBox();
             this.item10 = new System.Windows.Forms.PictureBox();
             this.item11 = new System.Windows.Forms.PictureBox();
+            this.MoveLeft = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Obsticle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brick19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brick18)).BeginInit();
@@ -167,7 +168,7 @@
             this.Obsticle.BackColor = System.Drawing.Color.Transparent;
             this.Obsticle.BackgroundImage = global::Game.Properties.Resources.Bricks;
             this.Obsticle.ErrorImage = global::Game.Properties.Resources.Bricks1;
-            this.Obsticle.Location = new System.Drawing.Point(67, 401);
+            this.Obsticle.Location = new System.Drawing.Point(58, 401);
             this.Obsticle.Name = "Obsticle";
             this.Obsticle.Size = new System.Drawing.Size(47, 23);
             this.Obsticle.TabIndex = 28;
@@ -390,7 +391,7 @@
             this.Obsticle5.BackColor = System.Drawing.Color.Transparent;
             this.Obsticle5.BackgroundImage = global::Game.Properties.Resources.Bricks;
             this.Obsticle5.ErrorImage = global::Game.Properties.Resources.Bricks1;
-            this.Obsticle5.Location = new System.Drawing.Point(114, 53);
+            this.Obsticle5.Location = new System.Drawing.Point(58, 46);
             this.Obsticle5.Name = "Obsticle5";
             this.Obsticle5.Size = new System.Drawing.Size(47, 23);
             this.Obsticle5.TabIndex = 29;
@@ -401,7 +402,7 @@
             this.Obsticle4.BackColor = System.Drawing.Color.Transparent;
             this.Obsticle4.BackgroundImage = global::Game.Properties.Resources.Bricks;
             this.Obsticle4.ErrorImage = global::Game.Properties.Resources.Bricks1;
-            this.Obsticle4.Location = new System.Drawing.Point(67, 153);
+            this.Obsticle4.Location = new System.Drawing.Point(454, 126);
             this.Obsticle4.Name = "Obsticle4";
             this.Obsticle4.Size = new System.Drawing.Size(47, 23);
             this.Obsticle4.TabIndex = 30;
@@ -412,7 +413,7 @@
             this.Obsticle3.BackColor = System.Drawing.Color.Transparent;
             this.Obsticle3.BackgroundImage = global::Game.Properties.Resources.Bricks;
             this.Obsticle3.ErrorImage = global::Game.Properties.Resources.Bricks1;
-            this.Obsticle3.Location = new System.Drawing.Point(67, 243);
+            this.Obsticle3.Location = new System.Drawing.Point(58, 217);
             this.Obsticle3.Name = "Obsticle3";
             this.Obsticle3.Size = new System.Drawing.Size(47, 23);
             this.Obsticle3.TabIndex = 31;
@@ -423,7 +424,7 @@
             this.Obsticle2.BackColor = System.Drawing.Color.Transparent;
             this.Obsticle2.BackgroundImage = global::Game.Properties.Resources.Bricks;
             this.Obsticle2.ErrorImage = global::Game.Properties.Resources.Bricks1;
-            this.Obsticle2.Location = new System.Drawing.Point(450, 339);
+            this.Obsticle2.Location = new System.Drawing.Point(454, 310);
             this.Obsticle2.Name = "Obsticle2";
             this.Obsticle2.Size = new System.Drawing.Size(47, 23);
             this.Obsticle2.TabIndex = 32;
@@ -604,6 +605,11 @@
             this.item11.TabIndex = 47;
             this.item11.TabStop = false;
             // 
+            // MoveLeft
+            // 
+            this.MoveLeft.Interval = 30;
+            this.MoveLeft.Tick += new System.EventHandler(this.MoveLeft_Tick);
+            // 
             // VulpterInvadersGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -750,6 +756,7 @@
         private PictureBox item9;
         private PictureBox item10;
         private PictureBox item11;
+        private Timer MoveLeft;
     }
 }
 

@@ -188,34 +188,101 @@
             this.obsticle5.PositionX = Obsticle5.Location.X;
             this.obsticle5.PositionY = Obsticle5.Location.Y;
 
-
-
-            Obsticle.Location=new Point(obsticle.PositionX +1 , obsticle.PositionY);
-            Obsticle2.Location = new Point(obsticle2.PositionX - 1, obsticle2.PositionY);
-            Obsticle3.Location = new Point(obsticle3.PositionX +1, obsticle3.PositionY);
-            Obsticle4.Location = new Point(obsticle4.PositionX + 1, obsticle4.PositionY);
-            Obsticle5.Location = new Point(obsticle5.PositionX + 1, obsticle5.PositionY);
-
-            if (obsticle.PositionY>=brick5.Location.Y-1)
+            Obsticle.Left += 1;
+            Obsticle2.Left -= 1;
+            Obsticle3.Left += 1;
+            Obsticle4.Left -= 1;
+            Obsticle5.Left += 1;
+            if (Obsticle.Left > brick11.Left - Obsticle.Width)
             {
-                if (Obsticle.Right >= brick11.Left)
-                {
-                    Obsticle.Location=new Point(brick5.Location.X-1,brick5.Location.Y);
-                }
+                ObsticleTimer.Enabled = false;
+                MoveLeft.Enabled = true;
             }
+            DetectCollison(Obsticle, hero, brick5);
+            DetectCollison(Obsticle2, hero, brick4);
+            DetectCollison(Obsticle3, hero, brick3);
+            DetectCollison(Obsticle4, hero, brick2);
+            DetectCollison(Obsticle5, hero, brick1);
 
-            bool obsticleOne = (
-                                    Obsticle.Location.X + Obsticle.Width >= this.player.Hero.Location.X &&
-                                    Obsticle.Location.X <= this.player.Hero.Left
-                               ) &&
-                               (
-                                    Obsticle.Location.Y >= this.player.Hero.Top &&
-                                    Obsticle.Location.Y <= this.player.Hero.Top + this.player.Hero.Height
-                               );
 
-            if (obsticleOne)
+            //Obsticle.Location=new Point(obsticle.PositionX +1 , obsticle.PositionY);
+            //Obsticle2.Location = new Point(obsticle2.PositionX - 1, obsticle2.PositionY);
+            //Obsticle3.Location = new Point(obsticle3.PositionX +1, obsticle3.PositionY);
+            //Obsticle4.Location = new Point(obsticle4.PositionX + 1, obsticle4.PositionY);
+            //Obsticle5.Location = new Point(obsticle5.PositionX + 1, obsticle5.PositionY);
+
+            //if (obsticle.PositionY>=brick5.Location.Y-1)
+            //{
+            //    if (Obsticle.Right >= brick11.Left)
+            //    {
+            //        Obsticle.Location=new Point(brick5.Location.X-1,brick5.Location.Y);
+            //    }
+            //}
+
+            //bool obsticleOne = (
+            //                        Obsticle.Location.X + Obsticle.Width >= this.player.Hero.Location.X &&
+            //                        Obsticle.Location.X <= this.player.Hero.Left
+            //                   ) &&
+            //                   (
+            //                        Obsticle.Location.Y >= this.player.Hero.Top &&
+            //                        Obsticle.Location.Y <= this.player.Hero.Top + this.player.Hero.Height
+            //                   );
+
+            //if (obsticleOne)
+            //{
+            //    Obsticle.Location = new Point(brick5.Location.X - 1, brick5.Location.Y);
+            //    Life.LifeCount--;
+            //    life_value.Text = Life.LifeCount.ToString();
+            //    if (Life.LifeCount == 0)
+            //    {
+            //        MessageBox.Show("Game over");
+            //        Application.Exit();
+            //    }
+            //}
+
+            //////obsticle2 movement
+            ////if (obsticle2.PositionY >= brick4.Location.Y - 1)
+            ////{
+            ////    if (Obsticle2.Left <= brick4.Right)
+            ////    {
+            ////        Obsticle2.Location = new Point(brick12.Location.X + 1, brick12.Location.Y);
+            ////    }
+            ////}
+            ////// Obsticle3 movement
+            ////if (obsticle3.PositionY >= brick13.Location.Y - 1)
+            ////{
+            ////    if (Obsticle3.Right >= brick13.Left)
+            ////    {
+            ////        Obsticle3.Location = new Point(brick3.Location.X - 1, brick3.Location.Y);
+            ////    }
+            ////}
+            ////// Obsticle4 movement
+            ////if (obsticle4.PositionY >= brick14.Location.Y - 1)
+            ////{
+            ////    if (Obsticle4.Right >= brick14.Left)
+            ////    {
+            ////        Obsticle4.Location = new Point(brick2.Location.X - 1, brick2.Location.Y);
+            ////    }
+            ////}
+            ////// Obsticle5 movement
+            ////if (obsticle5.PositionY >= brick15.Location.Y - 1)
+            ////{
+            ////    if (Obsticle5.Right >= brick15.Left)
+            ////    {
+            ////        Obsticle5.Location = new Point(brick1.Location.X - 1, brick1.Location.Y);
+            ////    }
+            ////}
+        }
+        private void DetectCollison(PictureBox obsticleBox, PictureBox hero, PictureBox brickBox)
+        {
+
+            if ((obsticleBox.Location.X + obsticleBox.Width >= hero.Location.X &&
+                                    obsticleBox.Location.X <= hero.Left) && (
+                                    obsticleBox.Location.Y >= hero.Top &&
+                                    obsticleBox.Location.Y <= hero.Top + hero.Height
+                               ))
             {
-                Obsticle.Location = new Point(brick5.Location.X - 1, brick5.Location.Y);
+                obsticleBox.Location = new Point(brickBox.Location.X - 1, brickBox.Location.Y);
                 Life.LifeCount--;
                 life_value.Text = Life.LifeCount.ToString();
                 if (Life.LifeCount == 0)
@@ -224,39 +291,21 @@
                     Application.Exit();
                 }
             }
+        }
 
-            //obsticle2 movement
-            if (obsticle2.PositionY >= brick4.Location.Y - 1)
+        private void MoveLeft_Tick(object sender, EventArgs e)
+        {
+            Obsticle.Left -= 1;
+            Obsticle2.Left += 1;
+            Obsticle3.Left -= 1;
+            Obsticle4.Left += 1;
+            Obsticle5.Left -= 1;
+            if (Obsticle.Left < brick5.Right)
             {
-                if (Obsticle2.Left <= brick4.Right)
-                {
-                    Obsticle2.Location = new Point(brick12.Location.X + 1, brick12.Location.Y);
-                }
+                ObsticleTimer.Enabled = true;
+                MoveLeft.Enabled = false;
             }
-            // Obsticle3 movement
-            if (obsticle3.PositionY >= brick13.Location.Y - 1)
-            {
-                if (Obsticle3.Right >= brick13.Left)
-                {
-                    Obsticle3.Location = new Point(brick3.Location.X - 1, brick3.Location.Y);
-                }
-            }
-            // Obsticle4 movement
-            if (obsticle4.PositionY >= brick14.Location.Y - 1)
-            {
-                if (Obsticle4.Right >= brick14.Left)
-                {
-                    Obsticle4.Location = new Point(brick2.Location.X - 1, brick2.Location.Y);
-                }
-            }
-            // Obsticle5 movement
-            if (obsticle5.PositionY >= brick15.Location.Y - 1)
-            {
-                if (Obsticle5.Right >= brick15.Left)
-                {
-                    Obsticle5.Location = new Point(brick1.Location.X - 1, brick1.Location.Y);
-                }
-            }
+
         }
     }
 }
