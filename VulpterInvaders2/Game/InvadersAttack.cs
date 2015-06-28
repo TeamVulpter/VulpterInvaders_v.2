@@ -2,6 +2,7 @@
 {
     using System.Drawing;
     using System.Windows.Forms;
+
     using Classes;
     using Classes.Characters;
     using Classes.Enemies;
@@ -12,8 +13,7 @@
         private PlayerShip shipPlayer;
         private Bullet bullet;
         private EnemyShip enemy;
-        private bool spaceKeyIsPressed = false;
-
+        private bool spaceKeyIsPressed = false;    
 
         public InvadersAttack()
         {
