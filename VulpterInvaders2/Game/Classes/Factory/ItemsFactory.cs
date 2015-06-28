@@ -3,26 +3,29 @@
     using System;
     using System.Collections.Generic;
     using System.Windows.Forms;
-    using Items;
+
     using Interfaces;
+
+    using Items;
 
     public class ItemsFactory
     {
-        Random rnd = new Random();
-        List<int> rndX = new List<int>();
-        List<int> rndY = new List<int>(); 
+        private Random rnd = new Random();
+        private List<int> rndX = new List<int>();
+        private List<int> rndY = new List<int>(); 
 
         public List<Item> CreateItems(int numbersOfItems, List<PictureBox> pic, IMap map)
         {
             List<Item> items = new List<Item>();
             for (int i = 0; i < numbersOfItems; i++)
             {
-                int randomItem = rnd.Next(1, 4);
+                int randomItem = rnd.Next(1, 5);
                 ItemType type = (ItemType) Enum.Parse(typeof (ItemType), randomItem.ToString());
                 items.Add(new Item(
-                                    GenerateRandomX(map.Left, map.Right-pic[i].Width), 
-                                    GenerateRandomY(map.Top, map.Down-pic[i].Height), 
-                                    type, pic[i]
+                                    this.GenerateRandomX(map.Left, map.Right-pic[i].Width), 
+                                    this.GenerateRandomY(map.Top, map.Down-pic[i].Height), 
+                                    type, 
+                                    pic[i]
                                    )
                          );
             }

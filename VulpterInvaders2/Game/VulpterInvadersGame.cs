@@ -54,10 +54,11 @@
                 itemsPictureBox.Add(item8);
                 itemsPictureBox.Add(item9);
                 itemsPictureBox.Add(item10);
+                itemsPictureBox.Add(item11);
 
                 //generation items with bonus
                 ItemsFactory itemsFactory = new ItemsFactory();
-                items = itemsFactory.CreateItems(10, itemsPictureBox, this.map);
+                items = itemsFactory.CreateItems(11, itemsPictureBox, this.map);
 
                 this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
                 //drawing bricks

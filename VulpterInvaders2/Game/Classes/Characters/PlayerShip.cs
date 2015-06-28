@@ -2,9 +2,11 @@
 {
     using System.Drawing;
     using System.Windows.Forms;
+
     public class PlayerShip : Character
     {
         private PictureBox playerShip;
+
         public PlayerShip(int positionX, int positionY, PictureBox playerShip)
             : base(positionX, positionY)
         {

@@ -1,7 +1,8 @@
 ﻿namespace Game.Classes.Characters
 {
-    using System.Windows.Forms;
     using System.Collections.Generic;
+    using System.Windows.Forms;
+
     using Items;
 
     public class Player : Character
@@ -30,6 +31,7 @@
                     items.RemoveAt(i);
                 }
             }
+
             return items;
         }
 
@@ -40,6 +42,7 @@
             {
                 return true;
             }
+
             return false;
         }
     }

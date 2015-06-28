@@ -1,8 +1,9 @@
-﻿using System.Windows.Forms;
-using Game.Classes.Brick;
-namespace Game
+﻿namespace Game
 {
-    partial class VulpterInvadersGame
+    using System.Windows.Forms;
+    using Game.Classes.Brick;
+
+    public partial class VulpterInvadersGame
     {
         /// <summary>
         /// Required designer variable.
@@ -78,6 +79,7 @@ namespace Game
             this.item8 = new System.Windows.Forms.PictureBox();
             this.item9 = new System.Windows.Forms.PictureBox();
             this.item10 = new System.Windows.Forms.PictureBox();
+            this.item11 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Obsticle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brick19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brick18)).BeginInit();
@@ -115,6 +117,7 @@ namespace Game
             ((System.ComponentModel.ISupportInitialize)(this.item8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item11)).BeginInit();
             this.SuspendLayout();
             // 
             // health
@@ -589,6 +592,18 @@ namespace Game
             this.item10.TabIndex = 46;
             this.item10.TabStop = false;
             // 
+            // item11
+            // 
+            this.item11.BackColor = System.Drawing.Color.Transparent;
+            this.item11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("item11.BackgroundImage")));
+            this.item11.InitialImage = ((System.Drawing.Image)(resources.GetObject("item11.InitialImage")));
+            this.item11.Location = new System.Drawing.Point(385, 113);
+            this.item11.Margin = new System.Windows.Forms.Padding(0);
+            this.item11.Name = "item11";
+            this.item11.Size = new System.Drawing.Size(30, 30);
+            this.item11.TabIndex = 47;
+            this.item11.TabStop = false;
+            // 
             // VulpterInvadersGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -596,6 +611,7 @@ namespace Game
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(736, 563);
+            this.Controls.Add(this.item11);
             this.Controls.Add(this.item10);
             this.Controls.Add(this.item9);
             this.Controls.Add(this.item8);
@@ -639,7 +655,7 @@ namespace Game
             this.Controls.Add(this.lives);
             this.Controls.Add(this.health);
             this.Controls.Add(this.brick);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "VulpterInvadersGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -681,6 +697,7 @@ namespace Game
             ((System.ComponentModel.ISupportInitialize)(this.item8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -732,6 +749,7 @@ namespace Game
         private PictureBox item8;
         private PictureBox item9;
         private PictureBox item10;
+        private PictureBox item11;
     }
 }
 
