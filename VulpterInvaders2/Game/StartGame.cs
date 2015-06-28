@@ -3,10 +3,10 @@
     using System;
     using Engine;
 
-    static class StartGame
+    public static class StartGame
     {
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             GameEngineVulpterInvaders engineVulpter = new GameEngineVulpterInvaders();
             engineVulpter.Run();

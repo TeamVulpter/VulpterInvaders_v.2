@@ -1,6 +1,7 @@
 ﻿namespace Game.Classes.Brick
 {
     using System.Windows.Forms;
+
     public class Brick : GameObject
     {
         private PictureBox brickSingle;
@@ -12,7 +13,21 @@
         }
 
         public int X { get; set; }
+
         public int Y { get; set; }
-        public PictureBox BrickSingle { get; set; }
+
+        public PictureBox BrickSingle
+        {
+            get
+            {
+                return brickSingle;
+            }
+
+            private set
+            {
+                this.brickSingle = value;
+            }
+        }
+
     }
 }

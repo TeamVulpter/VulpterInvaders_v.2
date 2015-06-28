@@ -1,8 +1,9 @@
 ﻿namespace Game.Classes
 {
-    using Interfaces;
     using System;
-    public class Attack :IAttack
+    using Interfaces;
+
+    public class Attack : IAttack
     {
         public void UpdateAttack()
         {

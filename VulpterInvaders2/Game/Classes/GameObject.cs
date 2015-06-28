@@ -2,9 +2,6 @@
 {
     public abstract class GameObject
     {
-        private int positionX;
-        private int positionY;
-
         protected GameObject(int positionX, int positionY)
         {
             this.PositionX = positionX;
@@ -12,6 +9,7 @@
         }
 
         public int PositionX { get; set; }
+
         public int PositionY { get; set; }
     }
 }

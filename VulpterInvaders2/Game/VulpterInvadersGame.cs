@@ -1,15 +1,18 @@
 ﻿namespace Game
 {
     using System;
-    using System.Windows.Forms;
     using System.Collections.Generic;
     using System.Drawing;
-    using Classes.Characters;
-    using Classes.Items;
-    using Classes.Factory;
+    using System.Windows.Forms;
+
     using Classes.Brick;
+    using Classes.Characters;
+    using Classes.Factory;
+    using Classes.Items;
     using Classes.Map;
+
     using Exception;
+
     using Interfaces;
 
     public partial class VulpterInvadersGame : Form

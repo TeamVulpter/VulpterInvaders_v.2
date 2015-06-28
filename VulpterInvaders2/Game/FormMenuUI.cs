@@ -2,6 +2,7 @@
 {
     using System;
     using System.Windows.Forms;
+
     public partial class FormMenuUI : Form
     {
         public FormMenuUI()
@@ -18,11 +19,6 @@
         
         private void FormMenuUI_Load(object sender, EventArgs e)
         {
-
         }
-
-        //private void Btn_NewPlayer_Click(object sender, EventArgs e)
-        //{
-        //}
     }
 }
