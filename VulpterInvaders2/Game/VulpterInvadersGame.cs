@@ -160,6 +160,13 @@
             this.life_value.Text = Life.LifeCount.ToString();
             this.score_value.Text = Score.ScoreCount.ToString();
 
+            //if lives is zero or negative - game over
+            if (Life.LifeCount <= 0)
+            {
+                MessageBox.Show("Game over");
+                Application.Exit();
+            }
+
             //check for exit from this form in door
             if (this.player.CheckForExit(this.door))
             {
@@ -193,11 +200,13 @@
             Obsticle3.Left += 1;
             Obsticle4.Left -= 1;
             Obsticle5.Left += 1;
+
             if (Obsticle.Left > brick11.Left - Obsticle.Width)
             {
                 ObsticleTimer.Enabled = false;
                 MoveLeft.Enabled = true;
             }
+
             DetectCollison(Obsticle, hero, brick5);
             DetectCollison(Obsticle2, hero, brick4);
             DetectCollison(Obsticle3, hero, brick3);
