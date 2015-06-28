@@ -27,6 +27,9 @@
                     Health.HelthCount += items[i].BonusHealth;
                     Life.LifeCount += items[i].BonusLife;
                     Score.ScoreCount += items[i].BonusScore;
+                    //remove life
+                    Life.LifeCount += items[i].RemoveBonus;
+
                     items[i].Picture.Visible = false;
                     items.RemoveAt(i);
                 }
