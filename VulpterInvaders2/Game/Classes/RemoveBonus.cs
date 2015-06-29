@@ -1,4 +1,4 @@
-﻿namespace Game.Classes.Characters
+﻿namespace Game.Classes
 {
     public class RemoveBonus
     {

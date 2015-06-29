@@ -62,7 +62,7 @@
   <ItemGroup>
     <Compile Include="Classes\Attack.cs" />
     <Compile Include="Classes\Characters\ObsticleBrick.cs" />
-    <Compile Include="Classes\Characters\RemoveBonus.cs" />
+    <Compile Include="Classes\RemoveBonus.cs" />
     <Compile Include="Classes\Enemies\EnemyShip.cs" />
     <Compile Include="Classes\Factory\EnemyInvaderFactory.cs" />
     <Compile Include="Classes\Factory\ItemsFactory.cs" />

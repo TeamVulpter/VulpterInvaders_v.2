@@ -67,7 +67,7 @@
         {
             if (this.ItemType.ToString() == "RemoveBonus")
             {
-                int randomBonus = this.rnd.Next(0, 4);
+                int randomBonus = this.rnd.Next(0, 3);
                 this.RemoveBonus -= randomBonus;
             }   
             else if (this.ItemType.ToString() == "BonusHealth")
