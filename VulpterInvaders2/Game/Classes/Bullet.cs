@@ -5,8 +5,8 @@
     {
         private Panel bulletPanel;
 
-        public Bullet(int positionX, int positionY, Panel bulletPanel)
-            :base(positionX, positionY)
+        public Bullet(Panel bulletPanel)
+            :base(bulletPanel.Location.X, bulletPanel.Location.Y)
         {
             this.bulletPanel = bulletPanel;
             bulletPanel.Visible = false;

@@ -19,6 +19,7 @@ namespace Game
         private EnemyShip enemy;
         private bool spaceKeyIsPressed = false;
         private IList<EnemyShip> enemies;
+        private Attack attack;
         private EnemyInvaderFactory factoryInvaders;
 
         public InvadersAttack()
@@ -27,8 +28,8 @@ namespace Game
             this.KeyPress += this.InvadersAttack_KeyPress;
             this.KeyDown += this.InvaderAttack_KeyDown;
             this.shipPlayer = new PlayerShip(playerShip);
-            this.bullet = new Bullet(shipPlayer.PositionX, shipPlayer.PositionY, bulletPanel);
-            //this.enemy = new EnemyShip(shipEnemy);
+            this.bullet = new Bullet(bulletPanel);
+            this.enemy = new EnemyShip(shipEnemy);
 
             enemies = new List<EnemyShip>()
             {
@@ -41,6 +42,7 @@ namespace Game
                 new EnemyShip(invaderSeven),
                 new EnemyShip(invaderEight)
             };
+            //attack = new Attack();
             factoryInvaders = new EnemyInvaderFactory();
             factoryInvaders.CreateEnemy(enemies);
 
@@ -81,18 +83,21 @@ namespace Game
         {
             if (spaceKeyIsPressed)
             {
-                this.bullet.PositionX = bulletPanel.Location.X;
-                this.bullet.PositionY = bulletPanel.Location.Y;
-                this.bullet = new Bullet(playerShip.Location.X, bullet.PositionY, bulletPanel);
+                this.bullet.PositionX = playerShip.Location.X+10;
+                this.bullet = new Bullet(bulletPanel);
                 bulletPanel.Location = new Point(playerShip.Location.X, bullet.PositionY - 10);
                 bullet.Start();
             }
-
-            //shipEnemy.Location = new Point(enemy.PositionX, enemy.PositionY + 1);
-            //if (enemy.PositionY >= this.Height - 30)
-            //{
-            //    shipEnemy.Location = new Point(enemy.PositionX, 10);
-            //}
+            foreach (var en in enemies)
+            {
+                en.PositionX = en.EnemyInvader.Location.X;
+                en.PositionY = en.EnemyInvader.Location.Y;
+                en.EnemyInvader.Location = new Point(en.PositionX, en.PositionY + 1);
+                if (en.PositionY >= this.Height - 30)
+                {
+                    en.EnemyInvader.Location = new Point(en.PositionX, 20);
+                }
+            }
         }
     }
 }
