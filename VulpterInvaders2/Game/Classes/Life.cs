@@ -1,4 +1,5 @@
-﻿namespace Game.Classes
+﻿//this file contains lives on player and player ship
+namespace Game.Classes
 {
     public class Life
     {

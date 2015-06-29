@@ -1,4 +1,5 @@
-﻿namespace Game.Classes
+﻿//this file contains bonus on player, which remove bonuses
+namespace Game.Classes
 {
     public class RemoveBonus
     {
