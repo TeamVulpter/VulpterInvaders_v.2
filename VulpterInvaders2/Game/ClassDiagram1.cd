@@ -89,8 +89,8 @@
     <InheritanceLine Type="Game.Classes.Characters.Character" FixedFromPoint="true">
       <Path>
         <Point X="10.188" Y="4.441" />
-        <Point X="10.188" Y="4.741" />
-        <Point X="16" Y="4.741" />
+        <Point X="10.188" Y="4.992" />
+        <Point X="16" Y="4.992" />
         <Point X="16" Y="5.75" />
       </Path>
     </InheritanceLine>
@@ -104,8 +104,8 @@
     <InheritanceLine Type="Game.Classes.Characters.Character" FixedFromPoint="true">
       <Path>
         <Point X="10.188" Y="4.441" />
-        <Point X="10.188" Y="4.741" />
-        <Point X="12" Y="4.741" />
+        <Point X="10.188" Y="4.992" />
+        <Point X="12" Y="4.992" />
         <Point X="12" Y="5.75" />
       </Path>
     </InheritanceLine>
@@ -119,8 +119,8 @@
     <InheritanceLine Type="Game.Classes.Characters.Character" FixedFromPoint="true">
       <Path>
         <Point X="10.188" Y="4.441" />
-        <Point X="10.188" Y="4.741" />
-        <Point X="14" Y="4.741" />
+        <Point X="10.188" Y="4.992" />
+        <Point X="14" Y="4.992" />
         <Point X="14" Y="5.75" />
       </Path>
     </InheritanceLine>
@@ -234,7 +234,7 @@
   <Class Name="Game.VulpterInvadersGame" Collapsed="true">
     <Position X="18.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAmEACAPCvAyAgJEioAAACAQIQCAAJIAAAAAAEgQg=</HashCode>
+      <HashCode>AAIAmEACAPCvAyAgJEioAAACAQIRCAAJIAAAAAAEgQg=</HashCode>
       <FileName>VulpterInvadersGame.cs</FileName>
     </TypeIdentifier>
   </Class>

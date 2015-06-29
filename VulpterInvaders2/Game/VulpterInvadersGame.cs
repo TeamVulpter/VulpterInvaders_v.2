@@ -27,10 +27,10 @@ namespace Game
         private ObsticleBrick obsticle3;
         private ObsticleBrick obsticle4;
         private ObsticleBrick obsticle5;
-        private IList<ObsticleBrick> obsticles=new List<ObsticleBrick>();
-        private IList<Item> items = new List<Item>(); 
-        private List<PictureBox> itemsPictureBox = new List<PictureBox>(); 
-        
+        private IList<ObsticleBrick> obsticles = new List<ObsticleBrick>();
+        private IList<Item> items = new List<Item>();
+        private List<PictureBox> itemsPictureBox = new List<PictureBox>();
+
         public VulpterInvadersGame()
         {
             InitializeComponent();
@@ -43,7 +43,7 @@ namespace Game
                     this.brick11.Location.X);
 
                 //create player
-                this.player = new Player(((this.map.Right - this.map.Left)/2), this.map.Down - hero.Height, hero);
+                this.player = new Player(((this.map.Right - this.map.Left) / 2), this.map.Down - hero.Height, hero);
 
                 //add item to list of items
                 this.AddItemToList();
@@ -84,7 +84,6 @@ namespace Game
             {
                 MessageBox.Show(@"No found picture for item!");
             }
-            
 
 
 
@@ -93,7 +92,8 @@ namespace Game
 
 
 
-            this.obsticle=new ObsticleBrick(67,401,Obsticle);
+
+            this.obsticle = new ObsticleBrick(67, 401, Obsticle);
             this.obsticle2 = new ObsticleBrick(67, 339, Obsticle2);
             this.obsticle3 = new ObsticleBrick(67, 243, Obsticle3);
             this.obsticle4 = new ObsticleBrick(67, 153, Obsticle4);
@@ -106,6 +106,7 @@ namespace Game
 
         }
 
+        //add item to list of items
         private void AddItemToList()
         {
             this.itemsPictureBox.Add(item1);
@@ -184,7 +185,7 @@ namespace Game
                 invaderAttack.Show();
             }
         }
-        
+
         private void ObsticleTimer_Tick(object sender, EventArgs e)
         {
             this.obsticle.PositionX = Obsticle.Location.X;
@@ -316,6 +317,7 @@ namespace Game
             Obsticle3.Left -= 1;
             Obsticle4.Left += 1;
             Obsticle5.Left -= 1;
+
             if (Obsticle.Left < brick5.Right)
             {
                 ObsticleTimer.Enabled = true;
