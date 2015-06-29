@@ -1,4 +1,7 @@
-﻿namespace Game
+﻿using System.Collections.Generic;
+using Game.Classes.Factory;
+
+namespace Game
 {
     using System.Drawing;
     using System.Windows.Forms;
@@ -6,6 +9,7 @@
     using Classes;
     using Classes.Characters;
     using Classes.Enemies;
+    using System.Collections;
 
     public partial class InvadersAttack : Form
     {
@@ -13,16 +17,34 @@
         private PlayerShip shipPlayer;
         private Bullet bullet;
         private EnemyShip enemy;
-        private bool spaceKeyIsPressed = false;    
+        private bool spaceKeyIsPressed = false;
+        private IList<EnemyShip> enemies;
+        private EnemyInvaderFactory factoryInvaders;
 
         public InvadersAttack()
         {
             InitializeComponent();
             this.KeyPress += this.InvadersAttack_KeyPress;
             this.KeyDown += this.InvaderAttack_KeyDown;
-            this.shipPlayer = new PlayerShip(playerShip.Location.X, playerShip.Location.Y, playerShip);
+            this.shipPlayer = new PlayerShip(playerShip);
             this.bullet = new Bullet(shipPlayer.PositionX, shipPlayer.PositionY, bulletPanel);
-            this.enemy = new EnemyShip(shipEnemy.Location.X, shipEnemy.Location.Y, shipEnemy);
+            //this.enemy = new EnemyShip(shipEnemy);
+
+            enemies = new List<EnemyShip>()
+            {
+                new EnemyShip(shipEnemy),
+                new EnemyShip(invaderTwo),
+                new EnemyShip(invaderThree),
+                new EnemyShip(invaderFour),
+                new EnemyShip(invaderFive),
+                new EnemyShip(invaderSix),
+                new EnemyShip(invaderSeven),
+                new EnemyShip(invaderEight)
+            };
+            factoryInvaders = new EnemyInvaderFactory();
+            factoryInvaders.CreateEnemy(enemies);
+
+
         }
 
         private void InvadersAttack_KeyPress(object sender, KeyPressEventArgs e)
@@ -66,14 +88,11 @@
                 bullet.Start();
             }
 
-            this.enemy.PositionX = shipEnemy.Location.X;
-            this.enemy.PositionY = shipEnemy.Location.Y;
-
-            shipEnemy.Location = new Point(enemy.PositionX, enemy.PositionY + 1);
-            if (enemy.PositionY >= this.Height - 30)
-            {
-                shipEnemy.Location = new Point(enemy.PositionX, 10);
-            }
+            //shipEnemy.Location = new Point(enemy.PositionX, enemy.PositionY + 1);
+            //if (enemy.PositionY >= this.Height - 30)
+            //{
+            //    shipEnemy.Location = new Point(enemy.PositionX, 10);
+            //}
         }
     }
 }

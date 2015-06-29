@@ -7,8 +7,8 @@
     {
         private PictureBox playerShip;
 
-        public PlayerShip(int positionX, int positionY, PictureBox playerShip)
-            : base(positionX, positionY)
+        public PlayerShip(PictureBox playerShip)
+            : base(playerShip.Location.X, playerShip.Location.Y)
         {
             
             this.Ship = playerShip;

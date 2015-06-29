@@ -4,11 +4,13 @@
     public class EnemyShip: GameObject
     {
         private Panel enemyInvader;
-        public EnemyShip(int positionX, int positionY, Panel enemyInvader) 
-            :base(positionX, positionY)
+        public EnemyShip(Panel enemyInvader)
+            : base(enemyInvader.Location.X, enemyInvader.Location.Y)
         {
-            this.enemyInvader = enemyInvader;
+            this.EnemyInvader = enemyInvader;
         }
-       
+
+        public Panel EnemyInvader { get; set; }
+     
     }
 }
