@@ -42,7 +42,7 @@ namespace Game
                 new EnemyShip(invaderSeven),
                 new EnemyShip(invaderEight)
             };
-            //attack = new Attack();
+            attack = new Attack();
             factoryInvaders = new EnemyInvaderFactory();
             factoryInvaders.CreateEnemy(enemies);
 
@@ -88,16 +88,7 @@ namespace Game
                 bulletPanel.Location = new Point(playerShip.Location.X, bullet.PositionY - 10);
                 bullet.Start();
             }
-            foreach (var en in enemies)
-            {
-                en.PositionX = en.EnemyInvader.Location.X;
-                en.PositionY = en.EnemyInvader.Location.Y;
-                en.EnemyInvader.Location = new Point(en.PositionX, en.PositionY + 1);
-                if (en.PositionY >= this.Height - 30)
-                {
-                    en.EnemyInvader.Location = new Point(en.PositionX, 20);
-                }
-            }
+            attack.UpdateAttack(enemies);
         }
     }
 }
