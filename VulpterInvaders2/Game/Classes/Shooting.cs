@@ -6,12 +6,12 @@
     {
         public void Shoot()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void UpdateShots()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
