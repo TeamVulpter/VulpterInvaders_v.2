@@ -20,7 +20,7 @@
         {
             get
             {
-                return brickSingle;
+                return this.brickSingle;
             }
 
             private set
@@ -28,6 +28,5 @@
                 this.brickSingle = value;
             }
         }
-
     }
 }

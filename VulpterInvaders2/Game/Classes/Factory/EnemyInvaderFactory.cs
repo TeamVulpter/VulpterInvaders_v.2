@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using Game.Classes.Enemies;
-
-namespace Game.Classes.Factory
+﻿namespace Game.Classes.Factory
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Drawing;
+    using Enemies;
+
     public class EnemyInvaderFactory
     {
         private Random randomX = new Random();

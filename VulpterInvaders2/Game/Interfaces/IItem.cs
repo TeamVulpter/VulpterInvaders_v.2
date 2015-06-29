@@ -2,6 +2,7 @@
 {
     using System.Windows.Forms;
     using Classes.Items;
+
     interface IItem
     {
         PictureBox Picture { get; set; }

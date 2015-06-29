@@ -1,10 +1,10 @@
-﻿using System.Drawing;
-
-namespace Game.Classes
+﻿namespace Game.Classes
 {
-    using Interfaces;
     using System.Collections.Generic;
-    using Game.Classes.Enemies;
+    using System.Drawing;
+
+    using Enemies;
+    using Interfaces;
 
     public class Attack : IAttack
     {

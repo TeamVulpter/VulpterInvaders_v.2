@@ -48,7 +48,7 @@
             {
                 if (x == randomX)
                 {
-                    //use recursion;
+                    //use recursion for generation new x position;
                     this.GenerateRandomX(this.map.Left, this.maxRandomX);
                 }
             }
@@ -64,7 +64,7 @@
             {
                 if (y == randomY)
                 {
-                    //use recursion;
+                    //use recursion for generation new y position;
                     this.GenerateRandomY(this.map.Top, this.maxRandomY);
                 }
             }
