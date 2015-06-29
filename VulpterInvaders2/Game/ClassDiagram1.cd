@@ -68,18 +68,18 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Game.Classes.Characters.Health" Collapsed="true">
+  <Class Name="Game.Classes.Health" Collapsed="true">
     <Position X="23.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Classes\Characters\Health.cs</FileName>
+      <FileName>Classes\Health.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Game.Classes.Characters.Life" Collapsed="true">
+  <Class Name="Game.Classes.Life" Collapsed="true">
     <Position X="23.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Classes\Characters\Life.cs</FileName>
+      <FileName>Classes\Life.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.Characters.ObsticleBrick" Collapsed="true">
@@ -103,11 +103,11 @@
       <FileName>Classes\Characters\PlayerShip.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Game.Classes.Characters.Score" Collapsed="true">
+  <Class Name="Game.Classes.Score" Collapsed="true">
     <Position X="20" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
-      <FileName>Classes\Characters\Score.cs</FileName>
+      <FileName>Classes\Score.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.Enemies.EnemyShip" Collapsed="true">
@@ -121,14 +121,14 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAA=</HashCode>
       <FileName>Classes\Enemies\EnemyShip.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.Factory.EnemyInvaderFactory" Collapsed="true">
     <Position X="18.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Factory\EnemyInvaderFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -150,7 +150,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>ADBEwAAgQIAAAAAAAAAAAAAAAAAAAIAAAAACAAAAAkA=</HashCode>
+      <HashCode>ADBEwAAgQIAAAAAAAAAAAAIAAAAAAIAAAAACAAIAAkA=</HashCode>
       <FileName>Classes\Items\Item.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -194,7 +194,7 @@
   <Class Name="Game.InvadersAttack" Collapsed="true">
     <Position X="20" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAgDAAAAAAAACAIAACAAAAAAAgARAAIAAAABI=</HashCode>
+      <HashCode>AEQAIAAAgDBAAAAAAACAYAACAAAAAAChARAIIAAAAho=</HashCode>
       <FileName>InvadersAttack.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -208,7 +208,7 @@
   <Class Name="Game.VulpterInvadersGame" Collapsed="true">
     <Position X="18.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAkEACAPCvAyAgJEioAAACAQIQCAABIAAAAAAEgQg=</HashCode>
+      <HashCode>AAIAmEACAPCvAyAgJEioAAACAQIQCAAJIAAAAAAEgQg=</HashCode>
       <FileName>VulpterInvadersGame.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -262,7 +262,7 @@
   <Enum Name="Game.Classes.Items.ItemType" Collapsed="true">
     <Position X="7.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAQAAgQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAQAAgQAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Items\ItemType.cs</FileName>
     </TypeIdentifier>
   </Enum>

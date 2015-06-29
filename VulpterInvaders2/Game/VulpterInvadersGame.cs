@@ -1,4 +1,6 @@
-﻿namespace Game
+﻿using Game.Classes;
+
+namespace Game
 {
     using System;
     using System.Collections.Generic;
