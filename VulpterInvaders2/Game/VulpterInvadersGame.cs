@@ -46,17 +46,7 @@ namespace Game
                 this.player = new Player(((this.map.Right - this.map.Left)/2), this.map.Down - hero.Height, hero);
 
                 //add item to list of items
-                itemsPictureBox.Add(item1);
-                itemsPictureBox.Add(item2);
-                itemsPictureBox.Add(item3);
-                itemsPictureBox.Add(item4);
-                itemsPictureBox.Add(item5);
-                itemsPictureBox.Add(item6);
-                itemsPictureBox.Add(item7);
-                itemsPictureBox.Add(item8);
-                itemsPictureBox.Add(item9);
-                itemsPictureBox.Add(item10);
-                itemsPictureBox.Add(item11);
+                this.AddItemToList();
 
                 //generation items with bonus
                 ItemsFactory itemsFactory = new ItemsFactory();
@@ -114,6 +104,21 @@ namespace Game
             obsticles.Add(obsticle4);
             obsticles.Add(obsticle5);
 
+        }
+
+        private void AddItemToList()
+        {
+            this.itemsPictureBox.Add(item1);
+            this.itemsPictureBox.Add(item2);
+            this.itemsPictureBox.Add(item3);
+            this.itemsPictureBox.Add(item4);
+            this.itemsPictureBox.Add(item5);
+            this.itemsPictureBox.Add(item6);
+            this.itemsPictureBox.Add(item7);
+            this.itemsPictureBox.Add(item8);
+            this.itemsPictureBox.Add(item9);
+            this.itemsPictureBox.Add(item10);
+            this.itemsPictureBox.Add(item11);
         }
 
         //moving hero
