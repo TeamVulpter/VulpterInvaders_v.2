@@ -44,7 +44,7 @@ namespace Game
             factoryInvaders = new EnemyInvaderFactory();
             shooting = new Shooting();
             factoryInvaders.CreateEnemy(enemies);
-            
+
 
         }
 
@@ -87,6 +87,21 @@ namespace Game
                 shooting.Shoot(bullet);
             }
             attack.UpdateAttack(enemies);
+            foreach (var enemy in enemies)
+            {
+                if (((bullet.PositionX + bullet.BulletPanel.Width >= enemy.EnemyInvader.Location.X && bullet.PositionX + bullet.BulletPanel.Width <= (enemy.EnemyInvader.Location.X + enemy.EnemyInvader.Width)) &&
+                     (bullet.PositionY + bullet.BulletPanel.Height >= enemy.EnemyInvader.Location.Y && bullet.PositionY + bullet.BulletPanel.Height <= (enemy.EnemyInvader.Location.Y + enemy.EnemyInvader.Height))))
+                {
+                    MessageBox.Show("Collision");
+                    //    //Score.ScoreCount++;
+                }
+                //if (bullet.PositionY < enemy.PositionY + enemy.EnemyInvader.Height && bullet.PositionY+bullet.BulletPanel.Height < enemy.PositionY && bullet.PositionX < enemy.PositionX + enemy.EnemyInvader.Width && bullet.BulletPanel.Width<enemy.PositionX)
+                //{
+                //    MessageBox.Show("Collision");
+                //    //Score.ScoreCount++;
+                //}
+            }
+            
         }
     }
 }

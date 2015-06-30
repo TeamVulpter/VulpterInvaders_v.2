@@ -144,6 +144,7 @@
   <ItemGroup>
     <Content Include="Resources\Bricks.jpg" />
     <Content Include="Resources\Song\GameMusic.wav" />
+    <Content Include="Resources\spaceTwo.jpg" />
     <None Include="Resources\playerShip.png" />
     <None Include="Resources\ShipEnemy.png" />
     <None Include="Resources\bullet.png" />
