@@ -1,15 +1,15 @@
-﻿using System.Collections.Generic;
-using Game.Classes.Factory;
-
-namespace Game
+﻿namespace Game
 {
+    using System.Collections.Generic;
     using System.Drawing;
     using System.Windows.Forms;
 
     using Classes;
     using Classes.Characters;
     using Classes.Enemies;
-    using System.Collections;
+    using Classes.Factory;
+
+    using Engine;
 
     public partial class InvadersAttack : Form
     {
@@ -51,7 +51,6 @@ namespace Game
 
         private void InvadersAttack_KeyPress(object sender, KeyPressEventArgs e)
         {
-
             if (e.KeyChar == (char)Keys.Space)
             {
                 spaceKeyIsPressed = true;
@@ -70,6 +69,7 @@ namespace Game
                 }
 
             }
+
             if (!shipPlayer.StopAtMax(playerShip.Location.X, this.Width - 70))
             {
                 if (e.KeyCode == Keys.D)
@@ -77,15 +77,12 @@ namespace Game
                     shipPlayer.MoveRight();
                 }
             }
-
-      
         }
 
         private void TimerMovementsTick(object sender, System.EventArgs e)
         {
             this.health_value.Text = Health.HelthCount.ToString();
             this.life_value.Text = Life.LifeCount.ToString();
-            this.score_value.Text = Score.ScoreCount.ToString();
 
             if (spaceKeyIsPressed)
             {
@@ -93,13 +90,19 @@ namespace Game
                 this.bullet = new Bullet(bulletPanel);
                 shooting.Shoot(bullet);
             }
+
             attack.UpdateAttack(enemies);
+
             foreach (var enemy in enemies)
             {
-                if (((bullet.PositionX >= enemy.EnemyInvader.Location.X && bullet.PositionX <= (enemy.EnemyInvader.Location.X + enemy.EnemyInvader.Width)) &&
-                   (bullet.PositionY >= enemy.EnemyInvader.Location.Y && bullet.PositionY <= (enemy.EnemyInvader.Location.Y + enemy.EnemyInvader.Height))))
+                if (((  bullet.PositionX >= enemy.EnemyInvader.Location.X && 
+                        bullet.PositionX <= (enemy.EnemyInvader.Location.X + enemy.EnemyInvader.Width)) &&
+                   (    bullet.PositionY >= enemy.EnemyInvader.Location.Y && 
+                        bullet.PositionY <= (enemy.EnemyInvader.Location.Y + 10))))
                 {
-                    Score.ScoreCount++;
+                    Score.ScoreCount += 1;
+                    this.score_value.Text = Score.ScoreCount.ToString();
+                    break;
                 }
             }
         }
