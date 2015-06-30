@@ -29,6 +29,7 @@ namespace Game
             this.KeyDown += this.InvaderAttack_KeyDown;
             this.shipPlayer = new PlayerShip(playerShip);
             this.bullet = new Bullet(bulletPanel);
+          
             enemies = new List<EnemyShip>()
             {
                 new EnemyShip(shipEnemy),
@@ -76,11 +77,16 @@ namespace Game
                     shipPlayer.MoveRight();
                 }
             }
+
+      
         }
 
         private void TimerMovementsTick(object sender, System.EventArgs e)
         {
-            score_value.Text = Score.ScoreCount.ToString();
+            this.health_value.Text = Health.HelthCount.ToString();
+            this.life_value.Text = Life.LifeCount.ToString();
+            this.score_value.Text = Score.ScoreCount.ToString();
+
             if (spaceKeyIsPressed)
             {
                 this.bullet.PositionX = bullet.PositionX + 10;

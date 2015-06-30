@@ -177,6 +177,7 @@ namespace Game
                 InvadersAttack invaderAttack = new InvadersAttack();
                 this.Close();
                 invaderAttack.Show();
+                
             }
         }
 

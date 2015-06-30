@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.Mime;
+using System.Windows.Forms;
 
 namespace Game.Classes
 {
@@ -13,10 +15,7 @@ namespace Game.Classes
         private Random randomY = new Random();
         public void UpdateAttack(IList<EnemyShip> enemies)
         {
-            //for (int i = 0; i < enemies.Count-1; i++)
-            //{
-            //}
-                foreach (var en in enemies)
+            foreach (var en in enemies)
             {
                 en.PositionX = en.EnemyInvader.Location.X;
                 en.PositionY = en.EnemyInvader.Location.Y;
@@ -25,10 +24,15 @@ namespace Game.Classes
                 {
                     if (en.PositionY >= 400 && enemies[i].PositionX + enemies[i].EnemyInvader.Width < enemies[i + 1].PositionX)
                     {
+                        Life.LifeCount -= 1;
+                        if (Life.LifeCount < 1)
+                        {
+                            Life.LifeCount = 0;
+                        }
                         en.EnemyInvader.Location = new Point(en.PositionX, randomY.Next(10, 100));
                     }
                 }
-               
+
             }
         }
     }
