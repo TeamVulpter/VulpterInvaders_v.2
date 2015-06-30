@@ -13,15 +13,22 @@ namespace Game.Classes
         private Random randomY = new Random();
         public void UpdateAttack(IList<EnemyShip> enemies)
         {
-            foreach (var en in enemies)
+            //for (int i = 0; i < enemies.Count-1; i++)
+            //{
+            //}
+                foreach (var en in enemies)
             {
                 en.PositionX = en.EnemyInvader.Location.X;
                 en.PositionY = en.EnemyInvader.Location.Y;
                 en.EnemyInvader.Location = new Point(en.PositionX, en.PositionY + 1);
-                if (en.PositionY >= 400)
+                for (int i = 0; i < enemies.Count - 1; i++)
                 {
-                    en.EnemyInvader.Location = new Point(en.PositionX, randomY.Next(10,100));
+                    if (en.PositionY >= 400 && enemies[i].PositionX + enemies[i].EnemyInvader.Width < enemies[i + 1].PositionX)
+                    {
+                        en.EnemyInvader.Location = new Point(en.PositionX, randomY.Next(10, 100));
+                    }
                 }
+               
             }
         }
     }

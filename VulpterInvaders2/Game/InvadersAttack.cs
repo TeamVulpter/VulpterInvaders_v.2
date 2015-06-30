@@ -89,8 +89,8 @@ namespace Game
             attack.UpdateAttack(enemies);
             foreach (var enemy in enemies)
             {
-                if (((bullet.PositionX + bullet.BulletPanel.Width >= enemy.EnemyInvader.Location.X && bullet.PositionX + bullet.BulletPanel.Width <= (enemy.EnemyInvader.Location.X + enemy.EnemyInvader.Width)) &&
-                     (bullet.PositionY + bullet.BulletPanel.Height >= enemy.EnemyInvader.Location.Y && bullet.PositionY + bullet.BulletPanel.Height <= (enemy.EnemyInvader.Location.Y + enemy.EnemyInvader.Height))))
+                if (((bullet.PositionX >= enemy.EnemyInvader.Location.X && bullet.PositionX <= (enemy.EnemyInvader.Location.X + enemy.EnemyInvader.Width)) &&
+                   (bullet.PositionY >= enemy.EnemyInvader.Location.Y && bullet.PositionY <= (enemy.EnemyInvader.Location.Y + enemy.EnemyInvader.Height))))
                 {
                     Score.ScoreCount++;
                     score_value.Text = Score.ScoreCount.ToString();
