@@ -67,22 +67,22 @@
         {
             if (this.ItemType.ToString() == "RemoveBonus")
             {
-                int randomBonus = this.rnd.Next(0, 3);
+                int randomBonus = this.rnd.Next(1, 3);
                 this.RemoveBonus -= randomBonus;
             }   
             else if (this.ItemType.ToString() == "BonusHealth")
             {
-                int randomBonus = this.rnd.Next(0, 100);
+                int randomBonus = this.rnd.Next(0, 75);
                 this.BonusHealth += randomBonus;
             }
             else if (this.ItemType.ToString() == "BonusScore")
             {
-                int randomBonus = this.rnd.Next(0, 50);
+                int randomBonus = this.rnd.Next(0, 30);
                 this.BonusScore += randomBonus;
             }
             else if (this.ItemType.ToString() == "BonusLife")
             {
-                int randomBonus = this.rnd.Next(0, 4);
+                int randomBonus = this.rnd.Next(1, 3);
                 this.BonusLife += randomBonus;
             }  
         }
