@@ -12,12 +12,6 @@ namespace Game.Engine
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMenuUI());
             Application.Exit();
-            //if lives is zero or negative - game over
-            if (Life.LifeCount <= 0)
-            {
-                MessageBox.Show("Game over");
-                Application.Exit();
-            }
 
             //while (true)
             //{
@@ -27,5 +21,15 @@ namespace Game.Engine
             //    }
             //}
         }
+
+        public static void GameExit()
+        {//if lives is zero or negative - game over
+            if (Life.LifeCount <= 0)
+            {
+                MessageBox.Show("Game over");
+                Application.Exit();
+            }
+        }
+
     }
 }
