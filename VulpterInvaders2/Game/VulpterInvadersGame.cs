@@ -168,12 +168,6 @@ namespace Game
             this.life_value.Text = Life.LifeCount.ToString();
             this.score_value.Text = Score.ScoreCount.ToString();
 
-            //if lives is zero or negative - game over
-            if (Life.LifeCount <= 0)
-            {
-                MessageBox.Show("Game over");
-                Application.Exit();
-            }
 
             //check for exit from this form in door
             if (this.player.CheckForExit(this.door))

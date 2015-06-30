@@ -80,6 +80,7 @@ namespace Game
 
         private void TimerMovementsTick(object sender, System.EventArgs e)
         {
+            score_value.Text = Score.ScoreCount.ToString();
             if (spaceKeyIsPressed)
             {
                 this.bullet.PositionX = bullet.PositionX + 10;
@@ -93,8 +94,6 @@ namespace Game
                    (bullet.PositionY >= enemy.EnemyInvader.Location.Y && bullet.PositionY <= (enemy.EnemyInvader.Location.Y + enemy.EnemyInvader.Height))))
                 {
                     Score.ScoreCount++;
-                    score_value.Text = Score.ScoreCount.ToString();
-
                 }
             }
         }
