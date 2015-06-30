@@ -40,5 +40,14 @@ namespace Game.Engine
             }
         }
 
+        public static void GameHealthMax()
+        {
+            if (Health.HelthCount >= 250)
+            {
+                Life.LifeCount += 1;
+                Health.HelthCount = 150;
+            }
+        }
+
     }
 }
