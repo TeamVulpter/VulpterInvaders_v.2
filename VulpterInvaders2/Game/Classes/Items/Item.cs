@@ -72,12 +72,12 @@
             }   
             else if (this.ItemType.ToString() == "BonusHealth")
             {
-                int randomBonus = this.rnd.Next(0, 75);
+                int randomBonus = this.rnd.Next(0, 25);
                 this.BonusHealth += randomBonus;
             }
             else if (this.ItemType.ToString() == "BonusScore")
             {
-                int randomBonus = this.rnd.Next(0, 30);
+                int randomBonus = this.rnd.Next(0, 15);
                 this.BonusScore += randomBonus;
             }
             else if (this.ItemType.ToString() == "BonusLife")
