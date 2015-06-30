@@ -12,19 +12,28 @@ namespace Game.Engine
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMenuUI());
             Application.Exit();
-
-            //while (true)
-            //{
-            //    if (Score.ScoreCount>=100 || Life.LifeCount<=0)
-            //    {
-            //        Application.Exit();
-            //    }
-            //}
         }
 
         public static void GameExit()
         {//if lives is zero or negative - game over
             if (Life.LifeCount <= 0)
+            {
+                MessageBox.Show("Game over");
+                Application.Exit();
+            }
+        }
+
+        public static void GameLifeReduction()
+        {
+            if (Health.HelthCount <= 0)
+            {
+                Life.LifeCount -= 1;
+            }
+        }
+
+        public static void GameScoreMax()
+        {
+            if (Score.ScoreCount >= 100)
             {
                 MessageBox.Show("Game over");
                 Application.Exit();
