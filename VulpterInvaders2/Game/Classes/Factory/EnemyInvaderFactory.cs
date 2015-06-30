@@ -8,6 +8,7 @@
     public class EnemyInvaderFactory
     {
         private Random randomX = new Random();
+        private Random randomY = new Random();
        
         public void CreateEnemy(IList<EnemyShip>enemies)
         {
@@ -15,7 +16,7 @@
             {
                 
                 enemy.PositionX = randomX.Next(10, 500);
-                enemy.PositionY = 20;
+                enemy.PositionY = randomY.Next(10,300);
                 enemy.EnemyInvader.Location = new Point(enemy.PositionX, enemy.PositionY);
             }
         }

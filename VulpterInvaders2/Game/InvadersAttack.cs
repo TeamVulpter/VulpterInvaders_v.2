@@ -92,11 +92,11 @@ namespace Game
                 if (((bullet.PositionX + bullet.BulletPanel.Width >= enemy.EnemyInvader.Location.X && bullet.PositionX + bullet.BulletPanel.Width <= (enemy.EnemyInvader.Location.X + enemy.EnemyInvader.Width)) &&
                      (bullet.PositionY + bullet.BulletPanel.Height >= enemy.EnemyInvader.Location.Y && bullet.PositionY + bullet.BulletPanel.Height <= (enemy.EnemyInvader.Location.Y + enemy.EnemyInvader.Height))))
                 {
-                    score_value.Text = Score.ScoreCount++.ToString();
-                   
+                    Score.ScoreCount++;
+                    score_value.Text = Score.ScoreCount.ToString();
+
                 }
             }
-            
         }
     }
 }

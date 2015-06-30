@@ -1,4 +1,6 @@
-﻿namespace Game.Classes
+﻿using System;
+
+namespace Game.Classes
 {
     using System.Collections.Generic;
     using System.Drawing;
@@ -8,6 +10,7 @@
 
     public class Attack : IAttack
     {
+        private Random randomY = new Random();
         public void UpdateAttack(IList<EnemyShip> enemies)
         {
             foreach (var en in enemies)
@@ -17,7 +20,7 @@
                 en.EnemyInvader.Location = new Point(en.PositionX, en.PositionY + 1);
                 if (en.PositionY >= 400)
                 {
-                    en.EnemyInvader.Location = new Point(en.PositionX, 20);
+                    en.EnemyInvader.Location = new Point(en.PositionX, randomY.Next(10,100));
                 }
             }
         }
