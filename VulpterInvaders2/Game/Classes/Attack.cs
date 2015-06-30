@@ -1,9 +1,6 @@
-﻿using System;
-using System.Net.Mime;
-using System.Windows.Forms;
-
-namespace Game.Classes
+﻿namespace Game.Classes
 {
+    using System;
     using System.Collections.Generic;
     using System.Drawing;
 
