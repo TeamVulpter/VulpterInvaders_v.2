@@ -20,6 +20,7 @@ namespace Game
         private IList<EnemyShip> enemies;
         private Attack attack;
         private EnemyInvaderFactory factoryInvaders;
+        private Shooting shooting;
 
         public InvadersAttack()
         {
@@ -41,8 +42,9 @@ namespace Game
             };
             attack = new Attack();
             factoryInvaders = new EnemyInvaderFactory();
+            shooting = new Shooting();
             factoryInvaders.CreateEnemy(enemies);
-
+            
 
         }
 
@@ -82,8 +84,7 @@ namespace Game
             {
                 this.bullet.PositionX = bullet.PositionX + 10;
                 this.bullet = new Bullet(bulletPanel);
-                bulletPanel.Location = new Point(bullet.PositionX, bullet.PositionY - 10);
-                bullet.Start();
+                shooting.Shoot(bullet);
             }
             attack.UpdateAttack(enemies);
         }

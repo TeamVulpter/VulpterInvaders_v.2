@@ -9,11 +9,12 @@
         public Bullet(Panel bulletPanel)
             :base(bulletPanel.Location.X, bulletPanel.Location.Y)
         {
-            this.bulletPanel = bulletPanel;
-            bulletPanel.Visible = false;
+            this.BulletPanel = bulletPanel;
+            BulletPanel.Visible = false;
             this.IsActive = false;
         }
-        
+
+        public Panel BulletPanel { get; set; }
         public bool IsActive { get; set; }
 
         public void Start()
@@ -24,13 +25,13 @@
             }
 
             IsActive = true;
-            bulletPanel.Visible = true;
+            BulletPanel.Visible = true;
         }
 
         public void Stop()
         {
             this.IsActive = false;
-            bulletPanel.Visible = false;
+            BulletPanel.Visible = false;
         }
     }
 }
