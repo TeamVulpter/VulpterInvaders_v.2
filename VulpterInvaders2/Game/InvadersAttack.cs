@@ -25,7 +25,8 @@ namespace Game
         private Attack attack;
         private EnemyInvaderFactory factoryInvaders;
         private Shooting shooting;
-        private Random randomEnemy;
+        private EnemyShooting enemyShooting;
+   
         private Collision collision;
 
         public InvadersAttack()
@@ -37,7 +38,8 @@ namespace Game
             this.bullet = new BulletPlayer(bulletPanel);
             this.enemyShot = new BulletEnemy(bulletEnemy);
             this.collision = new Collision();
-            randomEnemy = new Random();
+            this.enemyShooting = new EnemyShooting();
+         
 
             enemies = new List<EnemyShip>()
             {
@@ -107,13 +109,7 @@ namespace Game
             attack.UpdateAttack(enemies);
 
             this.enemyShot = new BulletEnemy(bulletEnemy);
-            enemyShot.EnemyBullet.Location = new Point(enemyShot.PositionX, enemyShot.PositionY + 10);
-
-            if (enemyShot.PositionY >= 500)
-            {
-                enemyShot.EnemyBullet.Location = new Point(enemies[randomEnemy.Next(1, 6)].PositionX, enemies[randomEnemy.Next(1, 6)].PositionY + 10);
-            }
-            enemyShot.Start();
+            enemyShooting.EnemyShoot(enemyShot, enemies);
             if (playerShip.Location.X <= enemyShot.EnemyBullet.Location.X && playerShip.Location.X+playerShip.Width >= (enemyShot.EnemyBullet.Location.X) &&
                         playerShip.Location.Y+20 <= enemyShot.EnemyBullet.Location.Y)
             {
