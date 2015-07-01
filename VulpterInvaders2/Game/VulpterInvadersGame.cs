@@ -24,13 +24,13 @@ namespace Game
         private readonly IMap map;
         private readonly Player player;
         private IList<Brick> bricksList = new List<Brick>();
-        private ObsticleBrick obsticle;
-        private ObsticleBrick obsticle2;
-        private ObsticleBrick obsticle3;
-        private ObsticleBrick obsticle4;
-        private ObsticleBrick obsticle5;
-        private IList<ObsticleBrick> obsticles = new List<ObsticleBrick>();
-        private IList<Item> items = new List<Item>();
+        //private ObsticleBrick obsticle;
+        //private ObsticleBrick obsticle2;
+        //private ObsticleBrick obsticle3;
+        //private ObsticleBrick obsticle4;
+        //private ObsticleBrick obsticle5;
+        private IList<ObsticleBrick> obsticles;
+        private IList<Item> items;
         private List<PictureBox> itemsPictureBox = new List<PictureBox>();
 
         public VulpterInvadersGame()
@@ -43,7 +43,8 @@ namespace Game
                     this.brick6.Location.Y,
                     this.brick1.Location.X + this.brick1.Width,
                     this.brick11.Location.X);
-
+                this.items = new List<Item>();
+                this.obsticles = new List<ObsticleBrick>();
                 //create player
                 this.player = new Player(hero);
 
@@ -76,7 +77,7 @@ namespace Game
                 this.bricksList.Add(new Brick(brick17.Location.X, brick17.Location.Y, brick17));
                 this.bricksList.Add(new Brick(brick18.Location.X, brick18.Location.Y, brick18));
                 this.bricksList.Add(new Brick(brick19.Location.X, brick19.Location.Y, brick19));
-
+                AddObsticleToList();
             }
             catch (NotImplementedException ex)
             {
@@ -86,17 +87,13 @@ namespace Game
             {
                 MessageBox.Show(@"No found picture for item!");
             }
+            //AddObsticleToList();
+            //this.obsticle = new ObsticleBrick(67, 401, Obsticle);
+            //this.obsticle2 = new ObsticleBrick(67, 339, Obsticle2);
+            //this.obsticle3 = new ObsticleBrick(67, 243, Obsticle3);
+            //this.obsticle4 = new ObsticleBrick(67, 153, Obsticle4);
+            //this.obsticle5 = new ObsticleBrick(67, 53, Obsticle5);
 
-            this.obsticle = new ObsticleBrick(67, 401, Obsticle);
-            this.obsticle2 = new ObsticleBrick(67, 339, Obsticle2);
-            this.obsticle3 = new ObsticleBrick(67, 243, Obsticle3);
-            this.obsticle4 = new ObsticleBrick(67, 153, Obsticle4);
-            this.obsticle5 = new ObsticleBrick(67, 53, Obsticle5);
-            obsticles.Add(obsticle);
-            obsticles.Add(obsticle2);
-            obsticles.Add(obsticle3);
-            obsticles.Add(obsticle4);
-            obsticles.Add(obsticle5);
 
         }
 
@@ -114,6 +111,15 @@ namespace Game
             this.itemsPictureBox.Add(item9);
             this.itemsPictureBox.Add(item10);
             this.itemsPictureBox.Add(item11);
+        }
+
+        private void AddObsticleToList()
+        {
+            this.obsticles.Add(new ObsticleBrick(Obsticle));
+            this.obsticles.Add(new ObsticleBrick(Obsticle2));
+            this.obsticles.Add(new ObsticleBrick(Obsticle3));
+            this.obsticles.Add(new ObsticleBrick(Obsticle4));
+            this.obsticles.Add(new ObsticleBrick(Obsticle5));
         }
 
         //moving hero
@@ -189,7 +195,7 @@ namespace Game
                 MoveLeft.Enabled = true;
 
             }
-            else if (Obsticle.Right > brick11.Left)
+            else if (Obsticle.Right > this.map.Right)
             {
                 ObsticleTimer.Enabled = false;
                 MoveLeft.Enabled = true;
@@ -204,7 +210,7 @@ namespace Game
                 ObsticleTimer.Enabled = true;
                 MoveLeft.Enabled = false;
             }
-            else if (Obsticle.Left < brick5.Right)
+            else if (Obsticle.Left < this.map.Left)
             {
                 ObsticleTimer.Enabled = true;
                 MoveLeft.Enabled = false;
@@ -221,7 +227,7 @@ namespace Game
                 Obsticle2MoveLeft.Enabled = false;
                 Obsticle2MoveRIght.Enabled = true;
             }
-            else if (Obsticle2.Left < brick4.Right)
+            else if (Obsticle2.Left < map.Left)
             {
                 Obsticle2MoveLeft.Enabled = false;
                 Obsticle2MoveRIght.Enabled = true;
@@ -237,7 +243,7 @@ namespace Game
                 Obsticle2MoveRIght.Enabled = false;
 
             }
-            else if (Obsticle2.Right > brick12.Left)
+            else if (Obsticle2.Right > this.map.Right)
             {
                 Obsticle2MoveLeft.Enabled = true;
                 Obsticle2MoveRIght.Enabled = false;
@@ -254,7 +260,7 @@ namespace Game
                 Obsticle3MoveLeft.Enabled = true;
 
             }
-            if (Obsticle3.Right > brick13.Left)
+            if (Obsticle3.Right > this.map.Right)
             {
                 Obsticle3MoveRight.Enabled = false;
                 Obsticle3MoveLeft.Enabled = true;
@@ -269,7 +275,7 @@ namespace Game
                 Obsticle3MoveLeft.Enabled = false;
                 Obsticle3MoveRight.Enabled = true;
             }
-            else if (Obsticle3.Left < brick3.Right)
+            else if (Obsticle3.Left < this.map.Left)
             {
                 Obsticle3MoveRight.Enabled = true;
                 Obsticle3MoveLeft.Enabled = false;
@@ -286,7 +292,7 @@ namespace Game
                 Obsticle4MoveLeft.Enabled = false;
                 Obsticle4MoveRight.Enabled = true;
             }
-            else if (Obsticle4.Left < brick2.Right)
+            else if (Obsticle4.Left < this.map.Left)
             {
                 Obsticle4MoveLeft.Enabled = false;
                 Obsticle4MoveRight.Enabled = true;
@@ -301,7 +307,7 @@ namespace Game
                 Obsticle4MoveLeft.Enabled = true;
                 Obsticle4MoveRight.Enabled = false;
             }
-            else if (Obsticle4.Right > brick14.Left)
+            else if (Obsticle4.Right > this.map.Right)
             {
                 Obsticle4MoveLeft.Enabled = true;
                 Obsticle4MoveRight.Enabled = false;
@@ -318,7 +324,7 @@ namespace Game
                 Obsticle5MoveLeft.Enabled = true;
 
             }
-            else if (Obsticle5.Right > brick15.Left)
+            else if (Obsticle5.Right > this.map.Right)
             {
                 Obsticle5MoveRight.Enabled = false;
                 Obsticle5MoveLeft.Enabled = true;
@@ -333,7 +339,7 @@ namespace Game
                 Obsticle5MoveLeft.Enabled = false;
                 Obsticle5MoveRight.Enabled = true;
             }
-            if (Obsticle5.Left < brick1.Right)
+            if (Obsticle5.Left < this.map.Left)
             {
                 Obsticle5MoveRight.Enabled = true;
                 Obsticle5MoveLeft.Enabled = false;

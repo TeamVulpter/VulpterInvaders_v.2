@@ -14,12 +14,11 @@ namespace Game.Classes.Characters
         public Player(PictureBox hero)
             : base(hero.Location.X, hero.Location.Y)
         {
-            //PositionX = hero.Location.X;
-            //PositionY = hero.Location.Y;
             this.Hero = hero;
         }
 
         public PictureBox Hero { get; set; }
+     
    
 
 
@@ -27,8 +26,8 @@ namespace Game.Classes.Characters
         {
             for (int i = 0; i < items.Count; i++)
             {
-                if (((this.PositionX + 16 >= items[i].PositionX && this.PositionX + 16 <= (items[i].PositionX + items[i].Picture.Width)) &&
-                     (this.PositionY + 16 >= items[i].PositionY && this.PositionY + 16 <= (items[i].PositionY + items[i].Picture.Height))))
+                if (((this.Hero.Location.X + 16 >= items[i].PositionX && this.Hero.Location.X+16 <= (items[i].PositionX + items[i].Picture.Width)) &&
+                     (this.Hero.Location.Y + 16 >= items[i].PositionY && this.Hero.Location.Y + 16 <= (items[i].PositionY + items[i].Picture.Height))))
                 {
                     Health.HelthCount += items[i].BonusHealth;
                     Life.LifeCount += items[i].BonusLife;

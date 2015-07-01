@@ -4,8 +4,8 @@
 
     class ObsticleBrick : GameObject
     {
-        public ObsticleBrick(int positionX, int positionY, PictureBox obsticleBox)
-            : base(positionX, positionY)
+        public ObsticleBrick(PictureBox obsticleBox)
+            : base(obsticleBox.Location.X, obsticleBox.Location.Y)
         {
             this.ObsticleBox = obsticleBox;
         }

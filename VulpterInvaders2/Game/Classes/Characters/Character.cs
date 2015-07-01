@@ -11,6 +11,7 @@ namespace Game.Classes.Characters
         protected Character(int positionX, int positionY)
             : base(positionX, positionY)
         {
+
         }
 
         public abstract void MoveLeft();
