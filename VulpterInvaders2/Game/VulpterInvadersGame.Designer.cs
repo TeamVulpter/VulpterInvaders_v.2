@@ -38,7 +38,7 @@
             this.health = new System.Windows.Forms.Label();
             this.lives = new System.Windows.Forms.Label();
             this.scores = new System.Windows.Forms.Label();
-            this.ObsticleTimer = new System.Windows.Forms.Timer(this.components);
+            this.ObsticleMoveRight = new System.Windows.Forms.Timer(this.components);
             this.Obsticle = new System.Windows.Forms.PictureBox();
             this.brick19 = new System.Windows.Forms.PictureBox();
             this.brick18 = new System.Windows.Forms.PictureBox();
@@ -80,7 +80,7 @@
             this.item9 = new System.Windows.Forms.PictureBox();
             this.item10 = new System.Windows.Forms.PictureBox();
             this.item11 = new System.Windows.Forms.PictureBox();
-            this.MoveLeft = new System.Windows.Forms.Timer(this.components);
+            this.ObsticleMoveLeft = new System.Windows.Forms.Timer(this.components);
             this.Obsticle2MoveLeft = new System.Windows.Forms.Timer(this.components);
             this.Obsticle2MoveRIght = new System.Windows.Forms.Timer(this.components);
             this.Obsticle5MoveRight = new System.Windows.Forms.Timer(this.components);
@@ -165,11 +165,11 @@
             this.scores.TabIndex = 3;
             this.scores.Text = "Scores:";
             // 
-            // ObsticleTimer
+            // ObsticleMoveRight
             // 
-            this.ObsticleTimer.Enabled = true;
-            this.ObsticleTimer.Interval = 30;
-            this.ObsticleTimer.Tick += new System.EventHandler(this.ObsticleTimer_Tick);
+            this.ObsticleMoveRight.Enabled = true;
+            this.ObsticleMoveRight.Interval = 30;
+            this.ObsticleMoveRight.Tick += new System.EventHandler(this.ObsticleMoveRight_Tick);
             // 
             // Obsticle
             // 
@@ -613,10 +613,10 @@
             this.item11.TabIndex = 47;
             this.item11.TabStop = false;
             // 
-            // MoveLeft
+            // ObsticleMoveLeft
             // 
-            this.MoveLeft.Interval = 30;
-            this.MoveLeft.Tick += new System.EventHandler(this.MoveLeft_Tick);
+            this.ObsticleMoveLeft.Interval = 30;
+            this.ObsticleMoveLeft.Tick += new System.EventHandler(this.ObsticleMoveLeft_Tick);
             // 
             // Obsticle2MoveLeft
             // 
@@ -787,7 +787,7 @@
         private PictureBox brick17;
         private PictureBox brick18;
         private PictureBox brick19;
-        private Timer ObsticleTimer;
+        private Timer ObsticleMoveRight;
         private PictureBox Obsticle;
         private PictureBox Obsticle5;
         private PictureBox Obsticle4;
@@ -808,7 +808,7 @@
         private PictureBox item9;
         private PictureBox item10;
         private PictureBox item11;
-        private Timer MoveLeft;
+        private Timer ObsticleMoveLeft;
         private Timer Obsticle2MoveLeft;
         private Timer Obsticle2MoveRIght;
         private Timer Obsticle5MoveRight;

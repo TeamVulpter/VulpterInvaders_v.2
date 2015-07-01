@@ -185,35 +185,35 @@
             }
         }
 
-        private void ObsticleTimer_Tick(object sender, EventArgs e)
+        private void ObsticleMoveRight_Tick(object sender, EventArgs e)
         {
             Obsticle.Left += 1;
             if (DetectCollison(Obsticle, hero))
             {
                 Obsticle.Left -= 1;
-                ObsticleTimer.Enabled = false;
-                MoveLeft.Enabled = true;
+                ObsticleMoveRight.Enabled = false;
+                ObsticleMoveLeft.Enabled = true;
 
             }
             else if (Obsticle.Right > this.map.Right)
             {
-                ObsticleTimer.Enabled = false;
-                MoveLeft.Enabled = true;
+                ObsticleMoveRight.Enabled = false;
+                ObsticleMoveLeft.Enabled = true;
             }
         }
-        private void MoveLeft_Tick(object sender, EventArgs e)
+        private void ObsticleMoveLeft_Tick(object sender, EventArgs e)
         {
             Obsticle.Left -= 1;
             if (DetectCollison(Obsticle, hero))
             {
                 Obsticle.Left += 1;
-                ObsticleTimer.Enabled = true;
-                MoveLeft.Enabled = false;
+                ObsticleMoveRight.Enabled = true;
+                ObsticleMoveLeft.Enabled = false;
             }
             else if (Obsticle.Left < this.map.Left)
             {
-                ObsticleTimer.Enabled = true;
-                MoveLeft.Enabled = false;
+                ObsticleMoveRight.Enabled = true;
+                ObsticleMoveLeft.Enabled = false;
             }
 
         }
