@@ -7,10 +7,10 @@ using System.Windows.Forms;
 
 namespace Game.Classes
 {
-    public class BulletEnemy : GameObject
+    public class BulletEnemy : Bullet
     {
         public BulletEnemy(Panel bulletEnemy)
-            : base(bulletEnemy.Location.X, bulletEnemy.Location.Y)
+            : base(bulletEnemy.Location.X, bulletEnemy.Location.Y, bulletEnemy)
         {
             this.EnemyBullet = bulletEnemy;
             EnemyBullet.Visible = false;
@@ -18,9 +18,8 @@ namespace Game.Classes
         }
 
         public Panel EnemyBullet { get; set; }
-        public bool IsActive { get; set; }
 
-        public void Start()
+        public override void Start()
         {
             if (this.IsActive)
             {
@@ -31,7 +30,7 @@ namespace Game.Classes
             EnemyBullet.Visible = true;
         }
 
-        public void Stop()
+        public override void Stop()
         {
             this.IsActive = false;
             EnemyBullet.Visible = false;

@@ -17,7 +17,7 @@ namespace Game
     {
 
         private PlayerShip shipPlayer;
-        private Bullet bullet;
+        private BulletPlayer bullet;
         private BulletEnemy enemyShot;
         private bool spaceKeyIsPressed = false;
         private IList<EnemyShip> enemies;
@@ -33,7 +33,7 @@ namespace Game
             this.KeyPress += this.InvadersAttack_KeyPress;
             this.KeyDown += this.InvaderAttack_KeyDown;
             this.shipPlayer = new PlayerShip(playerShip);
-            this.bullet = new Bullet(bulletPanel);
+            this.bullet = new BulletPlayer(bulletPanel);
             this.enemyShot = new BulletEnemy(bulletEnemy);
             this.collision = new Collision();
             randomEnemy = new Random();
@@ -94,7 +94,7 @@ namespace Game
             if (spaceKeyIsPressed)
             {
                 this.bullet.PositionX = bullet.PositionX + 10;
-                this.bullet = new Bullet(bulletPanel);
+                this.bullet = new BulletPlayer(bulletPanel);
                 shooting.Shoot(bullet);
                 if (bullet.PositionY <= 20)
                 {

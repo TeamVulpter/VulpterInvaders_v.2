@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Classes\AdvancedStatistics.cs" />
     <Compile Include="Classes\Attack.cs" />
+    <Compile Include="Classes\Bullet.cs" />
     <Compile Include="Classes\BulletEnemy.cs" />
     <Compile Include="Classes\Characters\ObsticleBrick.cs" />
     <Compile Include="Classes\Collision.cs" />
@@ -75,7 +76,7 @@
     <Compile Include="Classes\Items\ItemType.cs" />
     <Compile Include="Classes\Life.cs" />
     <Compile Include="Classes\Brick\Brick.cs" />
-    <Compile Include="Classes\Bullet.cs" />
+    <Compile Include="Classes\BulletPlayer.cs" />
     <Compile Include="Classes\Characters\PlayerShip.cs" />
     <Compile Include="Classes\Characters\Character.cs" />
     <Compile Include="Classes\Characters\Player.cs" />

@@ -1,37 +1,22 @@
-﻿namespace Game.Classes
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Game.Classes
 {
-    using System.Windows.Forms;
-
-    public class Bullet :GameObject
+    public abstract class Bullet : GameObject
     {
-        private Panel bulletPanel;
-
-        public Bullet(Panel bulletPanel)
-            :base(bulletPanel.Location.X, bulletPanel.Location.Y)
+        protected Bullet(int positionX, int positionY, Panel bullet)
+            : base(positionX, positionY)
         {
-            this.BulletPanel = bulletPanel;
-            BulletPanel.Visible = false;
-            this.IsActive = false;
-        }
 
-        public Panel BulletPanel { get; set; }
+        }
         public bool IsActive { get; set; }
+        public abstract void Start();
+        public abstract void Stop();
 
-        public void Start()
-        {
-            if (this.IsActive)
-            {
-                return;
-            }
-
-            IsActive = true;
-            BulletPanel.Visible = true;
-        }
-
-        public void Stop()
-        {
-            this.IsActive = false;
-            BulletPanel.Visible = false;
-        }
     }
 }

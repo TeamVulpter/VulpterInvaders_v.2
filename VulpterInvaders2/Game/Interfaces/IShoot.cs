@@ -4,8 +4,8 @@ namespace Game.Interfaces
 {
     public interface IShoot
     {
-        void Shoot(Bullet bullet);
+        void Shoot(BulletPlayer bullet);
 
-        void UpdateShots(Bullet bullet);
+        void UpdateShots(BulletPlayer bullet);
     }
 }

@@ -6,14 +6,14 @@ namespace Game.Classes
     using Interfaces;
     public class Shooting :IShoot
     {
-        public void Shoot(Bullet bullet)
+        public void Shoot(BulletPlayer bullet)
         {
             bullet.BulletPanel.Location = new Point(bullet.PositionX, bullet.PositionY - 10);
             bullet.Start();
            
         }
 
-        public void UpdateShots(Bullet bullet)
+        public void UpdateShots(BulletPlayer bullet)
         {
           
         }
