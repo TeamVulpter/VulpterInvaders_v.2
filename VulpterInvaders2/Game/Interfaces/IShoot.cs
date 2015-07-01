@@ -6,6 +6,6 @@ namespace Game.Interfaces
     {
         void Shoot(Bullet bullet);
 
-        void UpdateShots();
+        void UpdateShots(Bullet bullet);
     }
 }

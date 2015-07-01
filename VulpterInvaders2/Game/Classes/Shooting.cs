@@ -8,15 +8,14 @@ namespace Game.Classes
     {
         public void Shoot(Bullet bullet)
         {
-            //bullet.PositionX = bullet.PositionX + 10;
-            //bullet = new Bullet(bulletPanel);
             bullet.BulletPanel.Location = new Point(bullet.PositionX, bullet.PositionY - 10);
             bullet.Start();
+           
         }
 
-        public void UpdateShots()
+        public void UpdateShots(Bullet bullet)
         {
-            
+          
         }
     }
 }

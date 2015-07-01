@@ -64,6 +64,7 @@
     <Compile Include="Classes\Attack.cs" />
     <Compile Include="Classes\BulletEnemy.cs" />
     <Compile Include="Classes\Characters\ObsticleBrick.cs" />
+    <Compile Include="Classes\Collision.cs" />
     <Compile Include="Classes\RemoveBonus.cs" />
     <Compile Include="Classes\Enemies\EnemyShip.cs" />
     <Compile Include="Classes\Factory\EnemyInvaderFactory.cs" />

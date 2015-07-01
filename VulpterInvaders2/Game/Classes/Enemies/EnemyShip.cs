@@ -9,9 +9,13 @@
             : base(enemyInvader.Location.X, enemyInvader.Location.Y)
         {
             this.EnemyInvader = enemyInvader;
+            this.Width = enemyInvader.Width;
+            this.Height = enemyInvader.Height;
         }
 
         public Panel EnemyInvader { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
      
     }
 }
