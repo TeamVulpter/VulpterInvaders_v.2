@@ -174,7 +174,14 @@
 
             AdvancedStatistics.GameHealthMax();
             AdvancedStatistics.GameScoreMax();
-            AdvancedStatistics.GameExit();
+            if (Life.LifeCount <= 0)
+            {
+                GameOverForm gameOver = new GameOverForm();
+                gameOver.Show();
+                this.Close();
+            }
+
+
 
             //check for exit from this form in door
             if (this.player.CheckForExit(this.door))
