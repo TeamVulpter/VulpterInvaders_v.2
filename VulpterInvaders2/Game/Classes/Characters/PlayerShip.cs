@@ -10,7 +10,6 @@
         public PlayerShip(PictureBox playerShip)
             : base(playerShip.Location.X, playerShip.Location.Y)
         {
-            
             this.Ship = playerShip;
         }
 

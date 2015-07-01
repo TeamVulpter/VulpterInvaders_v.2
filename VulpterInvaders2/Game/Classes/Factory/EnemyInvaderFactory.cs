@@ -14,11 +14,8 @@
         {
             foreach (var enemy in enemies)
             {
-
                 enemy.PositionY = randomY.Next(10, 100);
-
                 enemy.EnemyInvader.Location = new Point(enemy.PositionX, enemy.PositionY);
-
             }
         }
     }

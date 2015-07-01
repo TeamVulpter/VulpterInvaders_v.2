@@ -1,8 +1,7 @@
-﻿using System.Drawing;
-
-namespace Game.Classes.Characters
+﻿namespace Game.Classes.Characters
 {
     using System.Collections.Generic;
+    using System.Drawing;
     using System.Windows.Forms;
 
     using Items;
@@ -18,9 +17,6 @@ namespace Game.Classes.Characters
         }
 
         public PictureBox Hero { get; set; }
-     
-   
-
 
         public IList<Item> GetItem(IList<Item> items)
         {
