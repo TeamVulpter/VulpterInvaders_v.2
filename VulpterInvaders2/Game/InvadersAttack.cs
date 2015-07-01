@@ -1,8 +1,7 @@
-﻿using System;
-using System.Linq;
-
-namespace Game
+﻿namespace Game
 {
+    using System;
+    using System.Linq;
     using System.Collections.Generic;
     using System.Drawing;
     using System.Windows.Forms;
@@ -70,12 +69,10 @@ namespace Game
         {
             if (!shipPlayer.StopAtMin(playerShip.Location.X, 20))
             {
-
                 if (e.KeyCode == Keys.A)
                 {
                     shipPlayer.MoveLeft();
                 }
-
             }
 
             if (!shipPlayer.StopAtMax(playerShip.Location.X, this.Width - 70))
@@ -113,13 +110,17 @@ namespace Game
             {
                 enemyShot.EnemyBullet.Location = new Point(enemies[randomEnemy.Next(1, 6)].PositionX, enemies[randomEnemy.Next(1, 6)].PositionY + 10);
             }
+
             enemyShot.Start();
-            if (playerShip.Location.X <= enemyShot.EnemyBullet.Location.X && playerShip.Location.X+playerShip.Width >= (enemyShot.EnemyBullet.Location.X) &&
-                        playerShip.Location.Y+20 <= enemyShot.EnemyBullet.Location.Y)
+
+            if (playerShip.Location.X <= enemyShot.EnemyBullet.Location.X && 
+                playerShip.Location.X+playerShip.Width >= (enemyShot.EnemyBullet.Location.X) &&
+                playerShip.Location.Y+20 <= enemyShot.EnemyBullet.Location.Y)
             {
                 Life.LifeCount -= 1;
                 this.life_value.Text = Life.LifeCount.ToString();
             }
+
             foreach (var enemy in enemies.Where(enemy => collision.EnemyPlayerBullet(bullet, enemy)))
             {
                 enemy.EnemyInvader.Visible = false;
@@ -128,8 +129,6 @@ namespace Game
                 this.score_value.Text = Score.ScoreCount.ToString();
                 break;
             }
-
-
         }
     }
 }
