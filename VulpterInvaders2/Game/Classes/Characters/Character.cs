@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Game.Classes.Characters
+﻿namespace Game.Classes.Characters
 {
-    public abstract class Character:GameObject
+    public abstract class Character : GameObject
     {
         protected Character(int positionX, int positionY)
             : base(positionX, positionY)

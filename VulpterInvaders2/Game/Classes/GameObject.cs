@@ -8,7 +8,6 @@
             this.PositionY = positionY;
         }
 
-
         public int PositionX { get; set; }
 
         public int PositionY { get; set; }
