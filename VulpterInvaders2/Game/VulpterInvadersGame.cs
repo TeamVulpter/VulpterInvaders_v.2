@@ -188,142 +188,191 @@ namespace Game
 
         private void ObsticleTimer_Tick(object sender, EventArgs e)
         {
-            this.obsticle.PositionX = Obsticle.Location.X;
-            this.obsticle.PositionY = Obsticle.Location.Y;
-
-            this.obsticle2.PositionX = Obsticle2.Location.X;
-            this.obsticle2.PositionY = Obsticle2.Location.Y;
-
-            this.obsticle3.PositionX = Obsticle3.Location.X;
-            this.obsticle3.PositionY = Obsticle3.Location.Y;
-
-            this.obsticle4.PositionX = Obsticle4.Location.X;
-            this.obsticle4.PositionY = Obsticle4.Location.Y;
-
-            this.obsticle5.PositionX = Obsticle5.Location.X;
-            this.obsticle5.PositionY = Obsticle5.Location.Y;
-
             Obsticle.Left += 1;
-            Obsticle2.Left -= 1;
-            Obsticle3.Left += 1;
-            Obsticle4.Left -= 1;
-            Obsticle5.Left += 1;
+            if (DetectLeftCollison(Obsticle, hero))
+            {
+                Obsticle.Left -= 1;
+                ObsticleTimer.Enabled = false;
+                MoveLeft.Enabled = true;
 
-            if (Obsticle.Left > brick11.Left - Obsticle.Width)
+            }
+            else if (Obsticle.Right > brick11.Left)
             {
                 ObsticleTimer.Enabled = false;
                 MoveLeft.Enabled = true;
             }
-
-            DetectCollison(Obsticle, hero, brick5);
-            DetectCollison(Obsticle2, hero, brick4);
-            DetectCollison(Obsticle3, hero, brick3);
-            DetectCollison(Obsticle4, hero, brick2);
-            DetectCollison(Obsticle5, hero, brick1);
-
-
-            //Obsticle.Location=new Point(obsticle.PositionX +1 , obsticle.PositionY);
-            //Obsticle2.Location = new Point(obsticle2.PositionX - 1, obsticle2.PositionY);
-            //Obsticle3.Location = new Point(obsticle3.PositionX +1, obsticle3.PositionY);
-            //Obsticle4.Location = new Point(obsticle4.PositionX + 1, obsticle4.PositionY);
-            //Obsticle5.Location = new Point(obsticle5.PositionX + 1, obsticle5.PositionY);
-
-            //if (obsticle.PositionY>=brick5.Location.Y-1)
-            //{
-            //    if (Obsticle.Right >= brick11.Left)
-            //    {
-            //        Obsticle.Location=new Point(brick5.Location.X-1,brick5.Location.Y);
-            //    }
-            //}
-
-            //bool obsticleOne = (
-            //                        Obsticle.Location.X + Obsticle.Width >= this.player.Hero.Location.X &&
-            //                        Obsticle.Location.X <= this.player.Hero.Left
-            //                   ) &&
-            //                   (
-            //                        Obsticle.Location.Y >= this.player.Hero.Top &&
-            //                        Obsticle.Location.Y <= this.player.Hero.Top + this.player.Hero.Height
-            //                   );
-
-            //if (obsticleOne)
-            //{
-            //    Obsticle.Location = new Point(brick5.Location.X - 1, brick5.Location.Y);
-            //    Life.LifeCount--;
-            //    life_value.Text = Life.LifeCount.ToString();
-            //    if (Life.LifeCount == 0)
-            //    {
-            //        MessageBox.Show("Game over");
-            //        Application.Exit();
-            //    }
-            //}
-
-            //////obsticle2 movement
-            ////if (obsticle2.PositionY >= brick4.Location.Y - 1)
-            ////{
-            ////    if (Obsticle2.Left <= brick4.Right)
-            ////    {
-            ////        Obsticle2.Location = new Point(brick12.Location.X + 1, brick12.Location.Y);
-            ////    }
-            ////}
-            ////// Obsticle3 movement
-            ////if (obsticle3.PositionY >= brick13.Location.Y - 1)
-            ////{
-            ////    if (Obsticle3.Right >= brick13.Left)
-            ////    {
-            ////        Obsticle3.Location = new Point(brick3.Location.X - 1, brick3.Location.Y);
-            ////    }
-            ////}
-            ////// Obsticle4 movement
-            ////if (obsticle4.PositionY >= brick14.Location.Y - 1)
-            ////{
-            ////    if (Obsticle4.Right >= brick14.Left)
-            ////    {
-            ////        Obsticle4.Location = new Point(brick2.Location.X - 1, brick2.Location.Y);
-            ////    }
-            ////}
-            ////// Obsticle5 movement
-            ////if (obsticle5.PositionY >= brick15.Location.Y - 1)
-            ////{
-            ////    if (Obsticle5.Right >= brick15.Left)
-            ////    {
-            ////        Obsticle5.Location = new Point(brick1.Location.X - 1, brick1.Location.Y);
-            ////    }
-            ////}
         }
-        private void DetectCollison(PictureBox obsticleBox, PictureBox hero, PictureBox brickBox)
-        {
-
-            if ((obsticleBox.Location.X + obsticleBox.Width >= hero.Location.X &&
-                                    obsticleBox.Location.X <= hero.Left) && (
-                                    obsticleBox.Location.Y >= hero.Top &&
-                                    obsticleBox.Location.Y <= hero.Top + hero.Height
-                               ))
-            {
-                obsticleBox.Location = new Point(brickBox.Location.X - 1, brickBox.Location.Y);
-                Life.LifeCount--;
-                life_value.Text = Life.LifeCount.ToString();
-                if (Life.LifeCount == 0)
-                {
-                    MessageBox.Show("Game over");
-                    Application.Exit();
-                }
-            }
-        }
-
         private void MoveLeft_Tick(object sender, EventArgs e)
         {
             Obsticle.Left -= 1;
-            Obsticle2.Left += 1;
-            Obsticle3.Left -= 1;
-            Obsticle4.Left += 1;
-            Obsticle5.Left -= 1;
-
-            if (Obsticle.Left < brick5.Right)
+            if (DetectRightCollison(Obsticle, hero))
+            {
+                Obsticle.Left += 1;
+                ObsticleTimer.Enabled = true;
+                MoveLeft.Enabled = false;
+            }
+            else if (Obsticle.Left < brick5.Right)
             {
                 ObsticleTimer.Enabled = true;
                 MoveLeft.Enabled = false;
             }
 
         }
+
+        private void Obsticle2MoveLeft_Tick(object sender, EventArgs e)
+        {
+            Obsticle2.Left -= 1;
+            if (DetectRightCollison(Obsticle2, hero))
+            {
+                //Obsticle2.Left += 1;
+                Obsticle2MoveLeft.Enabled = false;
+                Obsticle2MoveRIght.Enabled = true;
+            }
+            else if (Obsticle2.Left < brick4.Right)
+            {
+                Obsticle2MoveLeft.Enabled = false;
+                Obsticle2MoveRIght.Enabled = true;
+            }
+        }
+        private void Obsticle2MoveRight_Tick(object sender, EventArgs e)
+        {
+            Obsticle2.Left += 1;
+            if (DetectLeftCollison(Obsticle2, hero))
+            {
+                //Obsticle2.Left -= 1;
+                Obsticle2MoveLeft.Enabled = true;
+                Obsticle2MoveRIght.Enabled = false;
+
+            }
+            else if (Obsticle2.Right > brick12.Left)
+            {
+                Obsticle2MoveLeft.Enabled = true;
+                Obsticle2MoveRIght.Enabled = false;
+            }
+        }
+
+        private void Obsticle3MoveRight_Tick(object sender, EventArgs e)
+        {
+            Obsticle3.Left += 1;
+            if (DetectLeftCollison(Obsticle3, hero))
+            {
+                Obsticle3.Left -= 1;
+                Obsticle3MoveRight.Enabled = false;
+                Obsticle3MoveLeft.Enabled = true;
+
+            }
+            if (Obsticle3.Right > brick13.Left)
+            {
+                Obsticle3MoveRight.Enabled = false;
+                Obsticle3MoveLeft.Enabled = true;
+            }
+        }
+        private void Obsticle3MoveLeft_Tick(object sender, EventArgs e)
+        {
+            Obsticle3.Left -= 1;
+            if (DetectRightCollison(Obsticle3, hero))
+            {
+                Obsticle3.Left += 1;
+                Obsticle3MoveLeft.Enabled = false;
+                Obsticle3MoveRight.Enabled = true;
+            }
+            else if (Obsticle3.Left < brick3.Right)
+            {
+                Obsticle3MoveRight.Enabled = true;
+                Obsticle3MoveLeft.Enabled = false;
+            }
+        }
+
+        private void Obsticle4MoveLeft_Tick(object sender, EventArgs e)
+        {
+
+            Obsticle4.Left -= 1;
+            if (DetectRightCollison(Obsticle4, hero))
+            {
+                Obsticle4.Left += 1;
+                Obsticle4MoveLeft.Enabled = false;
+                Obsticle4MoveRight.Enabled = true;
+            }
+            else if (Obsticle4.Left < brick2.Right)
+            {
+                Obsticle4MoveLeft.Enabled = false;
+                Obsticle4MoveRight.Enabled = true;
+            }
+        }
+        private void Obsticle4MoveRigth_Tick(object sender, EventArgs e)
+        {
+            Obsticle4.Left += 1;
+            if (DetectLeftCollison(Obsticle4, hero))
+            {
+                Obsticle4.Left -= 1;
+                Obsticle4MoveLeft.Enabled = true;
+                Obsticle4MoveRight.Enabled = false;
+            }
+            else if (Obsticle4.Right > brick14.Left)
+            {
+                Obsticle4MoveLeft.Enabled = true;
+                Obsticle4MoveRight.Enabled = false;
+            }
+        }
+
+        private void Obsticle5MoveRight_Tick(object sender, EventArgs e)
+        {
+            Obsticle5.Left += 1;
+            if (DetectLeftCollison(Obsticle5, hero))
+            {
+                Obsticle5.Left -= 1;
+                Obsticle5MoveRight.Enabled = false;
+                Obsticle5MoveLeft.Enabled = true;
+
+            }
+            else if (Obsticle5.Right > brick15.Left)
+            {
+                Obsticle5MoveRight.Enabled = false;
+                Obsticle5MoveLeft.Enabled = true;
+            }
+        }
+        private void Obsticle5MoveLeft_Tick(object sender, EventArgs e)
+        {
+            Obsticle5.Left -= 1;
+            if (DetectRightCollison(Obsticle5, hero))
+            {
+                Obsticle5.Left += 1;
+                Obsticle5MoveLeft.Enabled = false;
+                Obsticle5MoveRight.Enabled = true;
+            }
+            if (Obsticle5.Left < brick1.Right)
+            {
+                Obsticle5MoveRight.Enabled = true;
+                Obsticle5MoveLeft.Enabled = false;
+            }
+        }
+
+
+        private bool DetectLeftCollison(PictureBox obsticleBox, PictureBox hero)
+        {
+            if ((obsticleBox.Location.X + obsticleBox.Width >= hero.Location.X &&
+                                    obsticleBox.Location.X <= hero.Left) && (
+                                    obsticleBox.Location.Y >= hero.Top &&
+                                    obsticleBox.Location.Y <= hero.Top + hero.Height
+                               ))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private bool DetectRightCollison(PictureBox obsticleBox, PictureBox hero)
+        {
+            if ((obsticleBox.Location.X - hero.Width <= hero.Location.X &&
+                                    obsticleBox.Location.X <= hero.Right) && (
+                                    obsticleBox.Location.Y >= hero.Top &&
+                                    obsticleBox.Location.Y <= hero.Top + hero.Height
+                               ))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
+

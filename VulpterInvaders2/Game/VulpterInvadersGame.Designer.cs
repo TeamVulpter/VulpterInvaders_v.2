@@ -81,6 +81,14 @@
             this.item10 = new System.Windows.Forms.PictureBox();
             this.item11 = new System.Windows.Forms.PictureBox();
             this.MoveLeft = new System.Windows.Forms.Timer(this.components);
+            this.Obsticle2MoveLeft = new System.Windows.Forms.Timer(this.components);
+            this.Obsticle2MoveRIght = new System.Windows.Forms.Timer(this.components);
+            this.Obsticle5MoveRight = new System.Windows.Forms.Timer(this.components);
+            this.Obsticle3MoveRight = new System.Windows.Forms.Timer(this.components);
+            this.Obsticle5MoveLeft = new System.Windows.Forms.Timer(this.components);
+            this.Obsticle3MoveLeft = new System.Windows.Forms.Timer(this.components);
+            this.Obsticle4MoveLeft = new System.Windows.Forms.Timer(this.components);
+            this.Obsticle4MoveRight = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Obsticle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brick19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brick18)).BeginInit();
@@ -610,6 +618,49 @@
             this.MoveLeft.Interval = 30;
             this.MoveLeft.Tick += new System.EventHandler(this.MoveLeft_Tick);
             // 
+            // Obsticle2MoveLeft
+            // 
+            this.Obsticle2MoveLeft.Enabled = true;
+            this.Obsticle2MoveLeft.Interval = 30;
+            this.Obsticle2MoveLeft.Tick += new System.EventHandler(this.Obsticle2MoveLeft_Tick);
+            // 
+            // Obsticle2MoveRIght
+            // 
+            this.Obsticle2MoveRIght.Interval = 30;
+            this.Obsticle2MoveRIght.Tick += new System.EventHandler(this.Obsticle2MoveRight_Tick);
+            // 
+            // Obsticle5MoveRight
+            // 
+            this.Obsticle5MoveRight.Enabled = true;
+            this.Obsticle5MoveRight.Interval = 30;
+            this.Obsticle5MoveRight.Tick += new System.EventHandler(this.Obsticle5MoveRight_Tick);
+            // 
+            // Obsticle3MoveRight
+            // 
+            this.Obsticle3MoveRight.Enabled = true;
+            this.Obsticle3MoveRight.Interval = 30;
+            this.Obsticle3MoveRight.Tick += new System.EventHandler(this.Obsticle3MoveRight_Tick);
+            // 
+            // Obsticle5MoveLeft
+            // 
+            this.Obsticle5MoveLeft.Interval = 30;
+            this.Obsticle5MoveLeft.Tick += new System.EventHandler(this.Obsticle5MoveLeft_Tick);
+            // 
+            // Obsticle3MoveLeft
+            // 
+            this.Obsticle3MoveLeft.Interval = 30;
+            this.Obsticle3MoveLeft.Tick += new System.EventHandler(this.Obsticle3MoveLeft_Tick);
+            // 
+            // Obsticle4MoveLeft
+            // 
+            this.Obsticle4MoveLeft.Enabled = true;
+            this.Obsticle4MoveLeft.Interval = 30;
+            this.Obsticle4MoveLeft.Tick += new System.EventHandler(this.Obsticle4MoveLeft_Tick);
+            // 
+            // Obsticle4MoveRight
+            // 
+            this.Obsticle4MoveRight.Tick += new System.EventHandler(this.Obsticle4MoveRigth_Tick);
+            // 
             // VulpterInvadersGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -757,6 +808,14 @@
         private PictureBox item10;
         private PictureBox item11;
         private Timer MoveLeft;
+        private Timer Obsticle2MoveLeft;
+        private Timer Obsticle2MoveRIght;
+        private Timer Obsticle5MoveRight;
+        private Timer Obsticle3MoveRight;
+        private Timer Obsticle5MoveLeft;
+        private Timer Obsticle3MoveLeft;
+        private Timer Obsticle4MoveLeft;
+        private Timer Obsticle4MoveRight;
     }
 }
 
