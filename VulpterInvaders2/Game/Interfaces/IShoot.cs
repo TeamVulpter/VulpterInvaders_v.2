@@ -1,7 +1,7 @@
-﻿using Game.Classes;
-
-namespace Game.Interfaces
+﻿namespace Game.Interfaces
 {
+    using Game.Classes;
+
     public interface IShoot
     {
         void Shoot(BulletPlayer bullet);

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Game.Classes.Enemies;
-
-namespace Game.Classes
+﻿namespace Game.Classes
 {
+    using Enemies;
+
     public class Collision
     {
         public bool EnemyPlayerBullet(GameObject bullet, EnemyShip enemy)
@@ -21,7 +16,5 @@ namespace Game.Classes
             }
             return false;
         }
-
-
     }
 }
