@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Game.Classes.Enemies;
+using Game.Classes.Characters;
 
 namespace Game.Classes
 {
@@ -18,6 +19,17 @@ namespace Game.Classes
             {
                 return true;
 
+            }
+            return false;
+        }
+
+        public bool EnemyShotPlayerShipCollision(PlayerShip shipPlayer,BulletEnemy enemyShot)
+        {
+            if (shipPlayer.Ship.Location.X <= enemyShot.EnemyBullet.Location.X &&
+                shipPlayer.Ship.Location.X + shipPlayer.Ship.Width >= (enemyShot.EnemyBullet.Location.X) &&
+                shipPlayer.Ship.Location.Y + 20 <= enemyShot.EnemyBullet.Location.Y)
+            {
+                return true;
             }
             return false;
         }

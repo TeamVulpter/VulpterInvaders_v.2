@@ -99,19 +99,13 @@ namespace Game
                 this.bullet.PositionX = bullet.PositionX + 10;
                 this.bullet = new BulletPlayer(bulletPanel);
                 shooting.Shoot(bullet);
-                if (bullet.PositionY <= 20)
-                {
-                    bullet.BulletPanel.Visible = false;
-                }
-
             }
 
             attack.UpdateAttack(enemies);
 
             this.enemyShot = new BulletEnemy(bulletEnemy);
             enemyShooting.EnemyShoot(enemyShot, enemies);
-            if (playerShip.Location.X <= enemyShot.EnemyBullet.Location.X && playerShip.Location.X+playerShip.Width >= (enemyShot.EnemyBullet.Location.X) &&
-                        playerShip.Location.Y+20 <= enemyShot.EnemyBullet.Location.Y)
+            if (collision.EnemyShotPlayerShipCollision(shipPlayer, enemyShot))
             {
                 Life.LifeCount -= 1;
                 this.life_value.Text = Life.LifeCount.ToString();

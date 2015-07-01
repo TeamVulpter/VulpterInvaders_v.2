@@ -10,6 +10,10 @@ namespace Game.Classes
         {
             bullet.BulletPanel.Location = new Point(bullet.PositionX, bullet.PositionY - 10);
             bullet.Start();
+            if (bullet.PositionY <= 20)
+            {
+                bullet.BulletPanel.Visible = false;
+            }
            
         }
 
