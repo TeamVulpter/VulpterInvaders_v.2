@@ -1,16 +1,19 @@
-﻿namespace Game
+using Game.Classes;
+
+namespace Game
 {
     using System;
     using System.Collections.Generic;
     using System.Drawing;
     using System.Windows.Forms;
 
-    using Classes;
     using Classes.Brick;
     using Classes.Characters;
     using Classes.Factory;
     using Classes.Items;
     using Classes.Map;
+
+    using Engine;
 
     using Exception;
 
@@ -31,11 +34,19 @@
             try
             {
                 //generation map coordinates
+
                 this.map = new Map( this.brick16.Location.Y + this.brick16.Height,
                                     this.brick6.Location.Y,
                                     this.brick1.Location.X + this.brick1.Width,
                                     this.brick11.Location.X);
 
+                this.items = new List<Item>();
+                this.obsticles = new List<ObsticleBrick>();
+
+                this.map = new Map(this.brick16.Location.Y + this.brick16.Height,
+                    this.brick6.Location.Y,
+                    this.brick1.Location.X + this.brick1.Width,
+                    this.brick11.Location.X);
                 this.items = new List<Item>();
                 this.obsticles = new List<ObsticleBrick>();
 
@@ -47,15 +58,16 @@
 
                 //add all obsticle to list
                 AddObsticleToList();
-                
                 //drawing bricks
                 this.AddBrickToList();
+
 
                 //generation items with bonus
                 ItemsFactory itemsFactory = new ItemsFactory();
                 items = itemsFactory.CreateItems(11, itemsPictureBox, this.map);
 
                 this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+
             }
             catch (NotImplementedException ex)
             {
@@ -65,6 +77,7 @@
             {
                 MessageBox.Show(@"No found picture for item!");
             }
+            
         }
 
         //add item to list of items
@@ -127,7 +140,7 @@
                     player.MoveUp();
                 }
             }
-            if (!player.StopAtMax(player.Hero.Location.Y + player.Hero.Height, this.map.Down))
+            if (!player.StopAtMax(player.Hero.Location.Y+player.Hero.Height, this.map.Down))
             {
                 if (e.KeyCode == Keys.S)
                 {
@@ -141,12 +154,11 @@
                     player.MoveLeft();
                 }
             }
-            if (!player.StopAtMax(player.Hero.Location.X + player.Hero.Width, this.map.Right))
+            if (!player.StopAtMax(player.Hero.Location.X+player.Hero.Width, this.map.Right))
             {
                 if (e.KeyCode == Keys.D)
                 {
                     player.MoveRight();
-
                 }
             }
             if (e.KeyCode == Keys.X)
@@ -176,14 +188,13 @@
                 InvadersAttack invaderAttack = new InvadersAttack();
                 this.Close();
                 invaderAttack.Show();
-
             }
         }
 
         private void ObsticleTimer_Tick(object sender, EventArgs e)
         {
             Obsticle.Left += 1;
-            if (DetectLeftCollison(Obsticle, hero))
+            if (DetectCollison(Obsticle, hero))
             {
                 Obsticle.Left -= 1;
                 ObsticleTimer.Enabled = false;
@@ -199,7 +210,7 @@
         private void MoveLeft_Tick(object sender, EventArgs e)
         {
             Obsticle.Left -= 1;
-            if (DetectRightCollison(Obsticle, hero))
+            if (DetectCollison(Obsticle, hero))
             {
                 Obsticle.Left += 1;
                 ObsticleTimer.Enabled = true;
@@ -216,7 +227,7 @@
         private void Obsticle2MoveLeft_Tick(object sender, EventArgs e)
         {
             Obsticle2.Left -= 1;
-            if (DetectRightCollison(Obsticle2, hero))
+            if (DetectCollison(Obsticle2, hero))
             {
                 //Obsticle2.Left += 1;
                 Obsticle2MoveLeft.Enabled = false;
@@ -231,7 +242,7 @@
         private void Obsticle2MoveRight_Tick(object sender, EventArgs e)
         {
             Obsticle2.Left += 1;
-            if (DetectLeftCollison(Obsticle2, hero))
+            if (DetectCollison(Obsticle2, hero))
             {
                 //Obsticle2.Left -= 1;
                 Obsticle2MoveLeft.Enabled = true;
@@ -248,7 +259,7 @@
         private void Obsticle3MoveRight_Tick(object sender, EventArgs e)
         {
             Obsticle3.Left += 1;
-            if (DetectLeftCollison(Obsticle3, hero))
+            if (DetectCollison(Obsticle3, hero))
             {
                 Obsticle3.Left -= 1;
                 Obsticle3MoveRight.Enabled = false;
@@ -264,7 +275,7 @@
         private void Obsticle3MoveLeft_Tick(object sender, EventArgs e)
         {
             Obsticle3.Left -= 1;
-            if (DetectRightCollison(Obsticle3, hero))
+            if (DetectCollison(Obsticle3, hero))
             {
                 Obsticle3.Left += 1;
                 Obsticle3MoveLeft.Enabled = false;
@@ -281,7 +292,7 @@
         {
 
             Obsticle4.Left -= 1;
-            if (DetectRightCollison(Obsticle4, hero))
+            if (DetectCollison(Obsticle4, hero))
             {
                 Obsticle4.Left += 1;
                 Obsticle4MoveLeft.Enabled = false;
@@ -296,7 +307,7 @@
         private void Obsticle4MoveRigth_Tick(object sender, EventArgs e)
         {
             Obsticle4.Left += 1;
-            if (DetectLeftCollison(Obsticle4, hero))
+            if (DetectCollison(Obsticle4, hero))
             {
                 Obsticle4.Left -= 1;
                 Obsticle4MoveLeft.Enabled = true;
@@ -312,7 +323,7 @@
         private void Obsticle5MoveRight_Tick(object sender, EventArgs e)
         {
             Obsticle5.Left += 1;
-            if (DetectLeftCollison(Obsticle5, hero))
+            if (DetectCollison(Obsticle5, hero))
             {
                 Obsticle5.Left -= 1;
                 Obsticle5MoveRight.Enabled = false;
@@ -328,7 +339,7 @@
         private void Obsticle5MoveLeft_Tick(object sender, EventArgs e)
         {
             Obsticle5.Left -= 1;
-            if (DetectRightCollison(Obsticle5, hero))
+            if (DetectCollison(Obsticle5, hero))
             {
                 Obsticle5.Left += 1;
                 Obsticle5MoveLeft.Enabled = false;
@@ -342,26 +353,10 @@
         }
 
 
-        private bool DetectLeftCollison(PictureBox obsticleBox, PictureBox hero)
+        private bool DetectCollison(PictureBox obsticleBox, PictureBox hero)
         {
-            if ((obsticleBox.Location.X + obsticleBox.Width >= hero.Location.X &&
-                                    obsticleBox.Location.X <= hero.Left) && (
-                                    obsticleBox.Location.Y >= hero.Top &&
-                                    obsticleBox.Location.Y <= hero.Top + hero.Height
-                               ))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private bool DetectRightCollison(PictureBox obsticleBox, PictureBox hero)
-        {
-            if ((obsticleBox.Location.X - hero.Width <= hero.Location.X &&
-                                    obsticleBox.Location.X <= hero.Right) && (
-                                    obsticleBox.Location.Y >= hero.Top &&
-                                    obsticleBox.Location.Y <= hero.Top + hero.Height
-                               ))
+            if ((obsticleBox.Location.X + obsticleBox.Width == hero.Location.X && obsticleBox.Location.Y >= hero.Top &&
+                                   obsticleBox.Location.Y <= hero.Top + hero.Height ))
             {
                 return true;
             }
