@@ -119,6 +119,12 @@ namespace Game
             {
                 Life.LifeCount -= 1;
                 this.life_value.Text = Life.LifeCount.ToString();
+                if (Life.LifeCount<=0)
+                {
+                    GameOverForm gameOver = new GameOverForm();
+                    gameOver.Show();
+                    this.Hide();
+                }
             }
             foreach (var enemy in enemies.Where(enemy => collision.EnemyPlayerBullet(bullet, enemy)))
             {
