@@ -177,8 +177,8 @@ namespace Game
             //check for exit from this form in door
             if (this.player.CheckForExit(this.door))
             {
-                System.Media.SoundPlayer musicPlayer = new System.Media.SoundPlayer("../../Resources/Song/GameMusic.wav");
-                musicPlayer.PlayLooping();
+                //System.Media.SoundPlayer musicPlayer = new System.Media.SoundPlayer("../../Resources/Song/GameMusic.wav");
+                //musicPlayer.PlayLooping();
                 InvadersAttack invaderAttack = new InvadersAttack();
                 this.Close();
                 invaderAttack.Show();
