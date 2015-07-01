@@ -188,7 +188,7 @@ namespace Game
         private void ObsticleTimer_Tick(object sender, EventArgs e)
         {
             Obsticle.Left += 1;
-            if (DetectLeftCollison(Obsticle, hero))
+            if (DetectCollison(Obsticle, hero))
             {
                 Obsticle.Left -= 1;
                 ObsticleTimer.Enabled = false;
@@ -204,7 +204,7 @@ namespace Game
         private void MoveLeft_Tick(object sender, EventArgs e)
         {
             Obsticle.Left -= 1;
-            if (DetectRightCollison(Obsticle, hero))
+            if (DetectCollison(Obsticle, hero))
             {
                 Obsticle.Left += 1;
                 ObsticleTimer.Enabled = true;
@@ -221,7 +221,7 @@ namespace Game
         private void Obsticle2MoveLeft_Tick(object sender, EventArgs e)
         {
             Obsticle2.Left -= 1;
-            if (DetectRightCollison(Obsticle2, hero))
+            if (DetectCollison(Obsticle2, hero))
             {
                 //Obsticle2.Left += 1;
                 Obsticle2MoveLeft.Enabled = false;
@@ -236,7 +236,7 @@ namespace Game
         private void Obsticle2MoveRight_Tick(object sender, EventArgs e)
         {
             Obsticle2.Left += 1;
-            if (DetectLeftCollison(Obsticle2, hero))
+            if (DetectCollison(Obsticle2, hero))
             {
                 //Obsticle2.Left -= 1;
                 Obsticle2MoveLeft.Enabled = true;
@@ -253,7 +253,7 @@ namespace Game
         private void Obsticle3MoveRight_Tick(object sender, EventArgs e)
         {
             Obsticle3.Left += 1;
-            if (DetectLeftCollison(Obsticle3, hero))
+            if (DetectCollison(Obsticle3, hero))
             {
                 Obsticle3.Left -= 1;
                 Obsticle3MoveRight.Enabled = false;
@@ -269,7 +269,7 @@ namespace Game
         private void Obsticle3MoveLeft_Tick(object sender, EventArgs e)
         {
             Obsticle3.Left -= 1;
-            if (DetectRightCollison(Obsticle3, hero))
+            if (DetectCollison(Obsticle3, hero))
             {
                 Obsticle3.Left += 1;
                 Obsticle3MoveLeft.Enabled = false;
@@ -286,7 +286,7 @@ namespace Game
         {
 
             Obsticle4.Left -= 1;
-            if (DetectRightCollison(Obsticle4, hero))
+            if (DetectCollison(Obsticle4, hero))
             {
                 Obsticle4.Left += 1;
                 Obsticle4MoveLeft.Enabled = false;
@@ -301,7 +301,7 @@ namespace Game
         private void Obsticle4MoveRigth_Tick(object sender, EventArgs e)
         {
             Obsticle4.Left += 1;
-            if (DetectLeftCollison(Obsticle4, hero))
+            if (DetectCollison(Obsticle4, hero))
             {
                 Obsticle4.Left -= 1;
                 Obsticle4MoveLeft.Enabled = true;
@@ -317,7 +317,7 @@ namespace Game
         private void Obsticle5MoveRight_Tick(object sender, EventArgs e)
         {
             Obsticle5.Left += 1;
-            if (DetectLeftCollison(Obsticle5, hero))
+            if (DetectCollison(Obsticle5, hero))
             {
                 Obsticle5.Left -= 1;
                 Obsticle5MoveRight.Enabled = false;
@@ -333,7 +333,7 @@ namespace Game
         private void Obsticle5MoveLeft_Tick(object sender, EventArgs e)
         {
             Obsticle5.Left -= 1;
-            if (DetectRightCollison(Obsticle5, hero))
+            if (DetectCollison(Obsticle5, hero))
             {
                 Obsticle5.Left += 1;
                 Obsticle5MoveLeft.Enabled = false;
@@ -347,26 +347,10 @@ namespace Game
         }
 
 
-        private bool DetectLeftCollison(PictureBox obsticleBox, PictureBox hero)
+        private bool DetectCollison(PictureBox obsticleBox, PictureBox hero)
         {
-            if ((obsticleBox.Location.X + obsticleBox.Width >= hero.Location.X &&
-                                    obsticleBox.Location.X <= hero.Left) && (
-                                    obsticleBox.Location.Y >= hero.Top &&
-                                    obsticleBox.Location.Y <= hero.Top + hero.Height
-                               ))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private bool DetectRightCollison(PictureBox obsticleBox, PictureBox hero)
-        {
-            if ((obsticleBox.Location.X - hero.Width <= hero.Location.X &&
-                                    obsticleBox.Location.X <= hero.Right) && (
-                                    obsticleBox.Location.Y >= hero.Top &&
-                                    obsticleBox.Location.Y <= hero.Top + hero.Height
-                               ))
+            if ((obsticleBox.Location.X + obsticleBox.Width == hero.Location.X && obsticleBox.Location.Y >= hero.Top &&
+                                   obsticleBox.Location.Y <= hero.Top + hero.Height ))
             {
                 return true;
             }
