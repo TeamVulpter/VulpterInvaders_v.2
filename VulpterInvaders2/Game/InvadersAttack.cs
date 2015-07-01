@@ -16,6 +16,7 @@
 
         private PlayerShip shipPlayer;
         private Bullet bullet;
+        private BulletEnemy enemyShot;
         private bool spaceKeyIsPressed = false;
         private IList<EnemyShip> enemies;
         private Attack attack;
@@ -29,6 +30,7 @@
             this.KeyDown += this.InvaderAttack_KeyDown;
             this.shipPlayer = new PlayerShip(playerShip);
             this.bullet = new Bullet(bulletPanel);
+            this.enemyShot = new BulletEnemy(bulletEnemy);
           
             enemies = new List<EnemyShip>()
             {
@@ -77,6 +79,7 @@
                     shipPlayer.MoveRight();
                 }
             }
+            enemyShot.EnemyBullet.Location = new Point(50, 450);
         }
 
         private void TimerMovementsTick(object sender, System.EventArgs e)
@@ -92,7 +95,10 @@
             }
 
             attack.UpdateAttack(enemies);
-           
+
+            this.enemyShot = new BulletEnemy(bulletEnemy);
+            enemyShot.EnemyBullet.Location = new Point(enemyShot.PositionX, enemyShot.PositionY + 10);
+            enemyShot.Start();
 
             foreach (var enemy in enemies)
             {
@@ -106,6 +112,7 @@
                     break;
                 }
             }
+
         }
     }
 }

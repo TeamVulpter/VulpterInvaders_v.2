@@ -50,6 +50,7 @@ namespace Game
             this.scores = new System.Windows.Forms.Label();
             this.life_value = new System.Windows.Forms.Label();
             this.score_value = new System.Windows.Forms.Label();
+            this.bulletEnemy = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.playerShip)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,7 +143,6 @@ namespace Game
             this.invaderSeven.Name = "invaderSeven";
             this.invaderSeven.Size = new System.Drawing.Size(43, 36);
             this.invaderSeven.TabIndex = 8;
-           
             // 
             // invaderEight
             // 
@@ -231,12 +231,21 @@ namespace Game
             this.score_value.Text = "0";
             this.score_value.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // bulletEnemy
+            // 
+            this.bulletEnemy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bulletEnemy.BackgroundImage")));
+            this.bulletEnemy.Location = new System.Drawing.Point(507, 193);
+            this.bulletEnemy.Name = "bulletEnemy";
+            this.bulletEnemy.Size = new System.Drawing.Size(19, 30);
+            this.bulletEnemy.TabIndex = 39;
+            // 
             // InvadersAttack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(736, 563);
+            this.Controls.Add(this.bulletEnemy);
             this.Controls.Add(this.score_value);
             this.Controls.Add(this.life_value);
             this.Controls.Add(this.scores);
@@ -283,5 +292,6 @@ namespace Game
         private System.Windows.Forms.Label scores;
         private System.Windows.Forms.Label life_value;
         private System.Windows.Forms.Label score_value;
+        private System.Windows.Forms.Panel bulletEnemy;
     }
 }
