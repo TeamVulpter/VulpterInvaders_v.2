@@ -4,7 +4,7 @@ namespace Game.Classes
 {
     public abstract class Bullet : GameObject
     {
-        protected Bullet(int positionX, int positionY, Panel bullet)
+        protected Bullet(int positionX, int positionY)
             : base(positionX, positionY)
         {
         }

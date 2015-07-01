@@ -5,7 +5,7 @@
     public class BulletEnemy : Bullet
     {
         public BulletEnemy(Panel bulletEnemy)
-            : base(bulletEnemy.Location.X, bulletEnemy.Location.Y, bulletEnemy)
+            : base(bulletEnemy.Location.X, bulletEnemy.Location.Y)
         {
             this.EnemyBullet = bulletEnemy;
             EnemyBullet.Visible = false;

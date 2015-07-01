@@ -67,6 +67,7 @@
     <Compile Include="Classes\Characters\Character.cs" />
     <Compile Include="Classes\Characters\ObsticleBrick.cs" />
     <Compile Include="Classes\Collision.cs" />
+    <Compile Include="Classes\EnemyShooting.cs" />
     <Compile Include="Classes\RemoveBonus.cs" />
     <Compile Include="Classes\Enemies\EnemyShip.cs" />
     <Compile Include="Classes\Factory\EnemyInvaderFactory.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Interfaces\IItem.cs" />
     <Compile Include="Interfaces\IMap.cs" />
     <Compile Include="Interfaces\IShoot.cs" />
+    <Compile Include="Interfaces\IShootableEnemyBullet.cs" />
     <Compile Include="InvadersAttack.cs">
       <SubType>Form</SubType>
     </Compile>

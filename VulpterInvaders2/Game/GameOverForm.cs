@@ -1,8 +1,17 @@
 ﻿namespace Game
 {
-    using System;
-    using System.Windows.Forms;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
+namespace Game
+{
     public partial class GameOverForm : Form
     {
         public GameOverForm()
@@ -15,11 +24,10 @@
             Application.Exit();
         }
 
-        private void ButtonRestart(object sender, EventArgs e)
+        private void RestartGame_Click(object sender, EventArgs e)
         {
-           VulpterInvadersGame newGame = new VulpterInvadersGame();
-           newGame.Show();
-            this.Hide();
+            System.Diagnostics.Process.Start(Application.ExecutablePath); // to start new instance of application
+            this.Close();
         }
     }
 }
