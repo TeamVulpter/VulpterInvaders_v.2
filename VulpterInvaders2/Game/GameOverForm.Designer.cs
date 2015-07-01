@@ -41,6 +41,7 @@
             this.RestartGame.TabIndex = 0;
             this.RestartGame.Text = "Restart Game";
             this.RestartGame.UseVisualStyleBackColor = true;
+            this.RestartGame.Click += new System.EventHandler(this.RestartGame_Click);
             // 
             // ExitGame
             // 

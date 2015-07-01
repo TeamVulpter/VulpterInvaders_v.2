@@ -21,12 +21,12 @@ namespace Game
         {
             Application.Exit();
         }
-        private void ButtonRestart(object sender, EventArgs e)
+        
+
+        private void RestartGame_Click(object sender, EventArgs e)
         {
-           VulpterInvadersGame newGame = new VulpterInvadersGame();
-           newGame.Show();
-            this.Hide();
-            
+            System.Diagnostics.Process.Start(Application.ExecutablePath); // to start new instance of application
+            this.Close();
         }
     }
 }
