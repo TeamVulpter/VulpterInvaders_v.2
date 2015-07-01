@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Game.Classes.Enemies;
-using Game.Interfaces;
-
-namespace Game.Classes
+﻿namespace Game.Classes
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Drawing;
+    using Enemies;
+    using Interfaces;
+
     public class EnemyShooting:IShootableEnemyBullet
     {
         private Random randomEnemy;
