@@ -170,9 +170,9 @@ namespace Game
             this.life_value.Text = Life.LifeCount.ToString();
             this.score_value.Text = Score.ScoreCount.ToString();
 
-            GameEngineVulpterInvaders.GameHealthMax();
-            GameEngineVulpterInvaders.GameScoreMax();
-            GameEngineVulpterInvaders.GameExit();
+            AdvancedStatistics.GameHealthMax();
+            AdvancedStatistics.GameScoreMax();
+            AdvancedStatistics.GameExit();
 
             //check for exit from this form in door
             if (this.player.CheckForExit(this.door))

@@ -19,7 +19,8 @@
                 enemy.PositionY = randomY.Next(10,300);
                 for (int i = 0; i < enemies.Count - 1; i++)
                 {
-                    if (enemies[i].PositionX + enemies[i].EnemyInvader.Width < enemies[i + 1].PositionX)
+                    if (enemies[i].PositionX + enemies[i].EnemyInvader.Width < enemies[i + 1].PositionX + 10 && enemies[i + 1].PositionX + enemies[i+1].EnemyInvader.Width > enemies[i].PositionX)
+                       
                     {
                         enemy.EnemyInvader.Location = new Point(enemy.PositionX, enemy.PositionY);
                     }

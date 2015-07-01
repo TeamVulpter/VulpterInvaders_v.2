@@ -1,4 +1,7 @@
-﻿namespace Game
+﻿using System.Drawing;
+using System.Drawing.Imaging;
+
+namespace Game
 {
     partial class InvadersAttack
     {
@@ -139,6 +142,7 @@
             this.invaderSeven.Name = "invaderSeven";
             this.invaderSeven.Size = new System.Drawing.Size(43, 36);
             this.invaderSeven.TabIndex = 8;
+           
             // 
             // invaderEight
             // 

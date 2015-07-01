@@ -92,6 +92,7 @@
             }
 
             attack.UpdateAttack(enemies);
+           
 
             foreach (var enemy in enemies)
             {
