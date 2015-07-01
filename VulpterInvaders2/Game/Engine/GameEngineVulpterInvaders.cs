@@ -1,6 +1,4 @@
-﻿using Game.Classes;
-
-namespace Game.Engine
+﻿namespace Game.Engine
 {
     using System.Windows.Forms;
 
@@ -11,7 +9,6 @@ namespace Game.Engine
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMenuUI());
-           
             Application.Exit();
         }
     }
