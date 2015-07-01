@@ -351,9 +351,9 @@
 
         private bool DetectCollison(PictureBox obsticleBox, PictureBox hero)
         {
-            if ((   obsticleBox.Location.X + obsticleBox.Width == hero.Location.X &&
+            if ((obsticleBox.Location.X + obsticleBox.Width == hero.Location.X &&
                     obsticleBox.Location.Y >= hero.Top &&
-                    obsticleBox.Location.Y <= hero.Top + hero.Height ))
+                    obsticleBox.Location.Y <= hero.Top + hero.Height))
             {
                 return true;
             }
