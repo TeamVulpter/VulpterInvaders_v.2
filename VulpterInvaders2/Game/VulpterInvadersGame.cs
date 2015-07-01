@@ -21,11 +21,6 @@
         private readonly IMap map;
         private readonly Player player;
         private IList<Brick> bricksList = new List<Brick>();
-        //private ObsticleBrick obsticle;
-        //private ObsticleBrick obsticle2;
-        //private ObsticleBrick obsticle3;
-        //private ObsticleBrick obsticle4;
-        //private ObsticleBrick obsticle5;
         private IList<ObsticleBrick> obsticles;
         private IList<Item> items;
         private List<PictureBox> itemsPictureBox = new List<PictureBox>();
