@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Drawing;
+
     using Enemies;
     using Interfaces;
 
@@ -14,6 +15,7 @@
         {
             randomEnemy = new Random();
         }
+
         public void EnemyShoot(BulletEnemy enemyShot, IList<EnemyShip> enemies)
         {
             enemyShot.EnemyBullet.Location = new Point(enemyShot.PositionX, enemyShot.PositionY + 10);
@@ -24,7 +26,5 @@
             }
             enemyShot.Start();
         }
-
-       
     }
 }
