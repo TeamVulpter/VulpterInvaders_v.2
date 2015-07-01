@@ -349,11 +349,20 @@ namespace Game
 
         private bool DetectCollison(PictureBox obsticleBox, PictureBox hero)
         {
-            if ((obsticleBox.Location.X + obsticleBox.Width == hero.Location.X && obsticleBox.Location.Y >= hero.Top &&
-                                   obsticleBox.Location.Y <= hero.Top + hero.Height ))
+            if ((obsticleBox.Location.X + obsticleBox.Width == hero.Location.X &&
+                    obsticleBox.Location.Y >= hero.Top &&
+                    obsticleBox.Location.Y <= hero.Top + hero.Height))
             {
                 return true;
             }
+
+            if (obsticleBox.Location.X == (hero.Location.X + hero.Width) &&
+                    obsticleBox.Location.Y >= hero.Top &&
+                    obsticleBox.Location.Y <= hero.Top + hero.Height)
+            {
+                return true;
+            }
+
             return false;
         }
     }
