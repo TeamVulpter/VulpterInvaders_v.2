@@ -87,6 +87,12 @@
     <Compile Include="FormMenuUI.Designer.cs">
       <DependentUpon>FormMenuUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameOverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOverForm.Designer.cs">
+      <DependentUpon>GameOverForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IAttack.cs" />
     <Compile Include="Classes\Map\Map.cs" />
     <Compile Include="Classes\Shooting.cs" />
@@ -116,6 +122,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMenuUI.resx">
       <DependentUpon>FormMenuUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameOverForm.resx">
+      <DependentUpon>GameOverForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InvadersAttack.resx">
       <DependentUpon>InvadersAttack.cs</DependentUpon>

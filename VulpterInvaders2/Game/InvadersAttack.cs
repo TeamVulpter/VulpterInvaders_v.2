@@ -104,24 +104,24 @@ namespace Game
            
             if (enemyShot.PositionY>=470)
             {
-                enemyShot.EnemyBullet.Location = new Point(enemies[randomEnemy.Next(1, 6)].PositionX, enemies[randomEnemy.Next(1, 6)].PositionY);
+                enemyShot.EnemyBullet.Location = new Point(enemies[randomEnemy.Next(1, 6)].PositionX, enemies[randomEnemy.Next(1, 6)].PositionY+10);
             }
             enemyShot.Start();
             if ( playerShip.Location.X >= enemyShot.EnemyBullet.Location.X &&  playerShip.Location.X <= (enemyShot.EnemyBullet.Location.X + enemyShot.EnemyBullet.Width) && playerShip.Location.Y >= enemyShot.EnemyBullet.Location.Y && 
-                        (playerShip.Location.Y+10) <= enemyShot.EnemyBullet.Location.Y)
+                        (playerShip.Location.Y) <= enemyShot.EnemyBullet.Location.Y)
             {
                 Life.LifeCount -= 1;
                 this.life_value.Text = Life.LifeCount.ToString();
               
             }
-
             foreach (var enemy in enemies)
             {
-                if (((  bullet.PositionX >= enemy.EnemyInvader.Location.X && 
+                if (((bullet.PositionX >= enemy.EnemyInvader.Location.X && 
                         bullet.PositionX <= (enemy.EnemyInvader.Location.X + enemy.EnemyInvader.Width)) &&
                    (    bullet.PositionY >= enemy.EnemyInvader.Location.Y && 
                         bullet.PositionY <= (enemy.EnemyInvader.Location.Y + 10))))
                 {
+                    enemy.EnemyInvader.Visible = false;
                     Score.ScoreCount += 1;
                     this.score_value.Text = Score.ScoreCount.ToString();
                     break;

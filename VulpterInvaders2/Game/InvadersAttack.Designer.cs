@@ -64,7 +64,7 @@ namespace Game
             // 
             this.shipEnemy.BackColor = System.Drawing.Color.Transparent;
             this.shipEnemy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("shipEnemy.BackgroundImage")));
-            this.shipEnemy.Location = new System.Drawing.Point(331, 66);
+            this.shipEnemy.Location = new System.Drawing.Point(132, 66);
             this.shipEnemy.Name = "shipEnemy";
             this.shipEnemy.Size = new System.Drawing.Size(43, 36);
             this.shipEnemy.TabIndex = 2;
@@ -94,7 +94,7 @@ namespace Game
             // 
             this.invaderTwo.BackColor = System.Drawing.Color.Transparent;
             this.invaderTwo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("invaderTwo.BackgroundImage")));
-            this.invaderTwo.Location = new System.Drawing.Point(410, 66);
+            this.invaderTwo.Location = new System.Drawing.Point(207, 66);
             this.invaderTwo.Name = "invaderTwo";
             this.invaderTwo.Size = new System.Drawing.Size(43, 36);
             this.invaderTwo.TabIndex = 3;
@@ -103,7 +103,7 @@ namespace Game
             // 
             this.invaderThree.BackColor = System.Drawing.Color.Transparent;
             this.invaderThree.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("invaderThree.BackgroundImage")));
-            this.invaderThree.Location = new System.Drawing.Point(490, 66);
+            this.invaderThree.Location = new System.Drawing.Point(276, 66);
             this.invaderThree.Name = "invaderThree";
             this.invaderThree.Size = new System.Drawing.Size(43, 36);
             this.invaderThree.TabIndex = 4;
@@ -112,7 +112,7 @@ namespace Game
             // 
             this.invaderFour.BackColor = System.Drawing.Color.Transparent;
             this.invaderFour.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("invaderFour.BackgroundImage")));
-            this.invaderFour.Location = new System.Drawing.Point(264, 66);
+            this.invaderFour.Location = new System.Drawing.Point(74, 63);
             this.invaderFour.Name = "invaderFour";
             this.invaderFour.Size = new System.Drawing.Size(43, 36);
             this.invaderFour.TabIndex = 5;
@@ -121,7 +121,7 @@ namespace Game
             // 
             this.invaderFive.BackColor = System.Drawing.Color.Transparent;
             this.invaderFive.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("invaderFive.BackgroundImage")));
-            this.invaderFive.Location = new System.Drawing.Point(490, 136);
+            this.invaderFive.Location = new System.Drawing.Point(12, 63);
             this.invaderFive.Name = "invaderFive";
             this.invaderFive.Size = new System.Drawing.Size(43, 36);
             this.invaderFive.TabIndex = 6;
@@ -130,7 +130,7 @@ namespace Game
             // 
             this.invaderSix.BackColor = System.Drawing.Color.Transparent;
             this.invaderSix.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("invaderSix.BackgroundImage")));
-            this.invaderSix.Location = new System.Drawing.Point(410, 136);
+            this.invaderSix.Location = new System.Drawing.Point(479, 66);
             this.invaderSix.Name = "invaderSix";
             this.invaderSix.Size = new System.Drawing.Size(43, 36);
             this.invaderSix.TabIndex = 7;
@@ -139,7 +139,7 @@ namespace Game
             // 
             this.invaderSeven.BackColor = System.Drawing.Color.Transparent;
             this.invaderSeven.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("invaderSeven.BackgroundImage")));
-            this.invaderSeven.Location = new System.Drawing.Point(331, 136);
+            this.invaderSeven.Location = new System.Drawing.Point(410, 66);
             this.invaderSeven.Name = "invaderSeven";
             this.invaderSeven.Size = new System.Drawing.Size(43, 36);
             this.invaderSeven.TabIndex = 8;
@@ -148,7 +148,7 @@ namespace Game
             // 
             this.invaderEight.BackColor = System.Drawing.Color.Transparent;
             this.invaderEight.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("invaderEight.BackgroundImage")));
-            this.invaderEight.Location = new System.Drawing.Point(264, 136);
+            this.invaderEight.Location = new System.Drawing.Point(341, 66);
             this.invaderEight.Name = "invaderEight";
             this.invaderEight.Size = new System.Drawing.Size(43, 36);
             this.invaderEight.TabIndex = 9;

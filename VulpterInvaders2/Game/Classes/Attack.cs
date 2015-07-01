@@ -19,7 +19,7 @@
                 en.EnemyInvader.Location = new Point(en.PositionX, en.PositionY + 1);
                 for (int i = 0; i < enemies.Count - 1; i++)
                 {
-                    if (en.PositionY >= 400 && enemies[i].PositionX + enemies[i].EnemyInvader.Width < enemies[i + 1].PositionX)
+                    if (en.PositionY >= 400)
                     {
                         Life.LifeCount -= 1;
                         if (Life.LifeCount < 1)

@@ -6,16 +6,18 @@
 
     public partial class FormMenuUI : Form
     {
+        bool isFormOpen = false;
         public FormMenuUI()
         {
             InitializeComponent();
         }
 
         private void Btn_StartNewGame_Click(object sender, EventArgs e)
-        {          
-            VulpterInvadersGame newGame = new VulpterInvadersGame();
-            this.Hide();
-            newGame.Show();
+        {
+            
+                VulpterInvadersGame newGame = new VulpterInvadersGame();
+                newGame.Show();
+                this.Hide();
         }
     }
 }
