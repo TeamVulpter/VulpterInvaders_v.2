@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Game
 {
@@ -119,18 +120,13 @@ namespace Game
                 Life.LifeCount -= 1;
                 this.life_value.Text = Life.LifeCount.ToString();
             }
-            foreach (var enemy in enemies)
+            foreach (var enemy in enemies.Where(enemy => collision.EnemyPlayerBullet(bullet, enemy)))
             {
-               
-                if (collision.EnemyPlayerBullet(bullet, enemy))
-                {
-                    enemy.EnemyInvader.Visible = false;
+                enemy.EnemyInvader.Visible = false;
 
-                    Score.ScoreCount += 1;
-                    this.score_value.Text = Score.ScoreCount.ToString();
-                    break;
-
-                }
+                Score.ScoreCount += 1;
+                this.score_value.Text = Score.ScoreCount.ToString();
+                break;
             }
 
 
