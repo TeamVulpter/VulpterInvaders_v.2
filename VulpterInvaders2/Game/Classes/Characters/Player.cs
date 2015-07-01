@@ -45,8 +45,8 @@ namespace Game.Classes.Characters
 
         public bool CheckForExit(PictureBox door)
         {
-            if (((this.PositionX + 16 >= door.Location.X && this.PositionX + 16 <= (door.Location.X + door.Width)) &&
-                 (this.PositionY + 16 >= door.Location.Y && this.PositionY + 16 <= (door.Location.Y + door.Height))))
+            if (((this.Hero.Location.X + 16 >= door.Location.X && this.Hero.Location.X + 16 <= (door.Location.X + door.Width)) &&
+                 (this.Hero.Location.Y + 16 >= door.Location.Y && this.Hero.Location.Y + 16 <= (door.Location.Y + door.Height))))
             {
                 return true;
             }

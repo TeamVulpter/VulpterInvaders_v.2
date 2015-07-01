@@ -1,160 +1,102 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Game.Classes.Attack" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.75" Y="6" Width="1.5" />
+    <Position X="16.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Attack.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Game.Classes.Bullet" Collapsed="true">
-    <Position X="2.75" Y="3.25" Width="1.5" />
-    <InheritanceLine Type="Game.Classes.GameObject" ManuallyRouted="true">
-      <Path>
-        <Point X="5.75" Y="1.062" />
-        <Point X="5.75" Y="1.884" />
-        <Point X="3.5" Y="1.884" />
-        <Point X="3.5" Y="3.25" />
-      </Path>
-    </InheritanceLine>
+    <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Classes\Bullet.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.GameObject" Collapsed="true">
-    <Position X="5" Y="0.5" Width="1.5" />
+    <Position X="7.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\GameObject.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.Shooting" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5" Y="6" Width="1.5" />
+    <Position X="16.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Shooting.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Game.Classes.Brick.Brick" Collapsed="true">
-    <Position X="5" Y="3.25" Width="1.5" />
-    <InheritanceLine Type="Game.Classes.GameObject" ManuallyRouted="true">
-      <Path>
-        <Point X="5.75" Y="1.062" />
-        <Point X="5.75" Y="1.845" />
-        <Point X="5.75" Y="1.845" />
-        <Point X="5.75" Y="3.25" />
-      </Path>
-    </InheritanceLine>
+    <Position X="5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
       <FileName>Classes\Brick\Brick.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.Characters.Character" Collapsed="true">
-    <Position X="9.5" Y="3.75" Width="1.5" />
-    <InheritanceLine Type="Game.Classes.GameObject" ManuallyRouted="true">
-      <Path>
-        <Point X="5.75" Y="1.062" />
-        <Point X="5.75" Y="1.876" />
-        <Point X="9.049" Y="1.876" />
-        <Point X="9.049" Y="4.096" />
-        <Point X="9.5" Y="4.096" />
-      </Path>
-    </InheritanceLine>
+    <Position X="10.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAEAAAAIQAAAAAAAAAA=</HashCode>
       <FileName>Classes\Characters\Character.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Game.Classes.Health" Collapsed="true">
-    <Position X="11.25" Y="7.5" Width="1.5" />
+    <Position X="23.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Health.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.Life" Collapsed="true">
-    <Position X="11.25" Y="6.75" Width="1.5" />
+    <Position X="23.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Life.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.Characters.ObsticleBrick" Collapsed="true">
-    <Position X="15.25" Y="5.75" Width="1.5" />
-    <InheritanceLine Type="Game.Classes.Characters.Character" FixedFromPoint="true">
-      <Path>
-        <Point X="10.188" Y="4.441" />
-        <Point X="10.188" Y="4.992" />
-        <Point X="16" Y="4.992" />
-        <Point X="16" Y="5.75" />
-      </Path>
-    </InheritanceLine>
+    <Position X="14" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>Classes\Characters\ObsticleBrick.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.Characters.Player" Collapsed="true">
-    <Position X="11.25" Y="5.75" Width="1.5" />
-    <InheritanceLine Type="Game.Classes.Characters.Character" FixedFromPoint="true">
-      <Path>
-        <Point X="10.188" Y="4.441" />
-        <Point X="10.188" Y="4.992" />
-        <Point X="12" Y="4.992" />
-        <Point X="12" Y="5.75" />
-      </Path>
-    </InheritanceLine>
+    <Position X="9.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAEBAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAEAAAAAAEABAEBAAAAAAAAAAAEAAAAIQAAAAAgAAAA=</HashCode>
       <FileName>Classes\Characters\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.Characters.PlayerShip" Collapsed="true">
-    <Position X="13.25" Y="5.75" Width="1.5" />
-    <InheritanceLine Type="Game.Classes.Characters.Character" FixedFromPoint="true">
-      <Path>
-        <Point X="10.188" Y="4.441" />
-        <Point X="10.188" Y="4.992" />
-        <Point X="14" Y="4.992" />
-        <Point X="14" Y="5.75" />
-      </Path>
-    </InheritanceLine>
+    <Position X="11.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAGAAAAoQAAAAAAAAAA=</HashCode>
       <FileName>Classes\Characters\PlayerShip.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.Score" Collapsed="true">
-    <Position X="11.25" Y="8.25" Width="1.5" />
+    <Position X="21.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Score.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.Enemies.EnemyShip" Collapsed="true">
-    <Position X="0.5" Y="3.25" Width="1.5" />
-    <InheritanceLine Type="Game.Classes.GameObject" ManuallyRouted="true">
-      <Path>
-        <Point X="5.75" Y="1.062" />
-        <Point X="5.75" Y="1.878" />
-        <Point X="1.25" Y="1.878" />
-        <Point X="1.25" Y="3.25" />
-      </Path>
-    </InheritanceLine>
+    <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAAABAAAAAQAAAAAAA=</HashCode>
       <FileName>Classes\Enemies\EnemyShip.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.Factory.EnemyInvaderFactory" Collapsed="true">
     <Position X="18.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAABgAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Factory\EnemyInvaderFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -166,15 +108,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.Items.Item" Collapsed="true">
-    <Position X="7.25" Y="3.25" Width="1.5" />
-    <InheritanceLine Type="Game.Classes.GameObject" ManuallyRouted="true">
-      <Path>
-        <Point X="5.75" Y="1.062" />
-        <Point X="5.75" Y="1.873" />
-        <Point X="8" Y="1.873" />
-        <Point X="8" Y="3.25" />
-      </Path>
-    </InheritanceLine>
+    <Position X="7.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ADBEwAAgQIAAAAAAAAAAAAIAAAAAAIAAAAACAAIAAkA=</HashCode>
       <FileName>Classes\Items\Item.cs</FileName>
@@ -182,12 +116,12 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Game.Classes.Map.Map" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="6" Width="1.5" />
+    <Position X="16.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAACAAAAAAAAAAgAAAAIAAAACACAAAAAgAA=</HashCode>
       <FileName>Classes\Map\Map.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.242" />
+    <Lollipop Position="0.242" Collapsed="true" />
   </Class>
   <Class Name="Game.Engine.GameEngineVulpterInvaders" Collapsed="true">
     <Position X="21.75" Y="0.5" Width="1.5" />
@@ -213,87 +147,80 @@
   <Class Name="Game.FormMenuUI" Collapsed="true">
     <Position X="20" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAACAACAAAACAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <HashCode>AARAAQAAACAAABACAQCAAAACAAAEEAAQAAAAAAAAAAA=</HashCode>
       <FileName>FormMenuUI.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.InvadersAttack" Collapsed="true">
-    <Position X="20" Y="3.5" Width="1.5" />
+    <Position X="16.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEQAIAAAgDBAAAAAAACAYAACAAAAAAChARAIIAAAAhg=</HashCode>
+      <HashCode>AEQAoAAAgDJAAAAgAACIYAACCAIAAAChIRAIIAAEAhg=</HashCode>
       <FileName>InvadersAttack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.StartGame" Collapsed="true">
-    <Position X="15.25" Y="0.5" Width="1.5" />
+    <Position X="18.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>StartGame.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.VulpterInvadersGame" Collapsed="true">
-    <Position X="18.25" Y="3.5" Width="1.5" />
+    <Position X="20" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAmEACAPCvAyAgJEioAAACAQIRCAAJIAAAAAAEgQg=</HashCode>
+      <HashCode>AAIA2EADCPCvAyAgpEioAAACAQIRCBAJIAAAAABEgQw=</HashCode>
       <FileName>VulpterInvadersGame.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Properties.Resources" Collapsed="true">
-    <Position X="18.25" Y="2.5" Width="1.5" />
+    <Position X="20" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAAEAAAAAAABEAAAAQAAAAAgAAAgBAIAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Properties.Settings" Collapsed="true">
-    <Position X="21.75" Y="2.5" Width="1.5" />
+    <Position X="23.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="Game.Classes.RemoveBonus" Collapsed="true">
-    <Position X="11.25" Y="9" Width="1.5" />
+    <Position X="18.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>Classes\RemoveBonus.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Game.Interfaces.IAttack" Collapsed="true">
-    <Position X="2.75" Y="5" Width="1.5" />
+    <Position X="4" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IAttack.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Game.Interfaces.ICharacter" Collapsed="true">
-    <Position X="9.5" Y="5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Interfaces\ICharacter.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="Game.Interfaces.IItem" Collapsed="true">
-    <Position X="7.25" Y="5" Width="1.5" />
+    <Position X="5.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAwAAgQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Interfaces\IItem.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Game.Interfaces.IMap" Collapsed="true">
-    <Position X="0.5" Y="5" Width="1.5" />
+    <Position X="2.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAIAAAACACAAAAAAAA=</HashCode>
       <FileName>Interfaces\IMap.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Game.Interfaces.IShoot" Collapsed="true">
-    <Position X="5" Y="5" Width="1.5" />
+    <Position X="0.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IShoot.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="Game.Classes.Items.ItemType" Collapsed="true">
-    <Position X="7.25" Y="4.25" Width="1.5" />
+    <Position X="9.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAgQAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Items\ItemType.cs</FileName>

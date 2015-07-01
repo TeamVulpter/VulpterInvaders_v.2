@@ -1,9 +1,7 @@
-﻿using System.Media;
-
-namespace Game
+﻿namespace Game
 {
     using System;
-    using System.Net.Mime;
+    using System.Media;
     using System.Windows.Forms;
 
     public partial class FormMenuUI : Form
@@ -12,13 +10,13 @@ namespace Game
         public FormMenuUI()
         {
             InitializeComponent();
-            musicPlayer=new System.Media.SoundPlayer("../../Resources/Song/GameMusic.wav");
+            musicPlayer = new System.Media.SoundPlayer("../../Resources/Song/GameMusic.wav");
+            //start music player
             musicPlayer.PlayLooping();
         }
 
         private void Btn_StartNewGame_Click(object sender, EventArgs e)
         {
-            
                 VulpterInvadersGame newGame = new VulpterInvadersGame();
                 newGame.Show();
                 this.Hide();
@@ -28,6 +26,7 @@ namespace Game
         {
             musicPlayer.PlayLooping();
         }
+
         private void StopMusic_Click(object sender, System.EventArgs e)
         {
             musicPlayer.Stop();

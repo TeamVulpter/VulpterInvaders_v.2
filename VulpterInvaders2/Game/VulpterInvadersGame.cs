@@ -1,19 +1,15 @@
-﻿using Game.Classes;
-
-namespace Game
+﻿namespace Game
 {
     using System;
     using System.Collections.Generic;
-    using System.Drawing;
     using System.Windows.Forms;
-
+    
+    using Classes;
     using Classes.Brick;
     using Classes.Characters;
     using Classes.Factory;
     using Classes.Items;
     using Classes.Map;
-
-    using Engine;
 
     using Exception;
 
@@ -24,11 +20,6 @@ namespace Game
         private readonly IMap map;
         private readonly Player player;
         private IList<Brick> bricksList = new List<Brick>();
-        //private ObsticleBrick obsticle;
-        //private ObsticleBrick obsticle2;
-        //private ObsticleBrick obsticle3;
-        //private ObsticleBrick obsticle4;
-        //private ObsticleBrick obsticle5;
         private IList<ObsticleBrick> obsticles;
         private IList<Item> items;
         private List<PictureBox> itemsPictureBox = new List<PictureBox>();
@@ -39,45 +30,40 @@ namespace Game
             try
             {
                 //generation map coordinates
+
+                this.map = new Map( this.brick16.Location.Y + this.brick16.Height,
+                                    this.brick6.Location.Y,
+                                    this.brick1.Location.X + this.brick1.Width,
+                                    this.brick11.Location.X);
+
+                this.items = new List<Item>();
+                this.obsticles = new List<ObsticleBrick>();
+
                 this.map = new Map(this.brick16.Location.Y + this.brick16.Height,
                     this.brick6.Location.Y,
                     this.brick1.Location.X + this.brick1.Width,
                     this.brick11.Location.X);
                 this.items = new List<Item>();
                 this.obsticles = new List<ObsticleBrick>();
+
                 //create player
                 this.player = new Player(hero);
 
                 //add item to list of items
                 this.AddItemToList();
 
+                //add all obsticle to list
+                AddObsticleToList();
+                //drawing bricks
+                this.AddBrickToList();
+
+
                 //generation items with bonus
                 ItemsFactory itemsFactory = new ItemsFactory();
                 items = itemsFactory.CreateItems(11, itemsPictureBox, this.map);
 
                 this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-                //drawing bricks
-                this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
-                this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
-                this.bricksList.Add(new Brick(brick2.Location.X, brick2.Location.Y, brick2));
-                this.bricksList.Add(new Brick(brick3.Location.X, brick3.Location.Y, brick3));
-                this.bricksList.Add(new Brick(brick4.Location.X, brick4.Location.Y, brick4));
-                this.bricksList.Add(new Brick(brick5.Location.X, brick5.Location.Y, brick5));
-                this.bricksList.Add(new Brick(brick6.Location.X, brick6.Location.Y, brick6));
-                this.bricksList.Add(new Brick(brick7.Location.X, brick7.Location.Y, brick7));
-                this.bricksList.Add(new Brick(brick8.Location.X, brick8.Location.Y, brick8));
-                this.bricksList.Add(new Brick(brick9.Location.X, brick9.Location.Y, brick9));
-                this.bricksList.Add(new Brick(brick10.Location.X, brick10.Location.Y, brick10));
-                this.bricksList.Add(new Brick(brick11.Location.X, brick11.Location.Y, brick11));
-                this.bricksList.Add(new Brick(brick12.Location.X, brick12.Location.Y, brick12));
-                this.bricksList.Add(new Brick(brick13.Location.X, brick13.Location.Y, brick13));
-                this.bricksList.Add(new Brick(brick14.Location.X, brick14.Location.Y, brick14));
-                this.bricksList.Add(new Brick(brick15.Location.X, brick15.Location.Y, brick15));
-                this.bricksList.Add(new Brick(brick16.Location.X, brick16.Location.Y, brick16));
-                this.bricksList.Add(new Brick(brick17.Location.X, brick17.Location.Y, brick17));
-                this.bricksList.Add(new Brick(brick18.Location.X, brick18.Location.Y, brick18));
-                this.bricksList.Add(new Brick(brick19.Location.X, brick19.Location.Y, brick19));
-                AddObsticleToList();
+
             }
             catch (NotImplementedException ex)
             {
@@ -87,14 +73,7 @@ namespace Game
             {
                 MessageBox.Show(@"No found picture for item!");
             }
-            //AddObsticleToList();
-            //this.obsticle = new ObsticleBrick(67, 401, Obsticle);
-            //this.obsticle2 = new ObsticleBrick(67, 339, Obsticle2);
-            //this.obsticle3 = new ObsticleBrick(67, 243, Obsticle3);
-            //this.obsticle4 = new ObsticleBrick(67, 153, Obsticle4);
-            //this.obsticle5 = new ObsticleBrick(67, 53, Obsticle5);
-
-
+            
         }
 
         //add item to list of items
@@ -120,6 +99,31 @@ namespace Game
             this.obsticles.Add(new ObsticleBrick(Obsticle3));
             this.obsticles.Add(new ObsticleBrick(Obsticle4));
             this.obsticles.Add(new ObsticleBrick(Obsticle5));
+        }
+
+        //add all rick to list
+        private void AddBrickToList()
+        {
+            this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
+            this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
+            this.bricksList.Add(new Brick(brick2.Location.X, brick2.Location.Y, brick2));
+            this.bricksList.Add(new Brick(brick3.Location.X, brick3.Location.Y, brick3));
+            this.bricksList.Add(new Brick(brick4.Location.X, brick4.Location.Y, brick4));
+            this.bricksList.Add(new Brick(brick5.Location.X, brick5.Location.Y, brick5));
+            this.bricksList.Add(new Brick(brick6.Location.X, brick6.Location.Y, brick6));
+            this.bricksList.Add(new Brick(brick7.Location.X, brick7.Location.Y, brick7));
+            this.bricksList.Add(new Brick(brick8.Location.X, brick8.Location.Y, brick8));
+            this.bricksList.Add(new Brick(brick9.Location.X, brick9.Location.Y, brick9));
+            this.bricksList.Add(new Brick(brick10.Location.X, brick10.Location.Y, brick10));
+            this.bricksList.Add(new Brick(brick11.Location.X, brick11.Location.Y, brick11));
+            this.bricksList.Add(new Brick(brick12.Location.X, brick12.Location.Y, brick12));
+            this.bricksList.Add(new Brick(brick13.Location.X, brick13.Location.Y, brick13));
+            this.bricksList.Add(new Brick(brick14.Location.X, brick14.Location.Y, brick14));
+            this.bricksList.Add(new Brick(brick15.Location.X, brick15.Location.Y, brick15));
+            this.bricksList.Add(new Brick(brick16.Location.X, brick16.Location.Y, brick16));
+            this.bricksList.Add(new Brick(brick17.Location.X, brick17.Location.Y, brick17));
+            this.bricksList.Add(new Brick(brick18.Location.X, brick18.Location.Y, brick18));
+            this.bricksList.Add(new Brick(brick19.Location.X, brick19.Location.Y, brick19));
         }
 
         //moving hero
@@ -151,7 +155,6 @@ namespace Game
                 if (e.KeyCode == Keys.D)
                 {
                     player.MoveRight();
-                    
                 }
             }
             if (e.KeyCode == Keys.X)
@@ -176,12 +179,9 @@ namespace Game
             //check for exit from this form in door
             if (this.player.CheckForExit(this.door))
             {
-                //System.Media.SoundPlayer musicPlayer = new System.Media.SoundPlayer("../../Resources/Song/GameMusic.wav");
-                //musicPlayer.PlayLooping();
                 InvadersAttack invaderAttack = new InvadersAttack();
                 this.Close();
                 invaderAttack.Show();
-                
             }
         }
 
@@ -345,7 +345,6 @@ namespace Game
                 Obsticle5MoveLeft.Enabled = false;
             }
         }
-
 
         private bool DetectCollison(PictureBox obsticleBox, PictureBox hero)
         {
