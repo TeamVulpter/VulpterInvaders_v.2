@@ -1,19 +1,15 @@
-using Game.Classes;
-
-namespace Game
+﻿namespace Game
 {
     using System;
     using System.Collections.Generic;
-    using System.Drawing;
     using System.Windows.Forms;
-
+    
+    using Classes;
     using Classes.Brick;
     using Classes.Characters;
     using Classes.Factory;
     using Classes.Items;
     using Classes.Map;
-
-    using Engine;
 
     using Exception;
 
@@ -355,11 +351,20 @@ namespace Game
 
         private bool DetectCollison(PictureBox obsticleBox, PictureBox hero)
         {
-            if ((obsticleBox.Location.X + obsticleBox.Width == hero.Location.X && obsticleBox.Location.Y >= hero.Top &&
-                                   obsticleBox.Location.Y <= hero.Top + hero.Height ))
+            if ((   obsticleBox.Location.X + obsticleBox.Width == hero.Location.X &&
+                    obsticleBox.Location.Y >= hero.Top &&
+                    obsticleBox.Location.Y <= hero.Top + hero.Height ))
             {
                 return true;
             }
+
+            if (obsticleBox.Location.X == (hero.Location.X + hero.Width) &&
+                    obsticleBox.Location.Y >= hero.Top &&
+                    obsticleBox.Location.Y <= hero.Top + hero.Height)
+            {
+                return true;
+            }
+
             return false;
         }
     }
