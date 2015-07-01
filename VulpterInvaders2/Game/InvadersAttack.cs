@@ -92,7 +92,7 @@
             {
                 GameOverForm gameOver = new GameOverForm();
                 gameOver.Show();
-                this.Hide();
+                this.Close();
             }
 
             if (spaceKeyIsPressed)
@@ -106,6 +106,7 @@
 
             this.enemyShot = new BulletEnemy(bulletEnemy);
             enemyShooting.EnemyShoot(enemyShot, enemies);
+
             if (collision.EnemyShotPlayerShipCollision(shipPlayer, enemyShot))
             {
                 Life.LifeCount -= 1;
