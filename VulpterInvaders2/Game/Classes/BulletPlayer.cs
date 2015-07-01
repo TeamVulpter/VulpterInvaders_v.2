@@ -4,7 +4,8 @@
 
     public class BulletPlayer :Bullet
     {
-        private Panel bulletPanel;
+        //TODO
+        //private Panel bulletPanel;
 
         public BulletPlayer(Panel bulletPanel)
             :base(bulletPanel.Location.X, bulletPanel.Location.Y, bulletPanel)
