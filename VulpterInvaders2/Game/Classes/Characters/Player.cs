@@ -1,4 +1,6 @@
-﻿namespace Game.Classes.Characters
+﻿using System.Drawing;
+
+namespace Game.Classes.Characters
 {
     using System.Collections.Generic;
     using System.Windows.Forms;
@@ -9,13 +11,17 @@
     {
         private PictureBox hero;
 
-        public Player(int positionX, int positionY, PictureBox hero)
-            : base(positionX, positionY)
+        public Player(PictureBox hero)
+            : base(hero.Location.X, hero.Location.Y)
         {
+            //PositionX = hero.Location.X;
+            //PositionY = hero.Location.Y;
             this.Hero = hero;
         }
 
         public PictureBox Hero { get; set; }
+   
+
 
         public IList<Item> GetItem(IList<Item> items)
         {
@@ -46,6 +52,44 @@
                 return true;
             }
 
+            return false;
+        }
+
+        public override void MoveLeft()
+        {
+            Hero.Location = new Point(Hero.Location.X - 5, Hero.Location.Y);
+        }
+
+        public override void MoveRight()
+        {
+            Hero.Location = new Point(Hero.Location.X + 5, Hero.Location.Y);
+        }
+
+        public void MoveUp()
+        {
+            Hero.Location = new Point(Hero.Location.X, Hero.Location.Y-5);
+        }
+
+        public void MoveDown()
+        {
+            Hero.Location = new Point(Hero.Location.X, Hero.Location.Y + 5);
+        }
+
+        public override bool StopAtMax(int positionOfPlayer, int maxValue)
+        {
+            if (positionOfPlayer > maxValue)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public override bool StopAtMin(int positionOfPlayer, int minValue)
+        {
+            if (positionOfPlayer < minValue)
+            {
+                return true;
+            }
             return false;
         }
     }

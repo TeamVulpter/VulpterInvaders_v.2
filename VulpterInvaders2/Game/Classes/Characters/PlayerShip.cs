@@ -16,17 +16,17 @@
 
         public PictureBox Ship { get; set; }
 
-        public void MoveLeft()
+        public override void MoveLeft()
         {
             Ship.Location = new Point(Ship.Location.X - 10, Ship.Location.Y);
         }
 
-        public void MoveRight()
+        public override void MoveRight()
         {
             Ship.Location = new Point(Ship.Location.X + 10, Ship.Location.Y);
         }
 
-        public bool StopAtMax(int positionOfPlayer, int maxValue)
+        public override bool StopAtMax(int positionOfPlayer, int maxValue)
         {
             if (positionOfPlayer > maxValue)
             {
@@ -35,7 +35,7 @@
             return false;
         }
 
-        public bool StopAtMin(int positionOfPlayer, int minValue)
+        public override bool StopAtMin(int positionOfPlayer, int minValue)
         {
             if (positionOfPlayer < minValue)
             {

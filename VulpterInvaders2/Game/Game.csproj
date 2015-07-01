@@ -64,6 +64,7 @@
     <Compile Include="Classes\Attack.cs" />
     <Compile Include="Classes\Bullet.cs" />
     <Compile Include="Classes\BulletEnemy.cs" />
+    <Compile Include="Classes\Characters\Character.cs" />
     <Compile Include="Classes\Characters\ObsticleBrick.cs" />
     <Compile Include="Classes\Collision.cs" />
     <Compile Include="Classes\RemoveBonus.cs" />
@@ -78,7 +79,6 @@
     <Compile Include="Classes\Brick\Brick.cs" />
     <Compile Include="Classes\BulletPlayer.cs" />
     <Compile Include="Classes\Characters\PlayerShip.cs" />
-    <Compile Include="Classes\Characters\Character.cs" />
     <Compile Include="Classes\Characters\Player.cs" />
     <Compile Include="Classes\Score.cs" />
     <Compile Include="Exception\InvalidItemTypeException.cs" />
@@ -119,7 +119,6 @@
     <Compile Include="VulpterInvadersGame.Designer.cs">
       <DependentUpon>VulpterInvadersGame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\ICharacter.cs" />
     <Compile Include="StartGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMenuUI.resx">

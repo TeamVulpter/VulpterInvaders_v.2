@@ -45,7 +45,7 @@ namespace Game
                     this.brick11.Location.X);
 
                 //create player
-                this.player = new Player(((this.map.Right - this.map.Left) / 2), this.map.Down - hero.Height, hero);
+                this.player = new Player(hero);
 
                 //add item to list of items
                 this.AddItemToList();
@@ -87,14 +87,6 @@ namespace Game
                 MessageBox.Show(@"No found picture for item!");
             }
 
-
-
-
-
-
-
-
-
             this.obsticle = new ObsticleBrick(67, 401, Obsticle);
             this.obsticle2 = new ObsticleBrick(67, 339, Obsticle2);
             this.obsticle3 = new ObsticleBrick(67, 243, Obsticle3);
@@ -127,33 +119,34 @@ namespace Game
         //moving hero
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            this.player.PositionX = hero.Location.X;
-            this.player.PositionY = hero.Location.Y;
-
-            if (e.KeyCode == Keys.W)
+            if (!player.StopAtMin(player.Hero.Location.Y, this.map.Top))
             {
-                hero.Location = player.PositionY >= this.map.Top ?
-                    new Point(player.PositionX, player.PositionY - 5) :
-                    new Point(player.PositionX, player.PositionY + 5);
+                if (e.KeyCode == Keys.W)
+                {
+                    player.MoveUp();
+                }
             }
-            if (e.KeyCode == Keys.S)
+            if (!player.StopAtMax(player.Hero.Location.Y+player.Hero.Height, this.map.Down))
             {
-                hero.Location = this.player.PositionY <= (this.map.Down - hero.Width) ?
-                    new Point(player.PositionX, player.PositionY + 5) :
-                    new Point(player.PositionX, player.PositionY - 5);
+                if (e.KeyCode == Keys.S)
+                {
+                    player.MoveDown();
+                }
             }
-            if (e.KeyCode == Keys.A)
+            if (!player.StopAtMin(player.Hero.Location.X, this.map.Left))
             {
-                hero.Location = this.player.PositionX >= this.map.Left ?
-                    new Point(player.PositionX - 5, player.PositionY) :
-                    new Point(player.PositionX + 5, player.PositionY);
-
+                if (e.KeyCode == Keys.A)
+                {
+                    player.MoveLeft();
+                }
             }
-            if (e.KeyCode == Keys.D)
+            if (!player.StopAtMax(player.Hero.Location.X+player.Hero.Width, this.map.Right))
             {
-                hero.Location = this.player.PositionX <= this.map.Right - hero.Height ?
-                    new Point(player.PositionX + 5, player.PositionY) :
-                    new Point(player.PositionX - 5, player.PositionY);
+                if (e.KeyCode == Keys.D)
+                {
+                    player.MoveRight();
+                    
+                }
             }
             if (e.KeyCode == Keys.X)
             {

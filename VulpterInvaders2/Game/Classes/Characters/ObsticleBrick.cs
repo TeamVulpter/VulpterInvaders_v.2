@@ -2,7 +2,7 @@
 {
     using System.Windows.Forms;
 
-    class ObsticleBrick : Character
+    class ObsticleBrick : GameObject
     {
         public ObsticleBrick(int positionX, int positionY, PictureBox obsticleBox)
             : base(positionX, positionY)
