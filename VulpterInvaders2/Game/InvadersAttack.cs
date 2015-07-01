@@ -1,4 +1,6 @@
-﻿namespace Game
+﻿using System;
+
+namespace Game
 {
     using System.Collections.Generic;
     using System.Drawing;
@@ -22,6 +24,7 @@
         private Attack attack;
         private EnemyInvaderFactory factoryInvaders;
         private Shooting shooting;
+        private Random randomEnemy;
 
         public InvadersAttack()
         {
@@ -31,6 +34,7 @@
             this.shipPlayer = new PlayerShip(playerShip);
             this.bullet = new Bullet(bulletPanel);
             this.enemyShot = new BulletEnemy(bulletEnemy);
+            randomEnemy = new Random();
           
             enemies = new List<EnemyShip>()
             {
@@ -47,7 +51,6 @@
             factoryInvaders = new EnemyInvaderFactory();
             shooting = new Shooting();
             factoryInvaders.CreateEnemy(enemies);
-
 
         }
 
@@ -79,7 +82,7 @@
                     shipPlayer.MoveRight();
                 }
             }
-            enemyShot.EnemyBullet.Location = new Point(50, 450);
+            //enemyShot.EnemyBullet.Location = new Point(enemies[randomEnemy.Next(1, 6)].PositionX, enemies[randomEnemy.Next(1, 6)].PositionY);
         }
 
         private void TimerMovementsTick(object sender, System.EventArgs e)
@@ -95,10 +98,22 @@
             }
 
             attack.UpdateAttack(enemies);
-
+            
             this.enemyShot = new BulletEnemy(bulletEnemy);
             enemyShot.EnemyBullet.Location = new Point(enemyShot.PositionX, enemyShot.PositionY + 10);
+           
+            if (enemyShot.PositionY>=470)
+            {
+                enemyShot.EnemyBullet.Location = new Point(enemies[randomEnemy.Next(1, 6)].PositionX, enemies[randomEnemy.Next(1, 6)].PositionY);
+            }
             enemyShot.Start();
+            if ( playerShip.Location.X >= enemyShot.EnemyBullet.Location.X &&  playerShip.Location.X <= (enemyShot.EnemyBullet.Location.X + enemyShot.EnemyBullet.Width) && playerShip.Location.Y >= enemyShot.EnemyBullet.Location.Y && 
+                        (playerShip.Location.Y+10) <= enemyShot.EnemyBullet.Location.Y)
+            {
+                Life.LifeCount -= 1;
+                this.life_value.Text = Life.LifeCount.ToString();
+              
+            }
 
             foreach (var enemy in enemies)
             {
