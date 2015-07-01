@@ -1,6 +1,5 @@
 ﻿namespace Game
 {
-    using System;
     using System.Linq;
     using System.Collections.Generic;
     using System.Drawing;
@@ -10,8 +9,6 @@
     using Classes.Characters;
     using Classes.Enemies;
     using Classes.Factory;
-
-    using Engine;
 
     public partial class InvadersAttack : Form
     {
@@ -91,6 +88,13 @@
             this.health_value.Text = Health.HelthCount.ToString();
             this.life_value.Text = Life.LifeCount.ToString();
 
+            if (Life.LifeCount <= 0)
+            {
+                GameOverForm gameOver = new GameOverForm();
+                gameOver.Show();
+                this.Hide();
+            }
+
             if (spaceKeyIsPressed)
             {
                 this.bullet.PositionX = bullet.PositionX + 10;
@@ -106,13 +110,8 @@
             {
                 Life.LifeCount -= 1;
                 this.life_value.Text = Life.LifeCount.ToString();
-                if (Life.LifeCount<=0)
-                {
-                    GameOverForm gameOver = new GameOverForm();
-                    gameOver.Show();
-                    this.Hide();
-                }
             }
+
             foreach (var enemy in enemies.Where(enemy => collision.EnemyPlayerBullet(bullet, enemy)))
             {
                 enemy.EnemyInvader.Visible = false;
