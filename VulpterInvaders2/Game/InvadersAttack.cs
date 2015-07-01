@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Game
 {
@@ -108,30 +109,24 @@ namespace Game
             this.enemyShot = new BulletEnemy(bulletEnemy);
             enemyShot.EnemyBullet.Location = new Point(enemyShot.PositionX, enemyShot.PositionY + 10);
 
-            if (enemyShot.PositionY >= 470)
+            if (enemyShot.PositionY >= 500)
             {
                 enemyShot.EnemyBullet.Location = new Point(enemies[randomEnemy.Next(1, 6)].PositionX, enemies[randomEnemy.Next(1, 6)].PositionY + 10);
             }
             enemyShot.Start();
-            if (playerShip.Location.X >= enemyShot.EnemyBullet.Location.X && playerShip.Location.X <= (enemyShot.EnemyBullet.Location.X + enemyShot.EnemyBullet.Width) && playerShip.Location.Y >= enemyShot.EnemyBullet.Location.Y &&
-                        (playerShip.Location.Y) <= enemyShot.EnemyBullet.Location.Y)
+            if (playerShip.Location.X <= enemyShot.EnemyBullet.Location.X && playerShip.Location.X+playerShip.Width >= (enemyShot.EnemyBullet.Location.X) &&
+                        playerShip.Location.Y+20 <= enemyShot.EnemyBullet.Location.Y)
             {
                 Life.LifeCount -= 1;
                 this.life_value.Text = Life.LifeCount.ToString();
-
             }
-            foreach (var enemy in enemies)
+            foreach (var enemy in enemies.Where(enemy => collision.EnemyPlayerBullet(bullet, enemy)))
             {
-               
-                if (collision.EnemyPlayerBullet(bullet, enemy))
-                {
-                    enemy.EnemyInvader.Visible = false;
+                enemy.EnemyInvader.Visible = false;
 
-                    Score.ScoreCount += 1;
-                    this.score_value.Text = Score.ScoreCount.ToString();
-                    break;
-
-                }
+                Score.ScoreCount += 1;
+                this.score_value.Text = Score.ScoreCount.ToString();
+                break;
             }
 
 
