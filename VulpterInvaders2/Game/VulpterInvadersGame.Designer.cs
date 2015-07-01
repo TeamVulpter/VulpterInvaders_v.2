@@ -659,6 +659,7 @@
             // 
             // Obsticle4MoveRight
             // 
+            this.Obsticle4MoveRight.Interval = 30;
             this.Obsticle4MoveRight.Tick += new System.EventHandler(this.Obsticle4MoveRigth_Tick);
             // 
             // VulpterInvadersGame

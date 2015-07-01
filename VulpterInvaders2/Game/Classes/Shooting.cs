@@ -13,9 +13,5 @@ namespace Game.Classes
            
         }
 
-        public void UpdateShots(BulletPlayer bullet)
-        {
-          
-        }
     }
 }
