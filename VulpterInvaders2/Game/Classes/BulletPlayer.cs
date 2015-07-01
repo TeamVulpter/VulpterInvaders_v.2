@@ -8,7 +8,7 @@
         //private Panel bulletPanel;
 
         public BulletPlayer(Panel bulletPanel)
-            :base(bulletPanel.Location.X, bulletPanel.Location.Y, bulletPanel)
+            :base(bulletPanel.Location.X, bulletPanel.Location.Y)
         {
             this.BulletPanel = bulletPanel;
             BulletPanel.Visible = false;
