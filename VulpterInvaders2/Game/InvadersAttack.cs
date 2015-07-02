@@ -111,8 +111,8 @@
                 Life.LifeCount -= 1;
                 this.life_value.Text = Life.LifeCount.ToString();
             }
-
-            foreach (var enemy in enemies.Where(enemy => collision.EnemyPlayerBullet(bullet, enemy)))
+            var enemyCollided = enemies.Where(enemy => collision.EnemyPlayerBullet(bullet, enemy));
+            foreach (var enemy in enemyCollided)
             {
                 enemy.EnemyInvader.Visible = false;
 

@@ -1,4 +1,6 @@
-﻿namespace Game.Classes.Factory
+﻿using System.Linq;
+
+namespace Game.Classes.Factory
 {
     using System;
     using System.Collections.Generic;
@@ -44,13 +46,10 @@
         private int GenerateRandomX(int minX, int maxX)
         {
             int randomX = rnd.Next(minX, maxX);
-            foreach (int x in rndX)
+            var randX = rndX.Any(x => x == randomX);
+            if (randX)
             {
-                if (x == randomX)
-                {
-                    //use recursion for generation new x position;
-                    return this.GenerateRandomX(this.map.Left, this.maxRandomX);
-                }
+                return this.GenerateRandomX(this.map.Left, this.maxRandomX);
             }
             this.rndX.Add(randomX);
             return randomX;
@@ -60,13 +59,10 @@
         private int GenerateRandomY(int minY, int maxY)
         {
             int randomY = rnd.Next(minY, maxY);
-            foreach (int y in rndY)
+            var randY = rndY.Any(y => y == randomY);
+            if (randY)
             {
-                if (y == randomY)
-                {
-                    //use recursion for generation new y position;
-                    return this.GenerateRandomY(this.map.Top, this.maxRandomY);
-                }
+                return this.GenerateRandomY(this.map.Top, this.maxRandomY);
             }
             this.rndY.Add(randomY);
             return randomY;
