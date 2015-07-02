@@ -1,4 +1,4 @@
-﻿namespace Game.Classes.Characters
+﻿namespace Game.Classes.Bricks
 {
     using System.Windows.Forms;
 

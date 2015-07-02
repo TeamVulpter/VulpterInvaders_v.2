@@ -4,15 +4,6 @@
 
     public class AdvancedStatistics
     {
-        //public static void GameExit()
-        //{//if lives is zero or negative - game over
-        //    if (Life.LifeCount <= 0)
-        //    {
-        //        MessageBox.Show("Game over");
-        //        Application.Exit();
-        //    }
-        //}
-
         public static void GameLifeReduction()
         {
             if (Health.HelthCount <= 0)

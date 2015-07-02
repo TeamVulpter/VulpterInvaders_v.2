@@ -5,8 +5,8 @@
     using System.Windows.Forms;
     
     using Classes;
-    using Classes.Brick;
     using Classes.Characters;
+    using Classes.Bricks;
     using Classes.Factory;
     using Classes.Items;
     using Classes.Map;

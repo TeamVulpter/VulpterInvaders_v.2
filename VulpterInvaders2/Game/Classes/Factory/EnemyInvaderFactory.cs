@@ -7,7 +7,6 @@
 
     public class EnemyInvaderFactory
     {
-        private Random randomX = new Random();
         private Random randomY = new Random();
 
         public void CreateEnemy(IList<EnemyShip> enemies)

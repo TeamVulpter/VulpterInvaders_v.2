@@ -1,7 +1,7 @@
 ﻿namespace Game
 {
     using System.Windows.Forms;
-    using Game.Classes.Brick;
+    using Classes;
 
     public partial class VulpterInvadersGame
     {

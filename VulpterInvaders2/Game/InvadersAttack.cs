@@ -85,7 +85,6 @@
 
         private void TimerMovementsTick(object sender, System.EventArgs e)
         {
-            this.health_value.Text = Health.HelthCount.ToString();
             this.life_value.Text = Life.LifeCount.ToString();
 
             if (Life.LifeCount <= 0)
