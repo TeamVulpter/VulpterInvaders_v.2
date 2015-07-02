@@ -77,7 +77,7 @@
             }
             else if (this.ItemType.ToString() == "BonusScore")
             {
-                int randomBonus = this.rnd.Next(0, 15);
+                int randomBonus = this.rnd.Next(0, 25);
                 this.BonusScore += randomBonus;
             }
             else if (this.ItemType.ToString() == "BonusLife")

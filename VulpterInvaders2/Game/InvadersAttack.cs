@@ -51,7 +51,7 @@
             attack = new Attack();
             factoryInvaders = new EnemyInvaderFactory();
             shooting = new Shooting();
-            factoryInvaders.CreateEnemy(enemies);
+            factoryInvaders.CreateEnemies(enemies);
 
         }
 
@@ -87,7 +87,7 @@
         {
             this.life_value.Text = Life.LifeCount.ToString();
 
-            if (Life.LifeCount <= 0)
+            if (Life.LifeCount <= 0 || Score.ScoreCount>=100)
             {
                 GameOverForm gameOver = new GameOverForm();
                 gameOver.Show();
@@ -106,19 +106,31 @@
             this.enemyShot = new BulletEnemy(bulletEnemy);
             this.enemyShooting.EnemyShoot(enemyShot, enemies);
 
-            if (collision.EnemyShotPlayerShipCollision(shipPlayer, enemyShot))
+            if (collision.EnemyShotPlayerShipCollision(shipPlayer, enemyShot) && enemyShot.EnemyBullet.Visible)
             {
                 Life.LifeCount -= 1;
                 this.life_value.Text = Life.LifeCount.ToString();
             }
-            var enemyCollided = enemies.Where(enemy => collision.EnemyPlayerBullet(bullet, enemy));
-            foreach (var enemy in enemyCollided)
+            foreach (var enemy in enemies)
             {
-                enemy.EnemyInvader.Visible = false;
+                if (collision.EnemyPlayerBullet(bullet, enemy))
+                {
+                    factoryInvaders.CreateSingleEnemy(enemy);
 
-                Score.ScoreCount += 1;
-                this.score_value.Text = Score.ScoreCount.ToString();
-                break;
+                    Score.ScoreCount += 1;
+                    this.score_value.Text = Score.ScoreCount.ToString();
+                    break;
+                }
+               
+                if (enemy.PositionY >= 450)
+                {
+                    Life.LifeCount -= 1;
+                    if (Life.LifeCount < 1)
+                    {
+                        Life.LifeCount = 0;
+                    }
+                    factoryInvaders.CreateSingleEnemy(enemy);
+                }
             }
         }
     }

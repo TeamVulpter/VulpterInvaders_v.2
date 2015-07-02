@@ -68,6 +68,7 @@
     <Compile Include="Classes\Characters\Character.cs" />
     <Compile Include="Classes\InvadersAttackCollision.cs" />
     <Compile Include="Classes\EnemyShooting.cs" />
+    <Compile Include="Classes\Playership.cs" />
     <Compile Include="Classes\RemoveBonus.cs" />
     <Compile Include="Classes\Enemies\EnemyShip.cs" />
     <Compile Include="Classes\Factory\EnemyInvaderFactory.cs" />

@@ -1,4 +1,6 @@
-﻿namespace Game.Classes
+﻿using System.Linq;
+
+namespace Game.Classes
 {
     using System;
     using System.Collections.Generic;
@@ -20,7 +22,7 @@
         {
             enemyShot.EnemyBullet.Location = new Point(enemyShot.PositionX, enemyShot.PositionY + 10);
 
-            if (enemyShot.PositionY >= 500)
+            if (enemyShot.PositionY >= 500 && enemies.Any(x=>x.EnemyInvader.Visible))
             {
                 enemyShot.EnemyBullet.Location = new Point(enemies[this.randomEnemy.Next(3, 5)].PositionX, enemies[this.randomEnemy.Next(3, 5)].PositionY + 10);
             }
