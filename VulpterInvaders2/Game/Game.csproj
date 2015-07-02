@@ -66,7 +66,7 @@
     <Compile Include="Classes\Bullet.cs" />
     <Compile Include="Classes\BulletEnemy.cs" />
     <Compile Include="Classes\Characters\Character.cs" />
-    <Compile Include="Classes\Collision.cs" />
+    <Compile Include="Classes\InvadersAttackCollision.cs" />
     <Compile Include="Classes\EnemyShooting.cs" />
     <Compile Include="Classes\RemoveBonus.cs" />
     <Compile Include="Classes\Enemies\EnemyShip.cs" />

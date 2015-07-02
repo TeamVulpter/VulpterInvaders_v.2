@@ -5,6 +5,7 @@
     class InvalidItemTypeException : Exception
     {
         public InvalidItemTypeException(string message)
+            :base(message)
         {
             
         }

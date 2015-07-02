@@ -23,6 +23,7 @@
         private IList<ObsticleBrick> obsticles;
         private IList<Item> items;
         private List<PictureBox> itemsPictureBox;
+        
 
         public VulpterInvadersGame()
         {

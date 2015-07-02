@@ -4,8 +4,6 @@
 
     public class Brick : GameObject
     {
-        private PictureBox brickSingle;
-
         public Brick(PictureBox brickSingle)
             : base(brickSingle.Location.X, brickSingle.Location.Y)
         {
@@ -13,17 +11,6 @@
         }
        
 
-        public PictureBox BrickSingle
-        {
-            get
-            {
-                return this.brickSingle;
-            }
-
-            private set
-            {
-                this.brickSingle = value;
-            }
-        }
+        public PictureBox BrickSingle { get; private set; }
     }
 }

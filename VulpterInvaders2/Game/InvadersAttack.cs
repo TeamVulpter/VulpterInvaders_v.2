@@ -23,7 +23,7 @@
         private Shooting shooting;
         private EnemyShooting enemyShooting;
    
-        private Collision collision;
+        private InvadersAttackCollision collision;
 
         public InvadersAttack()
         {
@@ -33,7 +33,7 @@
             this.shipPlayer = new PlayerShip(playerShip);
             this.bullet = new BulletPlayer(bulletPanel);
             this.enemyShot = new BulletEnemy(bulletEnemy);
-            this.collision = new Collision();
+            this.collision = new InvadersAttackCollision();
             this.enemyShooting = new EnemyShooting();
          
 
