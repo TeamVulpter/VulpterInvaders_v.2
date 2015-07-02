@@ -8,7 +8,7 @@
             : base(bulletEnemy.Location.X, bulletEnemy.Location.Y)
         {
             this.EnemyBullet = bulletEnemy;
-            EnemyBullet.Visible = false;
+            this.EnemyBullet.Visible = false;
             this.IsActive = false;
         }
 
@@ -21,14 +21,14 @@
                 return;
             }
 
-            IsActive = true;
-            EnemyBullet.Visible = true;
+            this.IsActive = true;
+            this.EnemyBullet.Visible = true;
         }
 
         public override void Stop()
         {
             this.IsActive = false;
-            EnemyBullet.Visible = false;
+            this.EnemyBullet.Visible = false;
         }
     }
 }

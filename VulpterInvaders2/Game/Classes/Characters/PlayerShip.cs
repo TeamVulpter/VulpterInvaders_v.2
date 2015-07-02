@@ -14,12 +14,12 @@
 
         public override void MoveLeft()
         {
-            Ship.Left -= 10;
+            this.Ship.Left -= 10;
         }
 
         public override void MoveRight()
         {
-            Ship.Left += 10;
+            this.Ship.Left += 10;
         }
 
         public override bool StopAtMax(int positionOfPlayer, int maxValue)

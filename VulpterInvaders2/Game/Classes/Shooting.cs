@@ -4,7 +4,7 @@ namespace Game.Classes
 {
     using System;
     using Interfaces;
-    public class Shooting :IShoot
+    public class Shooting :IShootPlayer
     {
         public void Shoot(BulletPlayer bullet)
         {

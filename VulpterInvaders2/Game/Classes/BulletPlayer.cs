@@ -8,7 +8,7 @@
             :base(bulletPanel.Location.X, bulletPanel.Location.Y)
         {
             this.BulletPanel = bulletPanel;
-            BulletPanel.Visible = false;
+            this.BulletPanel.Visible = false;
             this.IsActive = false;
         }
 
@@ -21,14 +21,14 @@
                 return;
             }
 
-            IsActive = true;
-            BulletPanel.Visible = true;
+            this.IsActive = true;
+            this.BulletPanel.Visible = true;
         }
 
         public override void Stop()
         {
             this.IsActive = false;
-            BulletPanel.Visible = false;
+            this.BulletPanel.Visible = false;
         }
     }
 }

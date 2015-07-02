@@ -16,12 +16,12 @@ namespace Game.Classes.Bricks
 
         public void MoveLeft()
         {
-            ObsticleBox.Left -= 1;
+            this.ObsticleBox.Left -= 1;
         }
 
         public void MoveRight()
         {
-            ObsticleBox.Left += 1;
+            this.ObsticleBox.Left += 1;
         }
     }
 }

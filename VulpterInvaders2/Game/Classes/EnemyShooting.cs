@@ -7,13 +7,13 @@
     using Enemies;
     using Interfaces;
 
-    public class EnemyShooting:IShootableEnemyBullet
+    public class EnemyShooting:IShootEnemy
     {
         private Random randomEnemy;
 
         public EnemyShooting()
         {
-            randomEnemy = new Random();
+            this.randomEnemy = new Random();
         }
 
         public void EnemyShoot(BulletEnemy enemyShot, IList<EnemyShip> enemies)
@@ -22,7 +22,7 @@
 
             if (enemyShot.PositionY >= 500)
             {
-                enemyShot.EnemyBullet.Location = new Point(enemies[randomEnemy.Next(1, 6)].PositionX, enemies[randomEnemy.Next(1, 6)].PositionY + 10);
+                enemyShot.EnemyBullet.Location = new Point(enemies[this.randomEnemy.Next(1, 6)].PositionX, enemies[this.randomEnemy.Next(1, 6)].PositionY + 10);
             }
             enemyShot.Start();
         }
