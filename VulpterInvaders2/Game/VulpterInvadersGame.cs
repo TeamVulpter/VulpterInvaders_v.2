@@ -19,21 +19,30 @@
     {
         private readonly IMap map;
         private readonly Player player;
-        private IList<Brick> bricksList = new List<Brick>();
+        private IList<Brick> bricksList;
         private IList<ObsticleBrick> obsticles;
         private IList<Item> items;
-        private List<PictureBox> itemsPictureBox = new List<PictureBox>();
+        private List<PictureBox> itemsPictureBox;
 
         public VulpterInvadersGame()
         {
             InitializeComponent();
             try
             {
+                itemsPictureBox = new List<PictureBox>();
+                bricksList = new List<Brick>()
+                {
+                    new Brick(brick16),
+                    new Brick(brick6),
+                    new Brick(brick1),
+                    new Brick(brick11)
+                };
+
                 //generation map coordinates
-                this.map = new Map(this.brick16.Location.Y + this.brick16.Height,
-                                    this.brick6.Location.Y,
-                                    this.brick1.Location.X + this.brick1.Width,
-                                    this.brick11.Location.X);
+                this.map = new Map(this.bricksList[0].BrickSingle.Location.Y + this.bricksList[0].BrickSingle.Height,
+                                    this.bricksList[1].BrickSingle.Location.Y,
+                                    this.bricksList[2].BrickSingle.Location.X + this.brick1.Width,
+                                    this.bricksList[3].BrickSingle.Location.X);
 
                 this.items = new List<Item>();
                 this.obsticles = new List<ObsticleBrick>();
@@ -46,8 +55,6 @@
 
                 //add all obsticle to list
                 this.AddObsticleToList();
-                //drawing bricks
-                //this.AddBrickToList();
 
                 //generation items with bonus
                 ItemsFactory itemsFactory = new ItemsFactory();
@@ -91,31 +98,6 @@
             this.obsticles.Add(new ObsticleBrick(Obsticle4));
             this.obsticles.Add(new ObsticleBrick(Obsticle5));
         }
-
-        //add all rick to list
-        //private void AddBrickToList()
-        //{
-        //    this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
-        //    this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
-        //    this.bricksList.Add(new Brick(brick2.Location.X, brick2.Location.Y, brick2));
-        //    this.bricksList.Add(new Brick(brick3.Location.X, brick3.Location.Y, brick3));
-        //    this.bricksList.Add(new Brick(brick4.Location.X, brick4.Location.Y, brick4));
-        //    this.bricksList.Add(new Brick(brick5.Location.X, brick5.Location.Y, brick5));
-        //    this.bricksList.Add(new Brick(brick6.Location.X, brick6.Location.Y, brick6));
-        //    this.bricksList.Add(new Brick(brick7.Location.X, brick7.Location.Y, brick7));
-        //    this.bricksList.Add(new Brick(brick8.Location.X, brick8.Location.Y, brick8));
-        //    this.bricksList.Add(new Brick(brick9.Location.X, brick9.Location.Y, brick9));
-        //    this.bricksList.Add(new Brick(brick10.Location.X, brick10.Location.Y, brick10));
-        //    this.bricksList.Add(new Brick(brick11.Location.X, brick11.Location.Y, brick11));
-        //    this.bricksList.Add(new Brick(brick12.Location.X, brick12.Location.Y, brick12));
-        //    this.bricksList.Add(new Brick(brick13.Location.X, brick13.Location.Y, brick13));
-        //    this.bricksList.Add(new Brick(brick14.Location.X, brick14.Location.Y, brick14));
-        //    this.bricksList.Add(new Brick(brick15.Location.X, brick15.Location.Y, brick15));
-        //    this.bricksList.Add(new Brick(brick16.Location.X, brick16.Location.Y, brick16));
-        //    this.bricksList.Add(new Brick(brick17.Location.X, brick17.Location.Y, brick17));
-        //    this.bricksList.Add(new Brick(brick18.Location.X, brick18.Location.Y, brick18));
-        //    this.bricksList.Add(new Brick(brick19.Location.X, brick19.Location.Y, brick19));
-        //}
 
         //moving hero
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -188,6 +170,7 @@
             if (DetectCollison(Obsticle, hero))
             {
                 Health.HealthCount -= 10;
+                this.health_value.Text = Health.HealthCount.ToString();
                 obsticles[0].MoveLeft();
                 ObsticleMoveRight.Enabled = false;
                 ObsticleMoveLeft.Enabled = true;
@@ -205,6 +188,7 @@
             if (DetectCollison(Obsticle, hero))
             {
                 Health.HealthCount -= 10;
+                this.health_value.Text = Health.HealthCount.ToString();
                 obsticles[0].MoveRight();
                 ObsticleMoveRight.Enabled = true;
                 ObsticleMoveLeft.Enabled = false;
@@ -223,6 +207,7 @@
             if (DetectCollison(Obsticle2, hero))
             {
                 Health.HealthCount -= 10;
+                this.health_value.Text = Health.HealthCount.ToString();
                 obsticles[1].MoveRight();
                 Obsticle2MoveLeft.Enabled = false;
                 Obsticle2MoveRIght.Enabled = true;
@@ -239,6 +224,7 @@
             if (DetectCollison(Obsticle2, hero))
             {
                 Health.HealthCount -= 10;
+                this.health_value.Text = Health.HealthCount.ToString();
                 obsticles[1].MoveLeft();
                 Obsticle2MoveLeft.Enabled = true;
                 Obsticle2MoveRIght.Enabled = false;
@@ -257,6 +243,7 @@
             if (DetectCollison(Obsticle3, hero))
             {
                 Health.HealthCount -= 10;
+                this.health_value.Text = Health.HealthCount.ToString();
                 obsticles[2].MoveLeft();
                 Obsticle3MoveRight.Enabled = false;
                 Obsticle3MoveLeft.Enabled = true;
@@ -274,6 +261,7 @@
             if (DetectCollison(Obsticle3, hero))
             {
                 Health.HealthCount -= 10;
+                this.health_value.Text = Health.HealthCount.ToString();
                 obsticles[2].MoveRight();
                 Obsticle3MoveLeft.Enabled = false;
                 Obsticle3MoveRight.Enabled = true;
@@ -292,6 +280,7 @@
             if (DetectCollison(Obsticle4, hero))
             {
                 Health.HealthCount -= 10;
+                this.health_value.Text = Health.HealthCount.ToString();
                 obsticles[3].MoveRight();
                 Obsticle4MoveLeft.Enabled = false;
                 Obsticle4MoveRight.Enabled = true;
@@ -308,6 +297,7 @@
             if (DetectCollison(Obsticle4, hero))
             {
                 Health.HealthCount -= 10;
+                this.health_value.Text = Health.HealthCount.ToString();
                 obsticles[3].MoveLeft();
                 Obsticle4MoveLeft.Enabled = true;
                 Obsticle4MoveRight.Enabled = false;
@@ -325,6 +315,7 @@
             if (DetectCollison(Obsticle5, hero))
             {
                 Health.HealthCount -= 10;
+                this.health_value.Text = Health.HealthCount.ToString();
                 obsticles[4].MoveLeft();
                 Obsticle5MoveRight.Enabled = false;
                 Obsticle5MoveLeft.Enabled = true;
@@ -342,6 +333,7 @@
             if (DetectCollison(Obsticle5, hero))
             {
                 Health.HealthCount -= 10;
+                this.health_value.Text = Health.HealthCount.ToString();
                 obsticles[4].MoveRight();
                 Obsticle5MoveLeft.Enabled = false;
                 Obsticle5MoveRight.Enabled = true;

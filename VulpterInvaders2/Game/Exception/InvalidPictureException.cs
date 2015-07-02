@@ -4,5 +4,6 @@
 
     class InvalidPictureException : Exception
     {
+       
     }
 }

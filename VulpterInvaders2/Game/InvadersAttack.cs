@@ -98,13 +98,13 @@
             {
                 this.bullet.PositionX = bullet.PositionX + 10;
                 this.bullet = new BulletPlayer(bulletPanel);
-                shooting.Shoot(bullet);
+                this.shooting.Shoot(bullet);
             }
 
             attack.UpdateAttack(enemies);
 
             this.enemyShot = new BulletEnemy(bulletEnemy);
-            enemyShooting.EnemyShoot(enemyShot, enemies);
+            this.enemyShooting.EnemyShoot(enemyShot, enemies);
 
             if (collision.EnemyShotPlayerShipCollision(shipPlayer, enemyShot))
             {

@@ -4,15 +4,6 @@
 
     public class AdvancedStatistics
     {
-        public static void GameLifeReduction()
-        {
-            if (Health.HealthCount <= 0)
-            {
-                Life.LifeCount -= 1;
-            }
-        }
-
-       
 
         public static void GameHealthMax()
         {

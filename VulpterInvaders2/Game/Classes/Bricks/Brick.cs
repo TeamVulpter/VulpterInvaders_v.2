@@ -6,15 +6,12 @@
     {
         private PictureBox brickSingle;
 
-        public Brick(int positionX, int positionY, PictureBox brickSingle)
-            : base(positionX, positionY)
+        public Brick(PictureBox brickSingle)
+            : base(brickSingle.Location.X, brickSingle.Location.Y)
         {
             this.BrickSingle = brickSingle;
         }
-
-        public int X { get; set; }
-
-        public int Y { get; set; }
+       
 
         public PictureBox BrickSingle
         {

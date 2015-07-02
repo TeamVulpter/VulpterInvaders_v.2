@@ -4,5 +4,9 @@
 
     class InvalidItemTypeException : Exception
     {
+        public InvalidItemTypeException(string message)
+        {
+            
+        }
     }
 }
