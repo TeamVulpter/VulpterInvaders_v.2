@@ -1,14 +1,14 @@
 ﻿namespace Game
 {
     using System;
-    using Engine;
+    using Loader;
 
     public static class StartGame
     {
         [STAThread]
         public static void Main()
         {
-            GameEngineVulpterInvaders engineVulpter = new GameEngineVulpterInvaders();
+            GameLoader engineVulpter = new GameLoader();
             engineVulpter.Run();
         }
     }

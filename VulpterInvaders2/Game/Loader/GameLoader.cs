@@ -1,8 +1,8 @@
-namespace Game.Engine
+namespace Game.Loader
 {
     using System.Windows.Forms;
 
-    public class GameEngineVulpterInvaders
+    public class GameLoader
     {
         public void Run()
         {

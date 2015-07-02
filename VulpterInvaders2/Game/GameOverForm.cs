@@ -13,6 +13,7 @@
         private void ButtonExitClick(object sender, EventArgs e)
         {
             Application.Exit();
+            
         }
 
         private void RestartGame_Click(object sender, EventArgs e)
