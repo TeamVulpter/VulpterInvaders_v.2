@@ -1,6 +1,8 @@
-﻿namespace Game.Classes.Characters
+﻿using Game.Interfaces;
+
+namespace Game.Classes.Characters
 {
-    public abstract class Character : GameObject
+    public abstract class Character : GameObject, IMovable
     {
         protected Character(int positionX, int positionY)
             : base(positionX, positionY)

@@ -1,12 +1,9 @@
 ﻿namespace Game.Classes.Characters
 {
-    using System.Drawing;
     using System.Windows.Forms;
 
     public class PlayerShip : Character
     {
-        private PictureBox playerShip;
-
         public PlayerShip(PictureBox playerShip)
             : base(playerShip.Location.X, playerShip.Location.Y)
         {
@@ -17,12 +14,12 @@
 
         public override void MoveLeft()
         {
-            Ship.Location = new Point(Ship.Location.X - 10, Ship.Location.Y);
+            Ship.Left -= 10;
         }
 
         public override void MoveRight()
         {
-            Ship.Location = new Point(Ship.Location.X + 10, Ship.Location.Y);
+            Ship.Left += 10;
         }
 
         public override bool StopAtMax(int positionOfPlayer, int maxValue)

@@ -5,9 +5,9 @@ namespace Game.Classes
     {
         static Health()
         {
-            HelthCount = 150;
+            HealthCount = 150;
         }
 
-        public static int HelthCount { get; set; }
+        public static int HealthCount { get; set; }
     }
 }

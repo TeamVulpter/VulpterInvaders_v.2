@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Windows.Forms;
-    
+
     using Classes;
     using Classes.Characters;
     using Classes.Bricks;
@@ -30,19 +30,11 @@
             try
             {
                 //generation map coordinates
-
-                this.map = new Map( this.brick16.Location.Y + this.brick16.Height,
+                this.map = new Map(this.brick16.Location.Y + this.brick16.Height,
                                     this.brick6.Location.Y,
                                     this.brick1.Location.X + this.brick1.Width,
                                     this.brick11.Location.X);
 
-                this.items = new List<Item>();
-                this.obsticles = new List<ObsticleBrick>();
-
-                this.map = new Map(this.brick16.Location.Y + this.brick16.Height,
-                    this.brick6.Location.Y,
-                    this.brick1.Location.X + this.brick1.Width,
-                    this.brick11.Location.X);
                 this.items = new List<Item>();
                 this.obsticles = new List<ObsticleBrick>();
 
@@ -53,10 +45,9 @@
                 this.AddItemToList();
 
                 //add all obsticle to list
-                AddObsticleToList();
+                this.AddObsticleToList();
                 //drawing bricks
-                this.AddBrickToList();
-
+                //this.AddBrickToList();
 
                 //generation items with bonus
                 ItemsFactory itemsFactory = new ItemsFactory();
@@ -71,9 +62,9 @@
             }
             catch (InvalidPictureException)
             {
-                MessageBox.Show(@"No found picture for item!");
+                MessageBox.Show(@"Not found picture for item!");
             }
-            
+
         }
 
         //add item to list of items
@@ -102,29 +93,29 @@
         }
 
         //add all rick to list
-        private void AddBrickToList()
-        {
-            this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
-            this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
-            this.bricksList.Add(new Brick(brick2.Location.X, brick2.Location.Y, brick2));
-            this.bricksList.Add(new Brick(brick3.Location.X, brick3.Location.Y, brick3));
-            this.bricksList.Add(new Brick(brick4.Location.X, brick4.Location.Y, brick4));
-            this.bricksList.Add(new Brick(brick5.Location.X, brick5.Location.Y, brick5));
-            this.bricksList.Add(new Brick(brick6.Location.X, brick6.Location.Y, brick6));
-            this.bricksList.Add(new Brick(brick7.Location.X, brick7.Location.Y, brick7));
-            this.bricksList.Add(new Brick(brick8.Location.X, brick8.Location.Y, brick8));
-            this.bricksList.Add(new Brick(brick9.Location.X, brick9.Location.Y, brick9));
-            this.bricksList.Add(new Brick(brick10.Location.X, brick10.Location.Y, brick10));
-            this.bricksList.Add(new Brick(brick11.Location.X, brick11.Location.Y, brick11));
-            this.bricksList.Add(new Brick(brick12.Location.X, brick12.Location.Y, brick12));
-            this.bricksList.Add(new Brick(brick13.Location.X, brick13.Location.Y, brick13));
-            this.bricksList.Add(new Brick(brick14.Location.X, brick14.Location.Y, brick14));
-            this.bricksList.Add(new Brick(brick15.Location.X, brick15.Location.Y, brick15));
-            this.bricksList.Add(new Brick(brick16.Location.X, brick16.Location.Y, brick16));
-            this.bricksList.Add(new Brick(brick17.Location.X, brick17.Location.Y, brick17));
-            this.bricksList.Add(new Brick(brick18.Location.X, brick18.Location.Y, brick18));
-            this.bricksList.Add(new Brick(brick19.Location.X, brick19.Location.Y, brick19));
-        }
+        //private void AddBrickToList()
+        //{
+        //    this.bricksList.Add(new Brick(brick.Location.X, brick.Location.Y, brick));
+        //    this.bricksList.Add(new Brick(brick1.Location.X, brick1.Location.Y, brick1));
+        //    this.bricksList.Add(new Brick(brick2.Location.X, brick2.Location.Y, brick2));
+        //    this.bricksList.Add(new Brick(brick3.Location.X, brick3.Location.Y, brick3));
+        //    this.bricksList.Add(new Brick(brick4.Location.X, brick4.Location.Y, brick4));
+        //    this.bricksList.Add(new Brick(brick5.Location.X, brick5.Location.Y, brick5));
+        //    this.bricksList.Add(new Brick(brick6.Location.X, brick6.Location.Y, brick6));
+        //    this.bricksList.Add(new Brick(brick7.Location.X, brick7.Location.Y, brick7));
+        //    this.bricksList.Add(new Brick(brick8.Location.X, brick8.Location.Y, brick8));
+        //    this.bricksList.Add(new Brick(brick9.Location.X, brick9.Location.Y, brick9));
+        //    this.bricksList.Add(new Brick(brick10.Location.X, brick10.Location.Y, brick10));
+        //    this.bricksList.Add(new Brick(brick11.Location.X, brick11.Location.Y, brick11));
+        //    this.bricksList.Add(new Brick(brick12.Location.X, brick12.Location.Y, brick12));
+        //    this.bricksList.Add(new Brick(brick13.Location.X, brick13.Location.Y, brick13));
+        //    this.bricksList.Add(new Brick(brick14.Location.X, brick14.Location.Y, brick14));
+        //    this.bricksList.Add(new Brick(brick15.Location.X, brick15.Location.Y, brick15));
+        //    this.bricksList.Add(new Brick(brick16.Location.X, brick16.Location.Y, brick16));
+        //    this.bricksList.Add(new Brick(brick17.Location.X, brick17.Location.Y, brick17));
+        //    this.bricksList.Add(new Brick(brick18.Location.X, brick18.Location.Y, brick18));
+        //    this.bricksList.Add(new Brick(brick19.Location.X, brick19.Location.Y, brick19));
+        //}
 
         //moving hero
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -136,7 +127,7 @@
                     player.MoveUp();
                 }
             }
-            if (!player.StopAtMax(player.Hero.Location.Y+player.Hero.Height, this.map.Down))
+            if (!player.StopAtMax(player.Hero.Location.Y + player.Hero.Height, this.map.Down))
             {
                 if (e.KeyCode == Keys.S)
                 {
@@ -150,7 +141,7 @@
                     player.MoveLeft();
                 }
             }
-            if (!player.StopAtMax(player.Hero.Location.X+player.Hero.Width, this.map.Right))
+            if (!player.StopAtMax(player.Hero.Location.X + player.Hero.Width, this.map.Right))
             {
                 if (e.KeyCode == Keys.D)
                 {
@@ -168,20 +159,19 @@
             this.items = this.player.GetItem(items);
 
             //update values on hero
-            this.health_value.Text = Health.HelthCount.ToString();
+            this.health_value.Text = Health.HealthCount.ToString();
             this.life_value.Text = Life.LifeCount.ToString();
             this.score_value.Text = Score.ScoreCount.ToString();
 
             AdvancedStatistics.GameHealthMax();
-            AdvancedStatistics.GameScoreMax();
-            if (Life.LifeCount <= 0)
+            AdvancedStatistics.GameHealthMin();
+
+            if (Life.LifeCount <= 0 || Score.ScoreCount >= 100)
             {
                 GameOverForm gameOver = new GameOverForm();
                 gameOver.Show();
                 this.Close();
             }
-
-
 
             //check for exit from this form in door
             if (this.player.CheckForExit(this.door))
@@ -194,10 +184,11 @@
 
         private void ObsticleMoveRight_Tick(object sender, EventArgs e)
         {
-            Obsticle.Left += 1;
+            obsticles[0].MoveRight();
             if (DetectCollison(Obsticle, hero))
             {
-                Obsticle.Left -= 1;
+                Health.HealthCount -= 10;
+                obsticles[0].MoveLeft();
                 ObsticleMoveRight.Enabled = false;
                 ObsticleMoveLeft.Enabled = true;
 
@@ -210,10 +201,11 @@
         }
         private void ObsticleMoveLeft_Tick(object sender, EventArgs e)
         {
-            Obsticle.Left -= 1;
+            obsticles[0].MoveLeft();
             if (DetectCollison(Obsticle, hero))
             {
-                Obsticle.Left += 1;
+                Health.HealthCount -= 10;
+                obsticles[0].MoveRight();
                 ObsticleMoveRight.Enabled = true;
                 ObsticleMoveLeft.Enabled = false;
             }
@@ -227,10 +219,11 @@
 
         private void Obsticle2MoveLeft_Tick(object sender, EventArgs e)
         {
-            Obsticle2.Left -= 1;
+            obsticles[1].MoveLeft();
             if (DetectCollison(Obsticle2, hero))
             {
-                //Obsticle2.Left += 1;
+                Health.HealthCount -= 10;
+                obsticles[1].MoveRight();
                 Obsticle2MoveLeft.Enabled = false;
                 Obsticle2MoveRIght.Enabled = true;
             }
@@ -242,10 +235,11 @@
         }
         private void Obsticle2MoveRight_Tick(object sender, EventArgs e)
         {
-            Obsticle2.Left += 1;
+            obsticles[1].MoveRight();
             if (DetectCollison(Obsticle2, hero))
             {
-                //Obsticle2.Left -= 1;
+                Health.HealthCount -= 10;
+                obsticles[1].MoveLeft();
                 Obsticle2MoveLeft.Enabled = true;
                 Obsticle2MoveRIght.Enabled = false;
 
@@ -259,10 +253,11 @@
 
         private void Obsticle3MoveRight_Tick(object sender, EventArgs e)
         {
-            Obsticle3.Left += 1;
+            obsticles[2].MoveRight();
             if (DetectCollison(Obsticle3, hero))
             {
-                Obsticle3.Left -= 1;
+                Health.HealthCount -= 10;
+                obsticles[2].MoveLeft();
                 Obsticle3MoveRight.Enabled = false;
                 Obsticle3MoveLeft.Enabled = true;
 
@@ -275,10 +270,11 @@
         }
         private void Obsticle3MoveLeft_Tick(object sender, EventArgs e)
         {
-            Obsticle3.Left -= 1;
+            obsticles[2].MoveLeft();
             if (DetectCollison(Obsticle3, hero))
             {
-                Obsticle3.Left += 1;
+                Health.HealthCount -= 10;
+                obsticles[2].MoveRight();
                 Obsticle3MoveLeft.Enabled = false;
                 Obsticle3MoveRight.Enabled = true;
             }
@@ -292,10 +288,11 @@
         private void Obsticle4MoveLeft_Tick(object sender, EventArgs e)
         {
 
-            Obsticle4.Left -= 1;
+            obsticles[3].MoveLeft();
             if (DetectCollison(Obsticle4, hero))
             {
-                Obsticle4.Left += 1;
+                Health.HealthCount -= 10;
+                obsticles[3].MoveRight();
                 Obsticle4MoveLeft.Enabled = false;
                 Obsticle4MoveRight.Enabled = true;
             }
@@ -307,10 +304,11 @@
         }
         private void Obsticle4MoveRigth_Tick(object sender, EventArgs e)
         {
-            Obsticle4.Left += 1;
+            obsticles[3].MoveRight();
             if (DetectCollison(Obsticle4, hero))
             {
-                Obsticle4.Left -= 1;
+                Health.HealthCount -= 10;
+                obsticles[3].MoveLeft();
                 Obsticle4MoveLeft.Enabled = true;
                 Obsticle4MoveRight.Enabled = false;
             }
@@ -323,10 +321,11 @@
 
         private void Obsticle5MoveRight_Tick(object sender, EventArgs e)
         {
-            Obsticle5.Left += 1;
+            obsticles[4].MoveRight();
             if (DetectCollison(Obsticle5, hero))
             {
-                Obsticle5.Left -= 1;
+                Health.HealthCount -= 10;
+                obsticles[4].MoveLeft();
                 Obsticle5MoveRight.Enabled = false;
                 Obsticle5MoveLeft.Enabled = true;
 
@@ -339,10 +338,11 @@
         }
         private void Obsticle5MoveLeft_Tick(object sender, EventArgs e)
         {
-            Obsticle5.Left -= 1;
+            obsticles[4].MoveLeft();
             if (DetectCollison(Obsticle5, hero))
             {
-                Obsticle5.Left += 1;
+                Health.HealthCount -= 10;
+                obsticles[4].MoveRight();
                 Obsticle5MoveLeft.Enabled = false;
                 Obsticle5MoveRight.Enabled = true;
             }

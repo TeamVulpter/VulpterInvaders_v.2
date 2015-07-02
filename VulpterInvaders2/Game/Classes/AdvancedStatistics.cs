@@ -6,27 +6,28 @@
     {
         public static void GameLifeReduction()
         {
-            if (Health.HelthCount <= 0)
+            if (Health.HealthCount <= 0)
             {
                 Life.LifeCount -= 1;
             }
         }
 
-        public static void GameScoreMax()
-        {
-            if (Score.ScoreCount >= 100)
-            {
-                MessageBox.Show("Game over");
-                Application.Exit();
-            }
-        }
+       
 
         public static void GameHealthMax()
         {
-            if (Health.HelthCount >= 250)
+            if (Health.HealthCount >= 250)
             {
                 Life.LifeCount += 1;
-                Health.HelthCount = 150;
+                Health.HealthCount = 150;
+            }
+        }
+
+        public static void GameHealthMin()
+        {
+            if (Health.HealthCount <= 0)
+            {
+                Life.LifeCount -= 1;
             }
         }
     }

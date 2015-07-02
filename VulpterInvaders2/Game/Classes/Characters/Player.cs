@@ -1,7 +1,6 @@
 ﻿namespace Game.Classes.Characters
 {
     using System.Collections.Generic;
-    using System.Drawing;
     using System.Windows.Forms;
 
     using Items;
@@ -25,7 +24,7 @@
                 if (((this.Hero.Location.X + 16 >= items[i].PositionX && this.Hero.Location.X+16 <= (items[i].PositionX + items[i].Picture.Width)) &&
                      (this.Hero.Location.Y + 16 >= items[i].PositionY && this.Hero.Location.Y + 16 <= (items[i].PositionY + items[i].Picture.Height))))
                 {
-                    Health.HelthCount += items[i].BonusHealth;
+                    Health.HealthCount += items[i].BonusHealth;
                     Life.LifeCount += items[i].BonusLife;
                     Score.ScoreCount += items[i].BonusScore;
                     //remove life
@@ -52,22 +51,22 @@
 
         public override void MoveLeft()
         {
-            Hero.Location = new Point(Hero.Location.X - 5, Hero.Location.Y);
+            Hero.Left -= 5;
         }
 
         public override void MoveRight()
         {
-            Hero.Location = new Point(Hero.Location.X + 5, Hero.Location.Y);
+            Hero.Left += 5;
         }
 
         public void MoveUp()
         {
-            Hero.Location = new Point(Hero.Location.X, Hero.Location.Y-5);
+            Hero.Top -= 5;
         }
 
         public void MoveDown()
         {
-            Hero.Location = new Point(Hero.Location.X, Hero.Location.Y + 5);
+            Hero.Top += 5;
         }
 
         public override bool StopAtMax(int positionOfPlayer, int maxValue)

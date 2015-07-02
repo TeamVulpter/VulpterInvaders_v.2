@@ -1,8 +1,10 @@
-﻿namespace Game.Classes.Bricks
+﻿using Game.Interfaces;
+
+namespace Game.Classes.Bricks
 {
     using System.Windows.Forms;
 
-    class ObsticleBrick : GameObject
+    class ObsticleBrick : GameObject, IMovable
     {
         public ObsticleBrick(PictureBox obsticleBox)
             : base(obsticleBox.Location.X, obsticleBox.Location.Y)
@@ -11,5 +13,15 @@
         }
 
         public PictureBox ObsticleBox { get; set; }
+
+        public void MoveLeft()
+        {
+            ObsticleBox.Left -= 1;
+        }
+
+        public void MoveRight()
+        {
+            ObsticleBox.Left += 1;
+        }
     }
 }
