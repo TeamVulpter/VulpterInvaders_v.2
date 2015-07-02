@@ -100,11 +100,12 @@
     <Compile Include="Classes\Map\Map.cs" />
     <Compile Include="Classes\Shooting.cs" />
     <Compile Include="Interfaces\IMovable.cs" />
+    <Compile Include="Interfaces\IShootable.cs" />
     <Compile Include="Loader\GameLoader.cs" />
     <Compile Include="Interfaces\IItem.cs" />
     <Compile Include="Interfaces\IMap.cs" />
-    <Compile Include="Interfaces\IShoot.cs" />
-    <Compile Include="Interfaces\IShootableEnemyBullet.cs" />
+    <Compile Include="Interfaces\IShootPlayer.cs" />
+    <Compile Include="Interfaces\IShootEnemy.cs" />
     <Compile Include="InvadersAttack.cs">
       <SubType>Form</SubType>
     </Compile>

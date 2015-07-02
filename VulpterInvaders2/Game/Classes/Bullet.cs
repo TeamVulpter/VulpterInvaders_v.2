@@ -1,8 +1,8 @@
-﻿using System.Windows.Forms;
-
-namespace Game.Classes
+﻿namespace Game.Classes
 {
-    public abstract class Bullet : GameObject
+    using Game.Interfaces;
+
+    public abstract class Bullet : GameObject, IShootable
     {
         protected Bullet(int positionX, int positionY)
             : base(positionX, positionY)

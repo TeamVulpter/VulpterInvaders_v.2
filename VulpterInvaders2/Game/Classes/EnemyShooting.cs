@@ -22,7 +22,7 @@
 
             if (enemyShot.PositionY >= 500)
             {
-                enemyShot.EnemyBullet.Location = new Point(enemies[this.randomEnemy.Next(1, 6)].PositionX, enemies[this.randomEnemy.Next(1, 6)].PositionY + 10);
+                enemyShot.EnemyBullet.Location = new Point(enemies[this.randomEnemy.Next(3, 5)].PositionX, enemies[this.randomEnemy.Next(3, 5)].PositionY + 10);
             }
             enemyShot.Start();
         }
