@@ -7,38 +7,35 @@
     [TestClass]
     public class UnitTestMap
     {
-
         private const int topDefault = 10;
         private const int leftDefault = 10;
         private const int downDefault = 510;
         private const int rightDefault = 510;
 
+        private Map mapGlobal = new Map(topDefault, leftDefault, downDefault, rightDefault);
+
         [TestMethod]
         public void TestMapTopNotZero()
         {
-            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
-            Assert.AreNotEqual(0, map.Top);
+            Assert.AreNotEqual(0, this.mapGlobal.Top);
         }
 
         [TestMethod]
         public void TestMapLeftNotZero()
         {
-            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
-            Assert.AreNotEqual(0, map.Left);
+            Assert.AreNotEqual(0, this.mapGlobal.Left);
         }
 
         [TestMethod]
         public void TestMapDownNotZero()
         {
-            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
-            Assert.AreNotEqual(0, map.Down);
+            Assert.AreNotEqual(0, this.mapGlobal.Down);
         }
 
         [TestMethod]
         public void TestMapRightNotZero()
         {
-            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
-            Assert.AreNotEqual(0, map.Right);
+            Assert.AreNotEqual(0, this.mapGlobal.Right);
         }
 
         //Within the field start
