@@ -21,6 +21,7 @@
             Assert.AreNotEqual(0, top);
         }
 
+        //Within the field start
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException),
             "Value for top of field, cannot be negative!")]
@@ -56,7 +57,7 @@
             Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
             map.Right += 1;
         }
-
+        //Within the field end
 
     }
 }
