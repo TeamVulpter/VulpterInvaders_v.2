@@ -13,21 +13,41 @@
         private const int downDefault = 510;
         private const int rightDefault = 510;
 
-        private Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
-
         [TestMethod]
         public void TestMethodMapTopNotZero()
         {
-            int top = this.map.Top;
+            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
+            int top = map.Top;
             Assert.AreNotEqual(0, top);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException), 
+        [ExpectedException(typeof(ArgumentOutOfRangeException),
             "Value for top of field, cannot be negative!")]
-        public void TestMethodMapTopCheckExceptionForNegativeValue()
+        public void TestMethodMapTopExceptionForNegativeValue()
         {
-           this.map.Top = -1;
+            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
+            map.Top = -1;
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException),
+            "The amount of the upper limit can not be greater than the standard")]
+        public void TestMethodMapDownExceptionForGreaterValue()
+        {
+            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
+            map.Down += 1;
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException),
+            "The amount of the upper limit can not be greater than the standard")]
+        public void TestMethodMapRightExceptionForGreaterValue()
+        {
+            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
+            map.Right += 1;
+        }
+
+
     }
 }
