@@ -32,6 +32,15 @@
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException),
+            "Value for top of field, cannot be negative!")]
+        public void TestMethodMapLeftExceptionForNegativeValue()
+        {
+            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
+            map.Left = -1;
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException),
             "The amount of the upper limit can not be greater than the standard")]
         public void TestMethodMapDownExceptionForGreaterValue()
         {
