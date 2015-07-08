@@ -26,7 +26,8 @@ namespace Game.Classes.Map
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("top", "Value for top of field, cannot be negative!");
+                    throw new ArgumentOutOfRangeException("top", 
+                        "Value for top of field, cannot be negative!");
                 }
                 this.top = value;
             }
@@ -34,7 +35,16 @@ namespace Game.Classes.Map
         public int Down
         {
             get { return this.down; }
-            set { this.down = value; }
+            set
+            {
+                if (value > 510)
+                {
+                    throw new ArgumentOutOfRangeException("top",
+                        "The amount of the upper limit can not be greater than the standard");
+                }
+
+                this.down = value;
+            }
         }
         public int Left
         {
