@@ -14,7 +14,7 @@
         private const int rightDefault = 510;
 
         [TestMethod]
-        public void TestMethodMapTopNotZero()
+        public void TestMapTopNotZero()
         {
             Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
             int top = map.Top;
@@ -25,7 +25,7 @@
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException),
             "Value for top of field, cannot be negative!")]
-        public void TestMethodMapTopExceptionForNegativeValue()
+        public void TestMapTopExceptionForNegativeValue()
         {
             Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
             map.Top = -1;
@@ -34,7 +34,7 @@
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException),
             "Value for top of field, cannot be negative!")]
-        public void TestMethodMapLeftExceptionForNegativeValue()
+        public void TestMapLeftExceptionForNegativeValue()
         {
             Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
             map.Left = -1;
@@ -43,7 +43,7 @@
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException),
             "The amount of the upper limit can not be greater than the standard")]
-        public void TestMethodMapDownExceptionForGreaterValue()
+        public void TestMapDownExceptionForGreaterValue()
         {
             Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
             map.Down += 1;
@@ -52,7 +52,7 @@
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException),
             "The amount of the upper limit can not be greater than the standard")]
-        public void TestMethodMapRightExceptionForGreaterValue()
+        public void TestMapRightExceptionForGreaterValue()
         {
             Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
             map.Right += 1;
