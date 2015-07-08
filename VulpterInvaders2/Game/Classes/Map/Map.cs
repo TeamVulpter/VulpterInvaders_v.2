@@ -1,6 +1,9 @@
-﻿namespace Game.Classes.Map
+﻿using System;
+
+namespace Game.Classes.Map
 {
     using Interfaces;
+
     public class Map : IMap
     {
         private int top;
@@ -8,7 +11,7 @@
         private int left;
         private int right;
 
-        public Map(int top, int down, int left, int right)
+        public Map(int top, int left, int down, int right)
         {
             this.Top = top;
             this.Down = down;
@@ -19,7 +22,14 @@
         public int Top
         {
             get { return this.top; }
-            set { this.top = value; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException("top", "Value for top of field, cannot be negative!");
+                }
+                this.top = value;
+            }
         }
         public int Down
         {
