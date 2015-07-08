@@ -17,8 +17,28 @@
         public void TestMapTopNotZero()
         {
             Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
-            int top = map.Top;
-            Assert.AreNotEqual(0, top);
+            Assert.AreNotEqual(0, map.Top);
+        }
+
+        [TestMethod]
+        public void TestMapLeftNotZero()
+        {
+            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
+            Assert.AreNotEqual(0, map.Left);
+        }
+
+        [TestMethod]
+        public void TestMapDownNotZero()
+        {
+            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
+            Assert.AreNotEqual(0, map.Down);
+        }
+
+        [TestMethod]
+        public void TestMapRightNotZero()
+        {
+            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
+            Assert.AreNotEqual(0, map.Right);
         }
 
         //Within the field start
