@@ -7,12 +7,12 @@
     [TestClass]
     public class UnitTestMap
     {
-        private const int topDefault = 10;
-        private const int leftDefault = 10;
-        private const int downDefault = 510;
-        private const int rightDefault = 510;
+        private const int TopDefault = 10;
+        private const int LeftDefault = 10;
+        private const int DownDefault = 510;
+        private const int RightDefault = 510;
 
-        private Map mapGlobal = new Map(topDefault, leftDefault, downDefault, rightDefault);
+        private readonly Map mapGlobal = new Map(TopDefault, LeftDefault, DownDefault, RightDefault);
 
         [TestMethod]
         public void TestMapTopNotZero()
@@ -38,13 +38,13 @@
             Assert.AreNotEqual(0, this.mapGlobal.Right);
         }
 
-        //Within the field start
+        // Within the field start
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException),
             "Value for top of field, cannot be negative!")]
         public void TestMapTopExceptionForNegativeValue()
         {
-            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
+            Map map = new Map(TopDefault, LeftDefault, DownDefault, RightDefault);
             map.Top = -1;
         }
 
@@ -53,7 +53,7 @@
             "Value for top of field, cannot be negative!")]
         public void TestMapLeftExceptionForNegativeValue()
         {
-            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
+            Map map = new Map(TopDefault, LeftDefault, DownDefault, RightDefault);
             map.Left = -1;
         }
 
@@ -62,7 +62,7 @@
             "The amount of the upper limit can not be greater than the standard")]
         public void TestMapDownExceptionForGreaterValue()
         {
-            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
+            Map map = new Map(TopDefault, LeftDefault, DownDefault, RightDefault);
             map.Down += 1;
         }
 
@@ -71,11 +71,8 @@
             "The amount of the upper limit can not be greater than the standard")]
         public void TestMapRightExceptionForGreaterValue()
         {
-            Map map = new Map(topDefault, leftDefault, downDefault, rightDefault);
+            Map map = new Map(TopDefault, LeftDefault, DownDefault, RightDefault);
             map.Right += 1;
         }
-        //Within the field end
-
     }
-
 }

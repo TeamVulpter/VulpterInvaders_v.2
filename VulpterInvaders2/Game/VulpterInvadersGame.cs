@@ -364,6 +364,11 @@
 
             return false;
         }
+
+        private void VulpterInvadersGame_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
