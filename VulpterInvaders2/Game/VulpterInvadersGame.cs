@@ -13,21 +13,24 @@
 
     using Exception;
 
+    using Game.Loader;
+
     using Interfaces;
 
     public partial class VulpterInvadersGame : Form
     {
-        private readonly IMap map;
-        private readonly Player player;
+        private GameLoader engineGameLoader;
+        private Player player;
         private IList<Brick> bricksList;
         private IList<ObsticleBrick> obsticles;
         private IList<Item> items;
         private List<PictureBox> itemsPictureBox;
-        
 
-        public VulpterInvadersGame()
+
+        public VulpterInvadersGame(GameLoader engineGameLoader)
         {
-            InitializeComponent();
+            this.engineGameLoader = engineGameLoader;
+            this.InitializeComponent();
             try
             {
                 itemsPictureBox = new List<PictureBox>();
@@ -39,11 +42,12 @@
                     new Brick(brick11)
                 };
 
-                //generation map coordinates
-                this.map = new Map(this.bricksList[0].BrickSingle.Location.Y + this.bricksList[0].BrickSingle.Height,
-                                    this.bricksList[1].BrickSingle.Location.Y,
-                                    this.bricksList[2].BrickSingle.Location.X + this.brick1.Width,
-                                    this.bricksList[3].BrickSingle.Location.X);
+                this.engineGameLoader.Map =
+                    new Map(
+                        this.bricksList[0].BrickSingle.Location.Y + this.bricksList[0].BrickSingle.Height,
+                        this.bricksList[1].BrickSingle.Location.Y,
+                        this.bricksList[2].BrickSingle.Location.X + this.brick1.Width,
+                        this.bricksList[3].BrickSingle.Location.X);
 
                 this.items = new List<Item>();
                 this.obsticles = new List<ObsticleBrick>();
