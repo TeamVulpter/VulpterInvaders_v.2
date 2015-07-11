@@ -174,7 +174,7 @@
             this.Obsticle.BackgroundImage = global::Game.Properties.Resources.Bricks;
             this.Obsticle.ErrorImage = global::Game.Properties.Resources.Bricks1;
             this.Obsticle.Location = new System.Drawing.Point(77, 494);
-            this.Obsticle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Obsticle.Margin = new System.Windows.Forms.Padding(4);
             this.Obsticle.Name = "Obsticle";
             this.Obsticle.Size = new System.Drawing.Size(63, 28);
             this.Obsticle.TabIndex = 28;
@@ -185,7 +185,7 @@
             this.brick19.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick19.ErrorImage")));
             this.brick19.Image = ((System.Drawing.Image)(resources.GetObject("brick19.Image")));
             this.brick19.Location = new System.Drawing.Point(563, 30);
-            this.brick19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick19.Margin = new System.Windows.Forms.Padding(4);
             this.brick19.Name = "brick19";
             this.brick19.Size = new System.Drawing.Size(135, 25);
             this.brick19.TabIndex = 27;
@@ -196,7 +196,7 @@
             this.brick18.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick18.ErrorImage")));
             this.brick18.Image = ((System.Drawing.Image)(resources.GetObject("brick18.Image")));
             this.brick18.Location = new System.Drawing.Point(439, 30);
-            this.brick18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick18.Margin = new System.Windows.Forms.Padding(4);
             this.brick18.Name = "brick18";
             this.brick18.Size = new System.Drawing.Size(135, 25);
             this.brick18.TabIndex = 26;
@@ -207,7 +207,7 @@
             this.brick17.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick17.ErrorImage")));
             this.brick17.Image = ((System.Drawing.Image)(resources.GetObject("brick17.Image")));
             this.brick17.Location = new System.Drawing.Point(313, 30);
-            this.brick17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick17.Margin = new System.Windows.Forms.Padding(4);
             this.brick17.Name = "brick17";
             this.brick17.Size = new System.Drawing.Size(135, 25);
             this.brick17.TabIndex = 25;
@@ -218,7 +218,7 @@
             this.brick16.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick16.ErrorImage")));
             this.brick16.Image = ((System.Drawing.Image)(resources.GetObject("brick16.Image")));
             this.brick16.Location = new System.Drawing.Point(185, 30);
-            this.brick16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick16.Margin = new System.Windows.Forms.Padding(4);
             this.brick16.Name = "brick16";
             this.brick16.Size = new System.Drawing.Size(135, 25);
             this.brick16.TabIndex = 24;
@@ -229,7 +229,7 @@
             this.brick15.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick15.ErrorImage")));
             this.brick15.Image = ((System.Drawing.Image)(resources.GetObject("brick15.Image")));
             this.brick15.Location = new System.Drawing.Point(671, 47);
-            this.brick15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick15.Margin = new System.Windows.Forms.Padding(4);
             this.brick15.Name = "brick15";
             this.brick15.Size = new System.Drawing.Size(27, 118);
             this.brick15.TabIndex = 23;
@@ -240,7 +240,7 @@
             this.brick14.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick14.ErrorImage")));
             this.brick14.Image = ((System.Drawing.Image)(resources.GetObject("brick14.Image")));
             this.brick14.Location = new System.Drawing.Point(671, 155);
-            this.brick14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick14.Margin = new System.Windows.Forms.Padding(4);
             this.brick14.Name = "brick14";
             this.brick14.Size = new System.Drawing.Size(27, 118);
             this.brick14.TabIndex = 22;
@@ -251,7 +251,7 @@
             this.brick13.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick13.ErrorImage")));
             this.brick13.Image = ((System.Drawing.Image)(resources.GetObject("brick13.Image")));
             this.brick13.Location = new System.Drawing.Point(671, 267);
-            this.brick13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick13.Margin = new System.Windows.Forms.Padding(4);
             this.brick13.Name = "brick13";
             this.brick13.Size = new System.Drawing.Size(27, 118);
             this.brick13.TabIndex = 21;
@@ -262,7 +262,7 @@
             this.brick12.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick12.ErrorImage")));
             this.brick12.Image = ((System.Drawing.Image)(resources.GetObject("brick12.Image")));
             this.brick12.Location = new System.Drawing.Point(671, 382);
-            this.brick12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick12.Margin = new System.Windows.Forms.Padding(4);
             this.brick12.Name = "brick12";
             this.brick12.Size = new System.Drawing.Size(27, 118);
             this.brick12.TabIndex = 20;
@@ -273,7 +273,7 @@
             this.brick11.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick11.ErrorImage")));
             this.brick11.Image = ((System.Drawing.Image)(resources.GetObject("brick11.Image")));
             this.brick11.Location = new System.Drawing.Point(671, 494);
-            this.brick11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick11.Margin = new System.Windows.Forms.Padding(4);
             this.brick11.Name = "brick11";
             this.brick11.Size = new System.Drawing.Size(27, 118);
             this.brick11.TabIndex = 19;
@@ -284,7 +284,7 @@
             this.brick10.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick10.ErrorImage")));
             this.brick10.Image = ((System.Drawing.Image)(resources.GetObject("brick10.Image")));
             this.brick10.Location = new System.Drawing.Point(563, 606);
-            this.brick10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick10.Margin = new System.Windows.Forms.Padding(4);
             this.brick10.Name = "brick10";
             this.brick10.Size = new System.Drawing.Size(135, 25);
             this.brick10.TabIndex = 18;
@@ -295,7 +295,7 @@
             this.brick9.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick9.ErrorImage")));
             this.brick9.Image = ((System.Drawing.Image)(resources.GetObject("brick9.Image")));
             this.brick9.Location = new System.Drawing.Point(439, 606);
-            this.brick9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick9.Margin = new System.Windows.Forms.Padding(4);
             this.brick9.Name = "brick9";
             this.brick9.Size = new System.Drawing.Size(135, 25);
             this.brick9.TabIndex = 17;
@@ -306,7 +306,7 @@
             this.brick8.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick8.ErrorImage")));
             this.brick8.Image = ((System.Drawing.Image)(resources.GetObject("brick8.Image")));
             this.brick8.Location = new System.Drawing.Point(313, 606);
-            this.brick8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick8.Margin = new System.Windows.Forms.Padding(4);
             this.brick8.Name = "brick8";
             this.brick8.Size = new System.Drawing.Size(135, 25);
             this.brick8.TabIndex = 16;
@@ -317,7 +317,7 @@
             this.brick7.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick7.ErrorImage")));
             this.brick7.Image = ((System.Drawing.Image)(resources.GetObject("brick7.Image")));
             this.brick7.Location = new System.Drawing.Point(185, 606);
-            this.brick7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick7.Margin = new System.Windows.Forms.Padding(4);
             this.brick7.Name = "brick7";
             this.brick7.Size = new System.Drawing.Size(135, 25);
             this.brick7.TabIndex = 15;
@@ -328,7 +328,7 @@
             this.brick6.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick6.ErrorImage")));
             this.brick6.Image = ((System.Drawing.Image)(resources.GetObject("brick6.Image")));
             this.brick6.Location = new System.Drawing.Point(55, 606);
-            this.brick6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick6.Margin = new System.Windows.Forms.Padding(4);
             this.brick6.Name = "brick6";
             this.brick6.Size = new System.Drawing.Size(135, 25);
             this.brick6.TabIndex = 14;
@@ -339,7 +339,7 @@
             this.brick5.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick5.ErrorImage")));
             this.brick5.Image = ((System.Drawing.Image)(resources.GetObject("brick5.Image")));
             this.brick5.Location = new System.Drawing.Point(55, 494);
-            this.brick5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick5.Margin = new System.Windows.Forms.Padding(4);
             this.brick5.Name = "brick5";
             this.brick5.Size = new System.Drawing.Size(27, 118);
             this.brick5.TabIndex = 13;
@@ -350,7 +350,7 @@
             this.brick4.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick4.ErrorImage")));
             this.brick4.Image = ((System.Drawing.Image)(resources.GetObject("brick4.Image")));
             this.brick4.Location = new System.Drawing.Point(55, 382);
-            this.brick4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick4.Margin = new System.Windows.Forms.Padding(4);
             this.brick4.Name = "brick4";
             this.brick4.Size = new System.Drawing.Size(27, 118);
             this.brick4.TabIndex = 12;
@@ -361,7 +361,7 @@
             this.brick3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick3.ErrorImage")));
             this.brick3.Image = ((System.Drawing.Image)(resources.GetObject("brick3.Image")));
             this.brick3.Location = new System.Drawing.Point(55, 267);
-            this.brick3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick3.Margin = new System.Windows.Forms.Padding(4);
             this.brick3.Name = "brick3";
             this.brick3.Size = new System.Drawing.Size(27, 118);
             this.brick3.TabIndex = 11;
@@ -372,7 +372,7 @@
             this.brick2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick2.ErrorImage")));
             this.brick2.Image = ((System.Drawing.Image)(resources.GetObject("brick2.Image")));
             this.brick2.Location = new System.Drawing.Point(55, 155);
-            this.brick2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick2.Margin = new System.Windows.Forms.Padding(4);
             this.brick2.Name = "brick2";
             this.brick2.Size = new System.Drawing.Size(27, 118);
             this.brick2.TabIndex = 10;
@@ -383,7 +383,7 @@
             this.brick1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick1.ErrorImage")));
             this.brick1.Image = ((System.Drawing.Image)(resources.GetObject("brick1.Image")));
             this.brick1.Location = new System.Drawing.Point(55, 47);
-            this.brick1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick1.Margin = new System.Windows.Forms.Padding(4);
             this.brick1.Name = "brick1";
             this.brick1.Size = new System.Drawing.Size(27, 118);
             this.brick1.TabIndex = 9;
@@ -396,7 +396,7 @@
             this.hero.Image = ((System.Drawing.Image)(resources.GetObject("hero.Image")));
             this.hero.InitialImage = ((System.Drawing.Image)(resources.GetObject("hero.InitialImage")));
             this.hero.Location = new System.Drawing.Point(339, 558);
-            this.hero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hero.Margin = new System.Windows.Forms.Padding(4);
             this.hero.Name = "hero";
             this.hero.Size = new System.Drawing.Size(49, 47);
             this.hero.TabIndex = 8;
@@ -407,7 +407,7 @@
             this.brick.ErrorImage = ((System.Drawing.Image)(resources.GetObject("brick.ErrorImage")));
             this.brick.Image = ((System.Drawing.Image)(resources.GetObject("brick.Image")));
             this.brick.Location = new System.Drawing.Point(55, 30);
-            this.brick.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brick.Margin = new System.Windows.Forms.Padding(4);
             this.brick.Name = "brick";
             this.brick.Size = new System.Drawing.Size(135, 25);
             this.brick.TabIndex = 7;
@@ -419,7 +419,7 @@
             this.Obsticle5.BackgroundImage = global::Game.Properties.Resources.Bricks;
             this.Obsticle5.ErrorImage = global::Game.Properties.Resources.Bricks1;
             this.Obsticle5.Location = new System.Drawing.Point(77, 57);
-            this.Obsticle5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Obsticle5.Margin = new System.Windows.Forms.Padding(4);
             this.Obsticle5.Name = "Obsticle5";
             this.Obsticle5.Size = new System.Drawing.Size(63, 28);
             this.Obsticle5.TabIndex = 29;
@@ -431,7 +431,7 @@
             this.Obsticle4.BackgroundImage = global::Game.Properties.Resources.Bricks;
             this.Obsticle4.ErrorImage = global::Game.Properties.Resources.Bricks1;
             this.Obsticle4.Location = new System.Drawing.Point(605, 155);
-            this.Obsticle4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Obsticle4.Margin = new System.Windows.Forms.Padding(4);
             this.Obsticle4.Name = "Obsticle4";
             this.Obsticle4.Size = new System.Drawing.Size(63, 28);
             this.Obsticle4.TabIndex = 30;
@@ -443,7 +443,7 @@
             this.Obsticle3.BackgroundImage = global::Game.Properties.Resources.Bricks;
             this.Obsticle3.ErrorImage = global::Game.Properties.Resources.Bricks1;
             this.Obsticle3.Location = new System.Drawing.Point(77, 267);
-            this.Obsticle3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Obsticle3.Margin = new System.Windows.Forms.Padding(4);
             this.Obsticle3.Name = "Obsticle3";
             this.Obsticle3.Size = new System.Drawing.Size(63, 28);
             this.Obsticle3.TabIndex = 31;
@@ -455,7 +455,7 @@
             this.Obsticle2.BackgroundImage = global::Game.Properties.Resources.Bricks;
             this.Obsticle2.ErrorImage = global::Game.Properties.Resources.Bricks1;
             this.Obsticle2.Location = new System.Drawing.Point(605, 382);
-            this.Obsticle2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Obsticle2.Margin = new System.Windows.Forms.Padding(4);
             this.Obsticle2.Name = "Obsticle2";
             this.Obsticle2.Size = new System.Drawing.Size(63, 28);
             this.Obsticle2.TabIndex = 32;
@@ -688,7 +688,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(981, 693);
+            this.ClientSize = new System.Drawing.Size(982, 693);
             this.Controls.Add(this.item11);
             this.Controls.Add(this.item10);
             this.Controls.Add(this.item9);
